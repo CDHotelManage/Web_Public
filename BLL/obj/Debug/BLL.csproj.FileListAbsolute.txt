@@ -1,0 +1,51 @@
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.dll
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.pdb
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.Common.dll
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.DAL.dll
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.Model.dll
+E:\CdHotelManage\BLL\bin\Debug\Excel.dll
+E:\CdHotelManage\BLL\bin\Debug\COM.Excel.dll
+E:\CdHotelManage\BLL\bin\Debug\OpenSmtp.dll
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.DBUtility.dll
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.Common.pdb
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.DAL.pdb
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.Model.pdb
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.DBUtility.pdb
+E:\CdHotelManage\BLL\obj\Debug\ResolveAssemblyReference.cache
+E:\CdHotelManage\BLL\obj\Debug\CdHotelManage.BLL.dll
+E:\CdHotelManage\BLL\obj\Debug\CdHotelManage.BLL.pdb
+E:\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.dll.config
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.dll.config
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.dll
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.pdb
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.Common.dll
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.DAL.dll
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.Model.dll
+D:\CdHotelManage\BLL\bin\Debug\Excel.dll
+D:\CdHotelManage\BLL\bin\Debug\COM.Excel.dll
+D:\CdHotelManage\BLL\bin\Debug\OpenSmtp.dll
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.DBUtility.dll
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.Common.pdb
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.DAL.pdb
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.Model.pdb
+D:\CdHotelManage\BLL\bin\Debug\CdHotelManage.DBUtility.pdb
+D:\CdHotelManage\BLL\obj\Debug\ResolveAssemblyReference.cache
+D:\CdHotelManage\BLL\obj\Debug\CdHotelManage.BLL.dll
+D:\CdHotelManage\BLL\obj\Debug\CdHotelManage.BLL.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.dll.config
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.BLL.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.Common.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.DAL.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.Model.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\Excel.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\COM.Excel.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\OpenSmtp.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.Common.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.DAL.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.Model.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHotelManage.DBUtility.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\obj\Debug\CdHotelManage.BLL.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\obj\Debug\CdHotelManage.BLL.pdb

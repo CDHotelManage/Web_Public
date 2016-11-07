@@ -1,0 +1,15 @@
+E:\CdHotelManage\Model\bin\Debug\CdHotelManage.Model.dll
+E:\CdHotelManage\Model\bin\Debug\CdHotelManage.Model.pdb
+E:\CdHotelManage\Model\obj\Debug\ResolveAssemblyReference.cache
+E:\CdHotelManage\Model\obj\Debug\CdHotelManage.Model.dll
+E:\CdHotelManage\Model\obj\Debug\CdHotelManage.Model.pdb
+D:\CdHotelManage\Model\bin\Debug\CdHotelManage.Model.dll
+D:\CdHotelManage\Model\bin\Debug\CdHotelManage.Model.pdb
+D:\CdHotelManage\Model\obj\Debug\ResolveAssemblyReference.cache
+D:\CdHotelManage\Model\obj\Debug\CdHotelManage.Model.dll
+D:\CdHotelManage\Model\obj\Debug\CdHotelManage.Model.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\Model\bin\Debug\CdHotelManage.Model.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\Model\bin\Debug\CdHotelManage.Model.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\Model\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\Model\obj\Debug\CdHotelManage.Model.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\Model\obj\Debug\CdHotelManage.Model.pdb

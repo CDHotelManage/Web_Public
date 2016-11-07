@@ -1,0 +1,182 @@
+﻿.SelectedRow
+{
+background: yellow;
+}
+.contextMenu
+{
+display: none;
+}
+.yue1   
+{
+position: absolute;
+right: 0;
+top: 0;
+}
+.stime
+{
+position: absolute;
+right: 0;
+bottom: 13px;
+}
+.shengyu
+{
+display: none;
+}
+.main li
+{
+position: relative;
+}
+.main .hidli{width: inherit;
+height: inherit;
+margin: 0;
+padding: 0;}
+.zuofu{ float: left;
+position: absolute;
+left: 5px;
+bottom:0px;}
+.ahidden{ display:none;}
+.yudao
+{
+position: absolute;
+bottom: 0;
+color:#fff;
+}
+.numday
+{
+color:#fff;  background:green; padding:0 5px; width:10px; height:10px;  margin-left: 15px;
+}
+.hrj
+{
+background: #93bd3c;
+position: absolute;
+top: 00px;
+left: 0px;
+padding: 0 5px;
+line-height: 16px;
+color: #fff; text-align:center;
+}
+
+
+.yuding{ background:#93bd3c; height:10px;}
+#ulss .yuding{ height:inherit;}
+.bor{ border:1px solid;}
+.menu
+{
+width: 100px;
+position: absolute;
+z-index: 999;
+}
+.menu li
+{
+width: 100px;
+height: 25px;
+line-height: 25px;
+text-align: center;
+background: #ccc;
+color: #000;
+list-style-type: none;
+border: solid 1px #aaa;
+cursor: pointer;
+}
+.menu li:hover
+{
+background: #f00;
+color: #fff;
+}
+.deif
+{
+position: absolute;
+}
+.men
+{
+width: 100px;
+position: absolute;
+z-index: 999;
+left: 92px;
+display: none;
+}
+.show
+{
+display: block;
+}
+.hide
+{
+display: none;
+}
+.divFv
+{
+position: absolute;
+width: 350px;
+display: none;
+background: White;
+}
+.ul2
+{
+padding-left: 15px;
+}
+.ul3
+{
+height: 80px;
+}
+.ul3 li
+{
+float: left;
+padding-left: 20px;
+vertical-align: middle;
+text-align: center;
+border-bottom: 1px solid red;
+padding-top: 10px;
+}
+.uls1
+{
+height: 35px;
+}
+.uls1 li
+{
+float: left;
+}
+.csdiv
+{
+height: 30px;
+width: 50px;
+background: #F5F5F5;
+vertical-align: middle;
+border: 1px solid #DDD;
+text-align: center;
+color: #333;
+line-height: 30px;
+}
+.acd
+{
+background-color: Purple;
+}
+.zhang_zf
+{
+background: #5a819e;
+}
+.pink_zyf
+{
+background: red;
+}
+body .zhuangtai li
+{
+float:right;
+margin: 0 5px 5px 0;
+line-height: 22px;
+}
+.close
+{
+background:url(/admin/Images/closeBG.png) left;  position: absolute;
+top: 0;
+right: 0;
+width: 30px;
+height: 30px;
+cursor: pointer;
+z-index: 100;  top: -10px;
+right: -10px;
+}
+.close:hover
+{
+background: transparent url(/admin/Images/closeBG.png) repeat scroll right center;
+}
+.alltext{ background-color:cornflowerblue;}

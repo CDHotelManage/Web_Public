@@ -1,0 +1,27 @@
+E:\CdHotelManage\DBUtility\bin\Debug\CdHotelManage.DBUtility.dll
+E:\CdHotelManage\DBUtility\bin\Debug\CdHotelManage.DBUtility.pdb
+E:\CdHotelManage\DBUtility\bin\Debug\IBatisNet.Common.dll
+E:\CdHotelManage\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+E:\CdHotelManage\DBUtility\bin\Debug\MySql.Data.dll
+E:\CdHotelManage\DBUtility\bin\Debug\System.Data.SQLite.DLL
+E:\CdHotelManage\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+E:\CdHotelManage\DBUtility\obj\Debug\CdHotelManage.DBUtility.dll
+E:\CdHotelManage\DBUtility\obj\Debug\CdHotelManage.DBUtility.pdb
+D:\CdHotelManage\DBUtility\bin\Debug\CdHotelManage.DBUtility.dll
+D:\CdHotelManage\DBUtility\bin\Debug\CdHotelManage.DBUtility.pdb
+D:\CdHotelManage\DBUtility\bin\Debug\IBatisNet.Common.dll
+D:\CdHotelManage\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+D:\CdHotelManage\DBUtility\bin\Debug\MySql.Data.dll
+D:\CdHotelManage\DBUtility\bin\Debug\System.Data.SQLite.DLL
+D:\CdHotelManage\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+D:\CdHotelManage\DBUtility\obj\Debug\CdHotelManage.DBUtility.dll
+D:\CdHotelManage\DBUtility\obj\Debug\CdHotelManage.DBUtility.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\bin\Debug\CdHotelManage.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\bin\Debug\CdHotelManage.DBUtility.pdb
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\bin\Debug\IBatisNet.Common.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\bin\Debug\MySql.Data.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\bin\Debug\System.Data.SQLite.DLL
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\obj\Debug\CdHotelManage.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\CdHotelManage\DBUtility\obj\Debug\CdHotelManage.DBUtility.pdb

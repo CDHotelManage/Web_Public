@@ -1,0 +1,2462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B535162-10C2-4238-BC56-193B968E1834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CdHotelManage.Web</RootNamespace>
+    <AssemblyName>CdHotelManage.Web</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="LTP.Accounts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LtpPageControl, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\LtpPageControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.UI.WebControls, Version=1.0.2.226, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\banner\addbanner.aspx" />
+    <Content Include="Admin\banner\bannerlist.aspx" />
+    <Content Include="Admin\banner\editbanner.aspx" />
+    <Content Include="Admin\Book\BookAdd.aspx" />
+    <Content Include="Admin\Book\BookCancel.aspx" />
+    <Content Include="Admin\Book\BookList.aspx" />
+    <Content Include="Admin\Book\DepositAdd.aspx" />
+    <Content Include="Admin\Book\DueToLive.aspx" />
+    <Content Include="Admin\Book\HousDis.aspx" />
+    <Content Include="Admin\Book\Refund.aspx" />
+    <Content Include="Admin\css\bootstrap.css" />
+    <Content Include="Admin\css\default.css" />
+    <Content Include="Admin\css\jquery.autocomplete.css" />
+    <Content Include="Admin\css\main.css" />
+    <Content Include="Admin\css\mainzz.css" />
+    <Content Include="Admin\css\stylebyzz.css" />
+    <Content Include="Admin\css\tch.css" />
+    <Content Include="Admin\css\toomroom.css" />
+    <Content Include="Admin\css\tooms.css" />
+    <Content Include="Admin\customer\account_goods.aspx" />
+    <Content Include="Admin\customer\AcountInfos.aspx" />
+    <Content Include="Admin\customer\addContact.aspx" />
+    <Content Include="Admin\customer\addCustomer.aspx" />
+    <Content Include="Admin\customer\addProtocol.aspx" />
+    <Content Include="Admin\customer\CommissionList.aspx" />
+    <Content Include="Admin\customer\contactsList.aspx" />
+    <Content Include="Admin\customer\CostMoney.aspx" />
+    <Content Include="Admin\customer\customerList.aspx" />
+    <Content Include="Admin\customer\custromerDestic.aspx" />
+    <Content Include="Admin\customer\CzAdd.aspx" />
+    <Content Include="Admin\customer\GoodsList.aspx" />
+    <Content Include="Admin\customer\GoodsPrice.aspx" />
+    <Content Include="Admin\customer\JieSuan.aspx" />
+    <Content Include="Admin\customer\JsComm.aspx" />
+    <Content Include="Admin\customer\protocol.aspx" />
+    <Content Include="Admin\customer\skAcccount.aspx" />
+    <Content Include="Admin\customer\Transfer.aspx" />
+    <Content Include="Admin\DespAdd.aspx" />
+    <Content Include="Admin\iframe.html" />
+    <Content Include="Admin\Images\010.gif" />
+    <Content Include="Admin\Images\037.gif" />
+    <Content Include="Admin\Images\1.png" />
+    <Content Include="Admin\Images\10.png" />
+    <Content Include="Admin\Images\11.png" />
+    <Content Include="Admin\Images\12.png" />
+    <Content Include="Admin\Images\13.png" />
+    <Content Include="Admin\Images\14.png" />
+    <Content Include="Admin\Images\15.png" />
+    <Content Include="Admin\Images\16.png" />
+    <Content Include="Admin\Images\17.png" />
+    <Content Include="Admin\Images\18.png" />
+    <Content Include="Admin\Images\19.png" />
+    <Content Include="Admin\Images\2.png" />
+    <Content Include="Admin\Images\20.png" />
+    <Content Include="Admin\Images\20150506043824760_easyicon_net_21.6720554273.png" />
+    <Content Include="Admin\Images\3.png" />
+    <Content Include="Admin\Images\4.png" />
+    <Content Include="Admin\Images\5.png" />
+    <Content Include="Admin\Images\6.png" />
+    <Content Include="Admin\Images\7.png" />
+    <Content Include="Admin\Images\8.png" />
+    <Content Include="Admin\Images\9.png" />
+    <Content Include="Admin\Images\add_price_type.jpg" />
+    <Content Include="Admin\Images\add_price_type_no.jpg" />
+    <Content Include="Admin\Images\app_butn.jpg" />
+    <Content Include="Admin\Images\app_erweima.jpg" />
+    <Content Include="Admin\Images\bbsMoHead.png" />
+    <Content Include="Admin\Images\bgcircle.png" />
+    <Content Include="Admin\Images\btnout_bg_center.gif" />
+    <Content Include="Admin\Images\btnout_bg_left.gif" />
+    <Content Include="Admin\Images\btnout_bg_right.gif" />
+    <Content Include="Admin\Images\btnover_bg_center.gif" />
+    <Content Include="Admin\Images\btnover_bg_left.gif" />
+    <Content Include="Admin\Images\btnover_bg_right.gif" />
+    <Content Include="Admin\Images\button.jpg" />
+    <Content Include="Admin\Images\button_hover.jpg" />
+    <Content Include="Admin\Images\clear.jpg" />
+    <Content Include="Admin\Images\close.png" />
+    <Content Include="Admin\Images\closeBG.png" />
+    <Content Include="Admin\Images\close_1.png" />
+    <Content Include="Admin\Images\credit.jpg" />
+    <Content Include="Admin\Images\cs1.png" />
+    <Content Include="Admin\Images\download.png" />
+    <Content Include="Admin\Images\edit.png" />
+    <Content Include="Admin\Images\edit_1.png" />
+    <Content Include="Admin\Images\excel.gif" />
+    <Content Include="Admin\Images\ftt_actives.png" />
+    <Content Include="Admin\Images\ftt_actives_big.png" />
+    <Content Include="Admin\Images\ftt_actives_small.png" />
+    <Content Include="Admin\Images\hyy01.png" />
+    <Content Include="Admin\Images\hyy02.png" />
+    <Content Include="Admin\Images\hyy04.png" />
+    <Content Include="Admin\Images\hyybtn.gif" />
+    <Content Include="Admin\Images\ico-chrome.png" />
+    <Content Include="Admin\Images\ico-ie8.jpg" />
+    <Content Include="Admin\Images\icon.gif" />
+    <Content Include="Admin\Images\iconbg_a143619.png" />
+    <Content Include="Admin\Images\iconcuizhang.png" />
+    <Content Include="Admin\Images\iconfree.png" />
+    <Content Include="Admin\Images\iconjiangzou.png" />
+    <Content Include="Admin\Images\iconqf.png" />
+    <Content Include="Admin\Images\iconrili.png" />
+    <Content Include="Admin\Images\iconsuofang.png" />
+    <Content Include="Admin\Images\iconxz.png" />
+    <Content Include="Admin\Images\infor_close.jpg" />
+    <Content Include="Admin\Images\interface_logo.jpg" />
+    <Content Include="Admin\Images\interface_logo_hover.jpg" />
+    <Content Include="Admin\Images\login_bg.png" />
+    <Content Include="Admin\Images\logo.jpg" />
+    <Content Include="Admin\Images\main_bg.jpg" />
+    <Content Include="Admin\Images\main_logo.jpg" />
+    <Content Include="Admin\Images\menu_bg.jpg" />
+    <Content Include="Admin\Images\menu_close.png" />
+    <Content Include="Admin\Images\menu_line.jpg" />
+    <Content Include="Admin\Images\pdf.gif" />
+    <Content Include="Admin\Images\print.gif" />
+    <Content Include="Admin\Images\prompt.png" />
+    <Content Include="Admin\Images\prop.gif" />
+    <Content Include="Admin\Images\pw.png" />
+    <Content Include="Admin\Images\reg_bg.gif" />
+    <Content Include="Admin\Images\save.png" />
+    <Content Include="Admin\Images\search.jpg" />
+    <Content Include="Admin\Images\search.png" />
+    <Content Include="Admin\Images\search_top.jpg" />
+    <Content Include="Admin\Images\step_1.png" />
+    <Content Include="Admin\Images\step_2.png" />
+    <Content Include="Admin\Images\step_3.png" />
+    <Content Include="Admin\Images\step_4.png" />
+    <Content Include="Admin\Images\themes.gif" />
+    <Content Include="Admin\Images\tk_close.png" />
+    <Content Include="Admin\Images\top_icon.png" />
+    <Content Include="Admin\Images\top_icon_hover.png" />
+    <Content Include="Admin\Images\top_icon_select.png" />
+    <Content Include="Admin\Images\type_icon.jpg" />
+    <Content Include="Admin\Images\type_icon.png" />
+    <Content Include="Admin\Images\xz.jpg" />
+    <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\Jfcs.aspx" />
+    <Content Include="Admin\js\arrow.gif" />
+    <Content Include="Admin\js\base.js" />
+    <Content Include="Admin\js\cross.gif" />
+    <Content Include="Admin\js\exchange.js" />
+    <Content Include="Admin\js\hrjAddGoods.js" />
+    <Content Include="Admin\js\hs.png" />
+    <Content Include="Admin\js\hv.png" />
+    <Content Include="Admin\js\jq-main.js" />
+    <Content Include="Admin\js\jquery-1.4.2.min.js" />
+    <Content Include="Admin\js\jquery.easyui.min-1.2.0.js" />
+    <Content Include="Admin\js\jscolor.js" />
+    <Content Include="Admin\js\lss.js" />
+    <Content Include="Admin\js\memberadd.js" />
+    <Content Include="Admin\js\outlook.js" />
+    <Content Include="Admin\js\PeopleInfoAddsCs.js" />
+    <Content Include="Admin\js\themes\default\easyui.css" />
+    <Content Include="Admin\js\themes\default\images\button_a_bg.gif" />
+    <Content Include="Admin\js\themes\default\images\button_plain_hover.png" />
+    <Content Include="Admin\js\themes\default\images\button_span_bg.gif" />
+    <Content Include="Admin\js\themes\default\images\combo_arrow.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_header_bg.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_sort_asc.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_sort_desc.gif" />
+    <Content Include="Admin\js\themes\default\images\datagrid_title_bg.png" />
+    <Content Include="Admin\js\themes\default\images\layout_button_down.gif" />
+    <Content Include="Admin\js\themes\default\images\layout_button_left.gif" />
+    <Content Include="Admin\js\themes\default\images\layout_button_right.gif" />
+    <Content Include="Admin\js\themes\default\images\layout_button_up.gif" />
+    <Content Include="Admin\js\themes\default\images\menu.gif" />
+    <Content Include="Admin\js\themes\default\images\menu_downarrow.png" />
+    <Content Include="Admin\js\themes\default\images\menu_rightarrow.png" />
+    <Content Include="Admin\js\themes\default\images\menu_sep.png" />
+    <Content Include="Admin\js\themes\default\images\menu_split_downarrow.png" />
+    <Content Include="Admin\js\themes\default\images\messager_error.gif" />
+    <Content Include="Admin\js\themes\default\images\messager_info.gif" />
+    <Content Include="Admin\js\themes\default\images\messager_question.gif" />
+    <Content Include="Admin\js\themes\default\images\messager_warning.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_first.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_last.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_load.png" />
+    <Content Include="Admin\js\themes\default\images\pagination_loading.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_next.gif" />
+    <Content Include="Admin\js\themes\default\images\pagination_prev.gif" />
+    <Content Include="Admin\js\themes\default\images\panel_loading.gif" />
+    <Content Include="Admin\js\themes\default\images\panel_title.png" />
+    <Content Include="Admin\js\themes\default\images\panel_tools.gif" />
+    <Content Include="Admin\js\themes\default\images\panel_tool_collapse.gif" />
+    <Content Include="Admin\js\themes\default\images\panel_tool_expand.gif" />
+    <Content Include="Admin\js\themes\default\images\tabicons.png" />
+    <Content Include="Admin\js\themes\default\images\tabs_active.png" />
+    <Content Include="Admin\js\themes\default\images\tabs_close.gif" />
+    <Content Include="Admin\js\themes\default\images\tabs_enabled.png" />
+    <Content Include="Admin\js\themes\default\images\tabs_leftarrow.png" />
+    <Content Include="Admin\js\themes\default\images\tabs_rightarrow.png" />
+    <Content Include="Admin\js\themes\default\images\tree_arrows.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_file.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_folder.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_folder_open.gif" />
+    <Content Include="Admin\js\themes\default\images\tree_loading.gif" />
+    <Content Include="Admin\js\themes\default\images\validatebox_pointer.gif" />
+    <Content Include="Admin\js\themes\default\images\validatebox_warning.png" />
+    <Content Include="Admin\js\themes\icon.css" />
+    <Content Include="Admin\js\themes\icons\back.png" />
+    <Content Include="Admin\js\themes\icons\cancel.png" />
+    <Content Include="Admin\js\themes\icons\cut.png" />
+    <Content Include="Admin\js\themes\icons\edit_add.png" />
+    <Content Include="Admin\js\themes\icons\edit_remove.png" />
+    <Content Include="Admin\js\themes\icons\filesave.png" />
+    <Content Include="Admin\js\themes\icons\help.png" />
+    <Content Include="Admin\js\themes\icons\no.png" />
+    <Content Include="Admin\js\themes\icons\ok.png" />
+    <Content Include="Admin\js\themes\icons\pencil.png" />
+    <Content Include="Admin\js\themes\icons\print.png" />
+    <Content Include="Admin\js\themes\icons\redo.png" />
+    <Content Include="Admin\js\themes\icons\reload.png" />
+    <Content Include="Admin\js\themes\icons\search.png" />
+    <Content Include="Admin\js\themes\icons\undo.png" />
+    <Content Include="Admin\js\toomJs.js" />
+    <Content Include="Admin\js\vip_membertype.js" />
+    <Content Include="Admin\js\vip_rechargesolution.js" />
+    <Content Include="Admin\js\vip_rechargesolution1.js" />
+    <Content Include="Admin\js\vip_rechargesolution2.js" />
+    <Content Include="Admin\login.aspx" />
+    <Content Include="Admin\member\addPice.aspx" />
+    <Content Include="Admin\member\exchange.aspx" />
+    <Content Include="Admin\member\mAdd.aspx" />
+    <Content Include="Admin\member\mAddType.aspx" />
+    <Content Include="Admin\member\memberEdit.aspx" />
+    <Content Include="Admin\member\MemberList.aspx" />
+    <Content Include="Admin\member\mlist.aspx" />
+    <Content Include="Admin\member\mLoss.aspx" />
+    <Content Include="Admin\member\mtPrice.aspx" />
+    <Content Include="Admin\member\typeEdit.aspx" />
+    <Content Include="Admin\Menus2\AddGoods.aspx" />
+    <Content Include="Admin\Menus2\fjfaAdd.aspx" />
+    <Content Include="Admin\Menus2\fjfadefalut.aspx" />
+    <Content Include="Admin\Menus2\FlloorLd.aspx" />
+    <Content Include="Admin\Menus2\GoodsPrices.aspx" />
+    <Content Include="Admin\Menus2\Init.aspx" />
+    <Content Include="Admin\Menus2\InteSyS.aspx" />
+    <Content Include="Admin\Menus2\methpay.aspx" />
+    <Content Include="Admin\Menus2\Print.aspx" />
+    <Content Include="Admin\Menus2\RommSuo.aspx" />
+    <Content Include="Admin\Menus2\RoomAddSum.aspx" />
+    <Content Include="Admin\Menus2\RoomNumberInfo.aspx" />
+    <Content Include="Admin\Menus2\RoomsAllInfo.aspx" />
+    <Content Include="Admin\Menus2\Roomsmoshi.aspx" />
+    <Content Include="Admin\Menus2\RoommoshiAdd.aspx" />
+    <Content Include="Admin\Menus\Billing.aspx" />
+    <Content Include="Admin\Menus\FloorAdd.aspx" />
+    <Content Include="Admin\Menus\GoodsAdds.aspx" />
+    <Content Include="Admin\Menus\GoodsPriceAdds.aspx" />
+    <Content Include="Admin\Menus\GoodsPrices.aspx" />
+    <Content Include="Admin\Menus\Otherzhiliao.aspx" />
+    <Content Include="Admin\Menus\price.aspx" />
+    <Content Include="Admin\Menus\Priceinfor.aspx" />
+    <Content Include="Admin\Menus\roomAdds.aspx" />
+    <Content Include="Admin\Menus\RoomInfos.aspx" />
+    <Content Include="Admin\Menus\RoomTypeAdd.aspx" />
+    <Content Include="Admin\Menus\Setup.aspx" />
+    <Content Include="Admin\Menus\ShopBanc.aspx" />
+    <Content Include="Admin\Menus\shoppingInfo.aspx" />
+    <Content Include="Admin\Menus\shoppupdate.aspx" />
+    <Content Include="Admin\PartHouse.aspx" />
+    <Content Include="Admin\Permissions\accountuser\adduser.aspx" />
+    <Content Include="Admin\Permissions\accountuser\edituser.aspx" />
+    <Content Include="Admin\Permissions\accountuser\userlist.aspx" />
+    <Content Include="Admin\Permissions\menu\AddMenu.aspx" />
+    <Content Include="Admin\Permissions\menu\EditMenu.aspx" />
+    <Content Include="Admin\Permissions\menu\menulist.aspx" />
+    <Content Include="Admin\Permissions\Permission\Permission.aspx" />
+    <Content Include="Admin\Permissions\Permission\permissionajax.aspx" />
+    <Content Include="Admin\Permissions\Role\Role.aspx" />
+    <Content Include="Admin\RoomGustkr\RoomkrSelect.aspx" />
+    <Content Include="Admin\ShiftExc\Advance.aspx" />
+    <Content Include="Admin\ShiftExc\Checkout.aspx" />
+    <Content Include="Admin\ShiftExc\DailySheet.aspx" />
+    <Content Include="Admin\ShiftExc\DailySheetMouth.aspx" />
+    <Content Include="Admin\ShiftExc\HandOver.aspx" />
+    <Content Include="Admin\ShiftExc\HandOverXiang.aspx" />
+    <Content Include="Admin\ShiftExc\HistoryShiftExc.aspx" />
+    <Content Include="Admin\ShiftExc\OccupancySingle.aspx" />
+    <Content Include="Admin\ShiftExc\ShiftExc.aspx" />
+    <Content Include="Admin\ShiftExc\UpdateRoom.aspx" />
+    <Content Include="Admin\Toroom\accountlist.aspx" />
+    <Content Include="Admin\Toroom\AcountInfos.aspx" />
+    <Content Include="Admin\Toroom\AddRoom.aspx" />
+    <Content Include="Admin\Toroom\AdjustPrice.aspx" />
+    <Content Include="Admin\Toroom\ajax.aspx" />
+    <Content Include="Admin\Toroom\apartmentInfoAdd.aspx" />
+    <Content Include="Admin\Toroom\ChangeRoom.aspx" />
+    <Content Include="Admin\Toroom\ContinuedLive.aspx" />
+    <Content Include="Admin\Toroom\CostMoney.aspx" />
+    <Content Include="Admin\Toroom\cprotocol.aspx" />
+    <Content Include="Admin\Toroom\customerList.aspx" />
+    <Content Include="Admin\Toroom\CzPay.aspx" />
+    <Content Include="Admin\Toroom\DuiHuan.aspx" />
+    <Content Include="Admin\Toroom\FkMoney.aspx" />
+    <Content Include="Admin\Toroom\GoodsAcountsMoney.aspx" />
+    <Content Include="Admin\Toroom\GoodsCZ.aspx" />
+    <Content Include="Admin\Toroom\GoodsPrice.aspx" />
+    <Content Include="Admin\Toroom\GZlist.aspx" />
+    <Content Include="Admin\Toroom\images\95ssgylogo.png" />
+    <Content Include="Admin\Toroom\images\demo.jpg" />
+    <Content Include="Admin\Toroom\images\hhy01bg.png" />
+    <Content Include="Admin\Toroom\images\hhy02bg.jpg" />
+    <Content Include="Admin\Toroom\images\hhy02bg.png" />
+    <Content Include="Admin\Toroom\images\hhy03bg.png" />
+    <Content Include="Admin\Toroom\js\external\jquery.bgiframe-2.1.1.js" />
+    <Content Include="Admin\Toroom\js\external\jquery.cookie.js" />
+    <Content Include="Admin\Toroom\js\external\jquery.metadata.js" />
+    <Content Include="Admin\Toroom\js\external\qunit.css" />
+    <Content Include="Admin\Toroom\js\external\qunit.js" />
+    <Content Include="Admin\Toroom\js\jquery-1.4.2.min.js" />
+    <Content Include="Admin\Toroom\js\jquery-ui-1.8.custom.min.js" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.all.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.base.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.button.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.core.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.slider.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Admin\Toroom\js\themes\base\jquery.ui.theme.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery-ui-1.8.custom.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.accordion.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.all.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.autocomplete.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.base.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.button.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.core.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.datepicker.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.dialog.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.progressbar.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.resizable.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.slider.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.tabs.css" />
+    <Content Include="Admin\Toroom\js\themes\smoothness\jquery.ui.theme.css" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Admin\Toroom\js\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery-ui-1.8.custom.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.blind.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.bounce.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.clip.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.core.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.drop.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.explode.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.fold.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.highlight.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.pulsate.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.scale.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.shake.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.slide.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.effects.transfer.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.accordion.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.button.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.core.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.datepicker.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.dialog.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.draggable.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.droppable.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.mouse.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.position.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.progressbar.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.resizable.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.selectable.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.slider.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.sortable.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.tabs.js" />
+    <Content Include="Admin\Toroom\js\ui\jquery.ui.widget.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.blind.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.bounce.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.clip.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.core.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.drop.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.explode.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.fold.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.highlight.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.pulsate.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.scale.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.shake.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.slide.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.effects.transfer.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.button.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.slider.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="Admin\Toroom\js\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="Admin\Toroom\makecard.aspx" />
+    <Content Include="Admin\Toroom\PeopleInfosk.aspx" />
+    <Content Include="Admin\Toroom\Remaker.aspx" />
+    <Content Include="Admin\Toroom\SetPwd.aspx" />
+    <Content Include="Admin\Toroom\ShiftOcc.aspx" />
+    <Content Include="Admin\Toroom\SincetheAdds.aspx" />
+    <Content Include="Admin\Toroom\Sincethehousing.aspx" />
+    <Content Include="Admin\Toroom\TkMoney.aspx" />
+    <Content Include="Admin\Toroom\ToRoom.aspx" />
+    <Content Include="Admin\Menus2\FloorAdd.aspx" />
+    <Content Include="Admin\Menus2\roomAdds.aspx" />
+    <Content Include="Admin\Menus2\RoomInfos.aspx" />
+    <Content Include="Admin\Menus2\RoomTypeAdd.aspx" />
+    <Content Include="Admin\Toroom\ToRooms2.aspx" />
+    <Content Include="Admin\Toroom\apartmentInfosAdds.aspx" />
+    <Content Include="Admin\Toroom\PeopleInfoAddsCs1.aspx" />
+    <Content Include="Admin\Toroom\customerList1.aspx" />
+    <Content Include="Admin\Toroom\zxCard.aspx" />
+    <Content Include="calendar\calendar.js" />
+    <Content Include="calendar\lang\en.js" />
+    <Content Include="calendar\lang\zh-cn.js" />
+    <Content Include="calendar\lang\zh-tw.js" />
+    <Content Include="calendar\skin\datePicker.gif" />
+    <Content Include="calendar\skin\default\datepicker.css" />
+    <Content Include="calendar\skin\default\img.gif" />
+    <Content Include="calendar\skin\WdatePicker.css" />
+    <Content Include="calendar\skin\whyGreen\bg.jpg" />
+    <Content Include="calendar\skin\whyGreen\datepicker.css" />
+    <Content Include="calendar\skin\whyGreen\img.gif" />
+    <Content Include="calendar\WdatePicker.js" />
+    <Content Include="calendar\开发包\lang\en.js" />
+    <Content Include="calendar\开发包\lang\zh-cn.js" />
+    <Content Include="calendar\开发包\lang\zh-tw.js" />
+    <Content Include="calendar\开发包\readme.txt" />
+    <Content Include="calendar\开发包\skin\datePicker.gif" />
+    <Content Include="calendar\开发包\skin\default\datepicker.css" />
+    <Content Include="calendar\开发包\skin\default\img.gif" />
+    <Content Include="calendar\开发包\skin\WdatePicker.css" />
+    <Content Include="calendar\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="calendar\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="calendar\开发包\skin\whyGreen\img.gif" />
+    <Content Include="dll\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="dll\CrystalDecisions.ReportSource.dll" />
+    <Content Include="dll\CrystalDecisions.Shared.dll" />
+    <Content Include="dll\CrystalDecisions.Web.dll" />
+    <Content Include="easyui\changelog.txt" />
+    <Content Include="easyui\easyloader.js" />
+    <Content Include="easyui\jquery.easyui.min.js" />
+    <Content Include="easyui\jquery.easyui.mobile.js" />
+    <Content Include="easyui\jquery.min.js" />
+    <Content Include="easyui\licence_gpl.txt" />
+    <Content Include="easyui\locale\easyui-lang-af.js" />
+    <Content Include="easyui\locale\easyui-lang-am.js" />
+    <Content Include="easyui\locale\easyui-lang-ar.js" />
+    <Content Include="easyui\locale\easyui-lang-bg.js" />
+    <Content Include="easyui\locale\easyui-lang-ca.js" />
+    <Content Include="easyui\locale\easyui-lang-cs.js" />
+    <Content Include="easyui\locale\easyui-lang-cz.js" />
+    <Content Include="easyui\locale\easyui-lang-da.js" />
+    <Content Include="easyui\locale\easyui-lang-de.js" />
+    <Content Include="easyui\locale\easyui-lang-el.js" />
+    <Content Include="easyui\locale\easyui-lang-en.js" />
+    <Content Include="easyui\locale\easyui-lang-es.js" />
+    <Content Include="easyui\locale\easyui-lang-fr.js" />
+    <Content Include="easyui\locale\easyui-lang-it.js" />
+    <Content Include="easyui\locale\easyui-lang-jp.js" />
+    <Content Include="easyui\locale\easyui-lang-nl.js" />
+    <Content Include="easyui\locale\easyui-lang-pl.js" />
+    <Content Include="easyui\locale\easyui-lang-pt_BR.js" />
+    <Content Include="easyui\locale\easyui-lang-ru.js" />
+    <Content Include="easyui\locale\easyui-lang-sv_SE.js" />
+    <Content Include="easyui\locale\easyui-lang-tr.js" />
+    <Content Include="easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="easyui\locale\easyui-lang-zh_TW.js" />
+    <Content Include="easyui\plugins\jquery.accordion.js" />
+    <Content Include="easyui\plugins\jquery.calendar.js" />
+    <Content Include="easyui\plugins\jquery.combo.js" />
+    <Content Include="easyui\plugins\jquery.combobox.js" />
+    <Content Include="easyui\plugins\jquery.combogrid.js" />
+    <Content Include="easyui\plugins\jquery.combotree.js" />
+    <Content Include="easyui\plugins\jquery.datagrid.js" />
+    <Content Include="easyui\plugins\jquery.datalist.js" />
+    <Content Include="easyui\plugins\jquery.datebox.js" />
+    <Content Include="easyui\plugins\jquery.datetimebox.js" />
+    <Content Include="easyui\plugins\jquery.datetimespinner.js" />
+    <Content Include="easyui\plugins\jquery.dialog.js" />
+    <Content Include="easyui\plugins\jquery.draggable.js" />
+    <Content Include="easyui\plugins\jquery.droppable.js" />
+    <Content Include="easyui\plugins\jquery.filebox.js" />
+    <Content Include="easyui\plugins\jquery.form.js" />
+    <Content Include="easyui\plugins\jquery.layout.js" />
+    <Content Include="easyui\plugins\jquery.linkbutton.js" />
+    <Content Include="easyui\plugins\jquery.menu.js" />
+    <Content Include="easyui\plugins\jquery.menubutton.js" />
+    <Content Include="easyui\plugins\jquery.messager.js" />
+    <Content Include="easyui\plugins\jquery.mobile.js" />
+    <Content Include="easyui\plugins\jquery.numberbox.js" />
+    <Content Include="easyui\plugins\jquery.numberspinner.js" />
+    <Content Include="easyui\plugins\jquery.pagination.js" />
+    <Content Include="easyui\plugins\jquery.panel.js" />
+    <Content Include="easyui\plugins\jquery.parser.js" />
+    <Content Include="easyui\plugins\jquery.progressbar.js" />
+    <Content Include="easyui\plugins\jquery.propertygrid.js" />
+    <Content Include="easyui\plugins\jquery.resizable.js" />
+    <Content Include="easyui\plugins\jquery.searchbox.js" />
+    <Content Include="easyui\plugins\jquery.slider.js" />
+    <Content Include="easyui\plugins\jquery.spinner.js" />
+    <Content Include="easyui\plugins\jquery.splitbutton.js" />
+    <Content Include="easyui\plugins\jquery.tabs.js" />
+    <Content Include="easyui\plugins\jquery.textbox.js" />
+    <Content Include="easyui\plugins\jquery.timespinner.js" />
+    <Content Include="easyui\plugins\jquery.tooltip.js" />
+    <Content Include="easyui\plugins\jquery.tree.js" />
+    <Content Include="easyui\plugins\jquery.treegrid.js" />
+    <Content Include="easyui\plugins\jquery.validatebox.js" />
+    <Content Include="easyui\plugins\jquery.window.js" />
+    <Content Include="easyui\readme.txt" />
+    <Content Include="easyui\src\easyloader.js" />
+    <Content Include="easyui\src\jquery.accordion.js" />
+    <Content Include="easyui\src\jquery.calendar.js" />
+    <Content Include="easyui\src\jquery.combobox.js" />
+    <Content Include="easyui\src\jquery.datebox.js" />
+    <Content Include="easyui\src\jquery.draggable.js" />
+    <Content Include="easyui\src\jquery.droppable.js" />
+    <Content Include="easyui\src\jquery.form.js" />
+    <Content Include="easyui\src\jquery.linkbutton.js" />
+    <Content Include="easyui\src\jquery.menu.js" />
+    <Content Include="easyui\src\jquery.parser.js" />
+    <Content Include="easyui\src\jquery.progressbar.js" />
+    <Content Include="easyui\src\jquery.propertygrid.js" />
+    <Content Include="easyui\src\jquery.resizable.js" />
+    <Content Include="easyui\src\jquery.slider.js" />
+    <Content Include="easyui\src\jquery.tabs.js" />
+    <Content Include="easyui\src\jquery.window.js" />
+    <Content Include="easyui\themes\black\accordion.css" />
+    <Content Include="easyui\themes\black\calendar.css" />
+    <Content Include="easyui\themes\black\combo.css" />
+    <Content Include="easyui\themes\black\combobox.css" />
+    <Content Include="easyui\themes\black\datagrid.css" />
+    <Content Include="easyui\themes\black\datalist.css" />
+    <Content Include="easyui\themes\black\datebox.css" />
+    <Content Include="easyui\themes\black\dialog.css" />
+    <Content Include="easyui\themes\black\easyui.css" />
+    <Content Include="easyui\themes\black\filebox.css" />
+    <Content Include="easyui\themes\black\images\accordion_arrows.png" />
+    <Content Include="easyui\themes\black\images\blank.gif" />
+    <Content Include="easyui\themes\black\images\calendar_arrows.png" />
+    <Content Include="easyui\themes\black\images\combo_arrow.png" />
+    <Content Include="easyui\themes\black\images\datagrid_icons.png" />
+    <Content Include="easyui\themes\black\images\datebox_arrow.png" />
+    <Content Include="easyui\themes\black\images\layout_arrows.png" />
+    <Content Include="easyui\themes\black\images\linkbutton_bg.png" />
+    <Content Include="easyui\themes\black\images\loading.gif" />
+    <Content Include="easyui\themes\black\images\menu_arrows.png" />
+    <Content Include="easyui\themes\black\images\messager_icons.png" />
+    <Content Include="easyui\themes\black\images\pagination_icons.png" />
+    <Content Include="easyui\themes\black\images\panel_tools.png" />
+    <Content Include="easyui\themes\black\images\searchbox_button.png" />
+    <Content Include="easyui\themes\black\images\slider_handle.png" />
+    <Content Include="easyui\themes\black\images\spinner_arrows.png" />
+    <Content Include="easyui\themes\black\images\tabs_icons.png" />
+    <Content Include="easyui\themes\black\images\tree_icons.png" />
+    <Content Include="easyui\themes\black\images\validatebox_warning.png" />
+    <Content Include="easyui\themes\black\layout.css" />
+    <Content Include="easyui\themes\black\linkbutton.css" />
+    <Content Include="easyui\themes\black\menu.css" />
+    <Content Include="easyui\themes\black\menubutton.css" />
+    <Content Include="easyui\themes\black\messager.css" />
+    <Content Include="easyui\themes\black\numberbox.css" />
+    <Content Include="easyui\themes\black\pagination.css" />
+    <Content Include="easyui\themes\black\panel.css" />
+    <Content Include="easyui\themes\black\progressbar.css" />
+    <Content Include="easyui\themes\black\propertygrid.css" />
+    <Content Include="easyui\themes\black\searchbox.css" />
+    <Content Include="easyui\themes\black\slider.css" />
+    <Content Include="easyui\themes\black\spinner.css" />
+    <Content Include="easyui\themes\black\splitbutton.css" />
+    <Content Include="easyui\themes\black\tabs.css" />
+    <Content Include="easyui\themes\black\textbox.css" />
+    <Content Include="easyui\themes\black\tooltip.css" />
+    <Content Include="easyui\themes\black\tree.css" />
+    <Content Include="easyui\themes\black\validatebox.css" />
+    <Content Include="easyui\themes\black\window.css" />
+    <Content Include="easyui\themes\bootstrap\accordion.css" />
+    <Content Include="easyui\themes\bootstrap\calendar.css" />
+    <Content Include="easyui\themes\bootstrap\combo.css" />
+    <Content Include="easyui\themes\bootstrap\combobox.css" />
+    <Content Include="easyui\themes\bootstrap\datagrid.css" />
+    <Content Include="easyui\themes\bootstrap\datalist.css" />
+    <Content Include="easyui\themes\bootstrap\datebox.css" />
+    <Content Include="easyui\themes\bootstrap\dialog.css" />
+    <Content Include="easyui\themes\bootstrap\easyui.css" />
+    <Content Include="easyui\themes\bootstrap\filebox.css" />
+    <Content Include="easyui\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="easyui\themes\bootstrap\images\blank.gif" />
+    <Content Include="easyui\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="easyui\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="easyui\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="easyui\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="easyui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="easyui\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="easyui\themes\bootstrap\images\loading.gif" />
+    <Content Include="easyui\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="easyui\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="easyui\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="easyui\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="easyui\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="easyui\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="easyui\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="easyui\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="easyui\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="easyui\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="easyui\themes\bootstrap\layout.css" />
+    <Content Include="easyui\themes\bootstrap\linkbutton.css" />
+    <Content Include="easyui\themes\bootstrap\menu.css" />
+    <Content Include="easyui\themes\bootstrap\menubutton.css" />
+    <Content Include="easyui\themes\bootstrap\messager.css" />
+    <Content Include="easyui\themes\bootstrap\numberbox.css" />
+    <Content Include="easyui\themes\bootstrap\pagination.css" />
+    <Content Include="easyui\themes\bootstrap\panel.css" />
+    <Content Include="easyui\themes\bootstrap\progressbar.css" />
+    <Content Include="easyui\themes\bootstrap\propertygrid.css" />
+    <Content Include="easyui\themes\bootstrap\searchbox.css" />
+    <Content Include="easyui\themes\bootstrap\slider.css" />
+    <Content Include="easyui\themes\bootstrap\spinner.css" />
+    <Content Include="easyui\themes\bootstrap\splitbutton.css" />
+    <Content Include="easyui\themes\bootstrap\tabs.css" />
+    <Content Include="easyui\themes\bootstrap\textbox.css" />
+    <Content Include="easyui\themes\bootstrap\tooltip.css" />
+    <Content Include="easyui\themes\bootstrap\tree.css" />
+    <Content Include="easyui\themes\bootstrap\validatebox.css" />
+    <Content Include="easyui\themes\bootstrap\window.css" />
+    <Content Include="easyui\themes\color.css" />
+    <Content Include="easyui\themes\default\accordion.css" />
+    <Content Include="easyui\themes\default\calendar.css" />
+    <Content Include="easyui\themes\default\combo.css" />
+    <Content Include="easyui\themes\default\combobox.css" />
+    <Content Include="easyui\themes\default\datagrid.css" />
+    <Content Include="easyui\themes\default\datalist.css" />
+    <Content Include="easyui\themes\default\datebox.css" />
+    <Content Include="easyui\themes\default\dialog.css" />
+    <Content Include="easyui\themes\default\easyui.css" />
+    <Content Include="easyui\themes\default\filebox.css" />
+    <Content Include="easyui\themes\default\images\accordion_arrows.png" />
+    <Content Include="easyui\themes\default\images\blank.gif" />
+    <Content Include="easyui\themes\default\images\calendar_arrows.png" />
+    <Content Include="easyui\themes\default\images\combo_arrow.png" />
+    <Content Include="easyui\themes\default\images\datagrid_icons.png" />
+    <Content Include="easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="easyui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="easyui\themes\default\images\loading.gif" />
+    <Content Include="easyui\themes\default\images\menu_arrows.png" />
+    <Content Include="easyui\themes\default\images\messager_icons.png" />
+    <Content Include="easyui\themes\default\images\pagination_icons.png" />
+    <Content Include="easyui\themes\default\images\panel_tools.png" />
+    <Content Include="easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="easyui\themes\default\images\slider_handle.png" />
+    <Content Include="easyui\themes\default\images\spinner_arrows.png" />
+    <Content Include="easyui\themes\default\images\tabs_icons.png" />
+    <Content Include="easyui\themes\default\images\tree_icons.png" />
+    <Content Include="easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="easyui\themes\default\layout.css" />
+    <Content Include="easyui\themes\default\linkbutton.css" />
+    <Content Include="easyui\themes\default\menu.css" />
+    <Content Include="easyui\themes\default\menubutton.css" />
+    <Content Include="easyui\themes\default\messager.css" />
+    <Content Include="easyui\themes\default\numberbox.css" />
+    <Content Include="easyui\themes\default\pagination.css" />
+    <Content Include="easyui\themes\default\panel.css" />
+    <Content Include="easyui\themes\default\progressbar.css" />
+    <Content Include="easyui\themes\default\propertygrid.css" />
+    <Content Include="easyui\themes\default\searchbox.css" />
+    <Content Include="easyui\themes\default\slider.css" />
+    <Content Include="easyui\themes\default\spinner.css" />
+    <Content Include="easyui\themes\default\splitbutton.css" />
+    <Content Include="easyui\themes\default\tabs.css" />
+    <Content Include="easyui\themes\default\textbox.css" />
+    <Content Include="easyui\themes\default\tooltip.css" />
+    <Content Include="easyui\themes\default\tree.css" />
+    <Content Include="easyui\themes\default\validatebox.css" />
+    <Content Include="easyui\themes\default\window.css" />
+    <Content Include="easyui\themes\gray\accordion.css" />
+    <Content Include="easyui\themes\gray\calendar.css" />
+    <Content Include="easyui\themes\gray\combo.css" />
+    <Content Include="easyui\themes\gray\combobox.css" />
+    <Content Include="easyui\themes\gray\datagrid.css" />
+    <Content Include="easyui\themes\gray\datalist.css" />
+    <Content Include="easyui\themes\gray\datebox.css" />
+    <Content Include="easyui\themes\gray\dialog.css" />
+    <Content Include="easyui\themes\gray\easyui.css" />
+    <Content Include="easyui\themes\gray\filebox.css" />
+    <Content Include="easyui\themes\gray\images\accordion_arrows.png" />
+    <Content Include="easyui\themes\gray\images\blank.gif" />
+    <Content Include="easyui\themes\gray\images\calendar_arrows.png" />
+    <Content Include="easyui\themes\gray\images\combo_arrow.png" />
+    <Content Include="easyui\themes\gray\images\datagrid_icons.png" />
+    <Content Include="easyui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="easyui\themes\gray\images\layout_arrows.png" />
+    <Content Include="easyui\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="easyui\themes\gray\images\loading.gif" />
+    <Content Include="easyui\themes\gray\images\menu_arrows.png" />
+    <Content Include="easyui\themes\gray\images\messager_icons.png" />
+    <Content Include="easyui\themes\gray\images\pagination_icons.png" />
+    <Content Include="easyui\themes\gray\images\panel_tools.png" />
+    <Content Include="easyui\themes\gray\images\searchbox_button.png" />
+    <Content Include="easyui\themes\gray\images\slider_handle.png" />
+    <Content Include="easyui\themes\gray\images\spinner_arrows.png" />
+    <Content Include="easyui\themes\gray\images\tabs_icons.png" />
+    <Content Include="easyui\themes\gray\images\tree_icons.png" />
+    <Content Include="easyui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="easyui\themes\gray\layout.css" />
+    <Content Include="easyui\themes\gray\linkbutton.css" />
+    <Content Include="easyui\themes\gray\menu.css" />
+    <Content Include="easyui\themes\gray\menubutton.css" />
+    <Content Include="easyui\themes\gray\messager.css" />
+    <Content Include="easyui\themes\gray\numberbox.css" />
+    <Content Include="easyui\themes\gray\pagination.css" />
+    <Content Include="easyui\themes\gray\panel.css" />
+    <Content Include="easyui\themes\gray\progressbar.css" />
+    <Content Include="easyui\themes\gray\propertygrid.css" />
+    <Content Include="easyui\themes\gray\searchbox.css" />
+    <Content Include="easyui\themes\gray\slider.css" />
+    <Content Include="easyui\themes\gray\spinner.css" />
+    <Content Include="easyui\themes\gray\splitbutton.css" />
+    <Content Include="easyui\themes\gray\tabs.css" />
+    <Content Include="easyui\themes\gray\textbox.css" />
+    <Content Include="easyui\themes\gray\tooltip.css" />
+    <Content Include="easyui\themes\gray\tree.css" />
+    <Content Include="easyui\themes\gray\validatebox.css" />
+    <Content Include="easyui\themes\gray\window.css" />
+    <Content Include="easyui\themes\icon.css" />
+    <Content Include="easyui\themes\icons\back.png" />
+    <Content Include="easyui\themes\icons\blank.gif" />
+    <Content Include="easyui\themes\icons\cancel.png" />
+    <Content Include="easyui\themes\icons\clear.png" />
+    <Content Include="easyui\themes\icons\cut.png" />
+    <Content Include="easyui\themes\icons\edit_add.png" />
+    <Content Include="easyui\themes\icons\edit_remove.png" />
+    <Content Include="easyui\themes\icons\filesave.png" />
+    <Content Include="easyui\themes\icons\filter.png" />
+    <Content Include="easyui\themes\icons\help.png" />
+    <Content Include="easyui\themes\icons\large_chart.png" />
+    <Content Include="easyui\themes\icons\large_clipart.png" />
+    <Content Include="easyui\themes\icons\large_picture.png" />
+    <Content Include="easyui\themes\icons\large_shapes.png" />
+    <Content Include="easyui\themes\icons\large_smartart.png" />
+    <Content Include="easyui\themes\icons\lock.png" />
+    <Content Include="easyui\themes\icons\man.png" />
+    <Content Include="easyui\themes\icons\mini_add.png" />
+    <Content Include="easyui\themes\icons\mini_edit.png" />
+    <Content Include="easyui\themes\icons\mini_refresh.png" />
+    <Content Include="easyui\themes\icons\more.png" />
+    <Content Include="easyui\themes\icons\no.png" />
+    <Content Include="easyui\themes\icons\ok.png" />
+    <Content Include="easyui\themes\icons\pencil.png" />
+    <Content Include="easyui\themes\icons\print.png" />
+    <Content Include="easyui\themes\icons\redo.png" />
+    <Content Include="easyui\themes\icons\reload.png" />
+    <Content Include="easyui\themes\icons\search.png" />
+    <Content Include="easyui\themes\icons\sum.png" />
+    <Content Include="easyui\themes\icons\tip.png" />
+    <Content Include="easyui\themes\icons\undo.png" />
+    <Content Include="easyui\themes\metro\accordion.css" />
+    <Content Include="easyui\themes\metro\calendar.css" />
+    <Content Include="easyui\themes\metro\combo.css" />
+    <Content Include="easyui\themes\metro\combobox.css" />
+    <Content Include="easyui\themes\metro\datagrid.css" />
+    <Content Include="easyui\themes\metro\datalist.css" />
+    <Content Include="easyui\themes\metro\datebox.css" />
+    <Content Include="easyui\themes\metro\dialog.css" />
+    <Content Include="easyui\themes\metro\easyui.css" />
+    <Content Include="easyui\themes\metro\filebox.css" />
+    <Content Include="easyui\themes\metro\images\accordion_arrows.png" />
+    <Content Include="easyui\themes\metro\images\blank.gif" />
+    <Content Include="easyui\themes\metro\images\calendar_arrows.png" />
+    <Content Include="easyui\themes\metro\images\combo_arrow.png" />
+    <Content Include="easyui\themes\metro\images\datagrid_icons.png" />
+    <Content Include="easyui\themes\metro\images\datebox_arrow.png" />
+    <Content Include="easyui\themes\metro\images\layout_arrows.png" />
+    <Content Include="easyui\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="easyui\themes\metro\images\loading.gif" />
+    <Content Include="easyui\themes\metro\images\menu_arrows.png" />
+    <Content Include="easyui\themes\metro\images\messager_icons.png" />
+    <Content Include="easyui\themes\metro\images\pagination_icons.png" />
+    <Content Include="easyui\themes\metro\images\panel_tools.png" />
+    <Content Include="easyui\themes\metro\images\searchbox_button.png" />
+    <Content Include="easyui\themes\metro\images\slider_handle.png" />
+    <Content Include="easyui\themes\metro\images\spinner_arrows.png" />
+    <Content Include="easyui\themes\metro\images\tabs_icons.png" />
+    <Content Include="easyui\themes\metro\images\tree_icons.png" />
+    <Content Include="easyui\themes\metro\images\validatebox_warning.png" />
+    <Content Include="easyui\themes\metro\layout.css" />
+    <Content Include="easyui\themes\metro\linkbutton.css" />
+    <Content Include="easyui\themes\metro\menu.css" />
+    <Content Include="easyui\themes\metro\menubutton.css" />
+    <Content Include="easyui\themes\metro\messager.css" />
+    <Content Include="easyui\themes\metro\numberbox.css" />
+    <Content Include="easyui\themes\metro\pagination.css" />
+    <Content Include="easyui\themes\metro\panel.css" />
+    <Content Include="easyui\themes\metro\progressbar.css" />
+    <Content Include="easyui\themes\metro\propertygrid.css" />
+    <Content Include="easyui\themes\metro\searchbox.css" />
+    <Content Include="easyui\themes\metro\slider.css" />
+    <Content Include="easyui\themes\metro\spinner.css" />
+    <Content Include="easyui\themes\metro\splitbutton.css" />
+    <Content Include="easyui\themes\metro\tabs.css" />
+    <Content Include="easyui\themes\metro\textbox.css" />
+    <Content Include="easyui\themes\metro\tooltip.css" />
+    <Content Include="easyui\themes\metro\tree.css" />
+    <Content Include="easyui\themes\metro\validatebox.css" />
+    <Content Include="easyui\themes\metro\window.css" />
+    <Content Include="easyui\themes\mobile.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bg01.png" />
+    <Content Include="Images\bj_icon.png" />
+    <Content Include="Images\button01.png" />
+    <Content Include="Images\iconbj.png" />
+    <Content Include="Images\iconsc.png" />
+    <Content Include="Images\loginbg.png" />
+    <Content Include="Images\loginbg2.png" />
+    <Content Include="Images\loginbg3.png" />
+    <Content Include="Images\loginText.png" />
+    <Content Include="Images\LOGO.png" />
+    <Content Include="Images\menu01.png" />
+    <Content Include="Images\menu02.png" />
+    <Content Include="Images\menu03.png" />
+    <Content Include="Images\menu04.png" />
+    <Content Include="Images\menu05.png" />
+    <Content Include="Images\menu06.png" />
+    <Content Include="Images\no.gif" />
+    <Content Include="Images\qx_icon.png" />
+    <Content Include="Images\scicon.png" />
+    <Content Include="Images\sicon01.png" />
+    <Content Include="Images\sicon02.png" />
+    <Content Include="Images\sicon03.png" />
+    <Content Include="Images\sicon04.png" />
+    <Content Include="Images\sicon05.png" />
+    <Content Include="Images\sicon06.png" />
+    <Content Include="Images\sicon07.png" />
+    <Content Include="Images\topbg2.png" />
+    <Content Include="Images\yes.gif" />
+    <Content Include="js\AppendHtml.js" />
+    <Content Include="js\calendar1.js" />
+    <Content Include="js\CheckBox.js" />
+    <Content Include="js\DivWH.js" />
+    <Content Include="js\function.js" />
+    <Content Include="js\hDate.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
+    <Content Include="js\jquery.contextmenu.r2.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.PrintArea.js" />
+    <Content Include="js\jqueryes.js" />
+    <Content Include="dll\AspNetPager.dll" />
+    <Content Include="js\printy.js" />
+    <Content Include="js\ShowTabs.js" />
+    <Content Include="style\css.css" />
+    <Content Include="style\cssbf.css" />
+    <Content Include="style\hDate.css" />
+    <Content Include="style\newhouseview.css" />
+    <Content Include="style\Opendiv.css" />
+    <Content Include="style\reset.css" />
+    <Content Include="style\Sheet.css" />
+    <Content Include="style\shezhi.css" />
+    <Content Include="style\toom.css" />
+    <Content Include="SysRootType.aspx" />
+    <Content Include="Upload\Banner\a052811d-268b-43d6-9460-f4abd8ca3b4c.jpg" />
+    <Content Include="Upload\MenuIcon\02b6914d-8e7c-46ae-8019-eae668faa518.png" />
+    <Content Include="Upload\MenuIcon\02b6914d-8e7c-46ae-8019-eae668faa519.png" />
+    <Content Include="Upload\MenuIcon\20150618052624154_easyicon_net_128.png" />
+    <Content Include="Upload\MenuIcon\424ca616-367f-4813-98bf-f34380beeb6d.png" />
+    <Content Include="Upload\MenuIcon\810844d0-e2a9-49af-ae3f-1dbf858ca778.png" />
+    <Content Include="Upload\MenuIcon\9ba56aa1-6b0a-4385-8cc3-b5da2fa5d0c0.png" />
+    <Content Include="Upload\MenuIcon\9c4fdd4e-70c2-4da6-8164-b704ac7c2bef.png" />
+    <Content Include="Upload\MenuIcon\b3b721dc-b2ab-4354-8501-99346546cf30.png" />
+    <Content Include="Upload\MenuIcon\qiehuan.png" />
+    <Content Include="validateCode\validateCode.aspx" />
+    <Content Include="Wap\about\index.aspx" />
+    <Content Include="Wap\about\map.aspx" />
+    <Content Include="Wap\center\index.aspx" />
+    <Content Include="Wap\center\myinfo.aspx" />
+    <Content Include="Wap\center\myorder.aspx" />
+    <Content Include="Wap\center\updateinfo.aspx" />
+    <Content Include="Wap\center\updatepwd.aspx" />
+    <Content Include="Wap\control\banner.ascx" />
+    <Content Include="Wap\css\base.css" />
+    <Content Include="Wap\css\idangerous.swiper.css" />
+    <Content Include="Wap\css\jquery.mobile.structure-1.4.2.min.css" />
+    <Content Include="Wap\css\layout.css" />
+    <Content Include="Wap\css\mobilebone.css" />
+    <Content Include="Wap\css\slider.app.css" />
+    <Content Include="Wap\images\bg\blank.png" />
+    <Content Include="Wap\images\bg\controls.png" />
+    <Content Include="Wap\images\bg\info-pat.png" />
+    <Content Include="Wap\images\bg\light-timer-glow.png" />
+    <Content Include="Wap\images\bg\loading.gif" />
+    <Content Include="Wap\images\bg\ls_next.png" />
+    <Content Include="Wap\images\bg\ls_prev.png" />
+    <Content Include="Wap\images\bg\shadow-bottom.png" />
+    <Content Include="Wap\images\bg\shadow-top.png" />
+    <Content Include="Wap\images\bg\shadow.png" />
+    <Content Include="Wap\images\bg\thumb-frame.png" />
+    <Content Include="Wap\images\bg\trans.png" />
+    <Content Include="Wap\images\delete\activity.jpg" />
+    <Content Include="Wap\images\delete\activity2.jpg" />
+    <Content Include="Wap\images\delete\activity3.jpg" />
+    <Content Include="Wap\images\delete\banner.jpg" />
+    <Content Include="Wap\images\delete\banner2.jpg" />
+    <Content Include="Wap\images\delete\com_logo.jpg" />
+    <Content Include="Wap\images\delete\pic1.jpg" />
+    <Content Include="Wap\images\delete\ueer_pic.jpg" />
+    <Content Include="Wap\images\home-slider10.jpg" />
+    <Content Include="Wap\images\home-slider2.jpg" />
+    <Content Include="Wap\images\home-slider3.jpg" />
+    <Content Include="Wap\images\hotel\1.jpg" />
+    <Content Include="Wap\images\hotel\2.jpg" />
+    <Content Include="Wap\images\hotel\3.jpg" />
+    <Content Include="Wap\images\icon.png" />
+    <Content Include="Wap\images\iconAdress.png" />
+    <Content Include="Wap\images\iconAdress2.png" />
+    <Content Include="Wap\images\iconDate.png" />
+    <Content Include="Wap\images\iconPhone.png" />
+    <Content Include="Wap\images\intro.png" />
+    <Content Include="Wap\images\menber_bg.png" />
+    <Content Include="Wap\images\menu_bg.png" />
+    <Content Include="Wap\images\serviceicon.png" />
+    <Content Include="Wap\images\star.png" />
+    <Content Include="Wap\index.aspx" />
+    <Content Include="Wap\js\common.js" />
+    <Content Include="Wap\js\fastclick.min.js" />
+    <Content Include="Wap\js\guoshuang.js" />
+    <Content Include="Wap\js\hhSwipe.js" />
+    <Content Include="Wap\js\idangerous.swiper-2.1.min.js" />
+    <Content Include="Wap\js\jquery-1.4.4.min.js" />
+    <Content Include="Wap\js\jquery-2.0.3.min.js" />
+    <Content Include="Wap\js\jquery-html5Validate-min.js" />
+    <Content Include="Wap\js\jquery.min.js" />
+    <Content Include="Wap\js\jquery.mobile-1.4.2.min.js" />
+    <Content Include="Wap\js\mobilebone.js" />
+    <Content Include="Wap\js\roomtype.js" />
+    <Content Include="Wap\js\swipe.js" />
+    <Content Include="Wap\js\touch-0.2.14.min.js" />
+    <Content Include="Wap\login.aspx" />
+    <Content Include="Wap\order_room\bannerDetails.aspx" />
+    <Content Include="Wap\order_room\index.aspx" />
+    <Content Include="Wap\order_room\order.aspx" />
+    <Content Include="Wap\order_room\roomType.aspx" />
+    <Content Include="Wap\reg.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Ajax\addSession.ashx.cs">
+      <DependentUpon>addSession.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ajax\BaseHandler.cs" />
+    <Compile Include="Admin\Ajax\Books.ashx.cs">
+      <DependentUpon>Books.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ajax\calculate.ashx.cs">
+      <DependentUpon>calculate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ajax\customer.ashx.cs">
+      <DependentUpon>customer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ajax\goods.ashx.cs">
+      <DependentUpon>goods.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ajax\GoodsAcce.ashx.cs">
+      <DependentUpon>GoodsAcce.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ajax\IsDel.ashx.cs">
+      <DependentUpon>IsDel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ajax\Member.ashx.cs">
+      <DependentUpon>Member.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ajax\SysPara.ashx.cs">
+      <DependentUpon>SysPara.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\banner\addbanner.aspx.cs">
+      <DependentUpon>addbanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\banner\addbanner.aspx.designer.cs">
+      <DependentUpon>addbanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\banner\bannerlist.aspx.cs">
+      <DependentUpon>bannerlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\banner\bannerlist.aspx.designer.cs">
+      <DependentUpon>bannerlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\banner\editbanner.aspx.cs">
+      <DependentUpon>editbanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\banner\editbanner.aspx.designer.cs">
+      <DependentUpon>editbanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BasePageVaile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\BookAdd.aspx.cs">
+      <DependentUpon>BookAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\BookAdd.aspx.designer.cs">
+      <DependentUpon>BookAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Book\BookCancel.aspx.cs">
+      <DependentUpon>BookCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\BookCancel.aspx.designer.cs">
+      <DependentUpon>BookCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Book\BookList.aspx.cs">
+      <DependentUpon>BookList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\BookList.aspx.designer.cs">
+      <DependentUpon>BookList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Book\DepositAdd.aspx.cs">
+      <DependentUpon>DepositAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\DepositAdd.aspx.designer.cs">
+      <DependentUpon>DepositAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Book\DueToLive.aspx.cs">
+      <DependentUpon>DueToLive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\DueToLive.aspx.designer.cs">
+      <DependentUpon>DueToLive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Book\HousDis.aspx.cs">
+      <DependentUpon>HousDis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\HousDis.aspx.designer.cs">
+      <DependentUpon>HousDis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Book\Refund.aspx.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\Refund.aspx.designer.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\account_goods.aspx.cs">
+      <DependentUpon>account_goods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\account_goods.aspx.designer.cs">
+      <DependentUpon>account_goods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\AcountInfos.aspx.cs">
+      <DependentUpon>AcountInfos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\AcountInfos.aspx.designer.cs">
+      <DependentUpon>AcountInfos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\addContact.aspx.cs">
+      <DependentUpon>addContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\addContact.aspx.designer.cs">
+      <DependentUpon>addContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\addCustomer.aspx.cs">
+      <DependentUpon>addCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\addCustomer.aspx.designer.cs">
+      <DependentUpon>addCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\addProtocol.aspx.cs">
+      <DependentUpon>addProtocol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\addProtocol.aspx.designer.cs">
+      <DependentUpon>addProtocol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\CommissionList.aspx.cs">
+      <DependentUpon>CommissionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\CommissionList.aspx.designer.cs">
+      <DependentUpon>CommissionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\contactsList.aspx.cs">
+      <DependentUpon>contactsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\contactsList.aspx.designer.cs">
+      <DependentUpon>contactsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\CostMoney.aspx.cs">
+      <DependentUpon>CostMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\CostMoney.aspx.designer.cs">
+      <DependentUpon>CostMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\customerList.aspx.cs">
+      <DependentUpon>customerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\customerList.aspx.designer.cs">
+      <DependentUpon>customerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\custromerDestic.aspx.cs">
+      <DependentUpon>custromerDestic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\custromerDestic.aspx.designer.cs">
+      <DependentUpon>custromerDestic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\CzAdd.aspx.cs">
+      <DependentUpon>CzAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\CzAdd.aspx.designer.cs">
+      <DependentUpon>CzAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\GoodsList.aspx.cs">
+      <DependentUpon>GoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\GoodsList.aspx.designer.cs">
+      <DependentUpon>GoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\GoodsPrice.aspx.cs">
+      <DependentUpon>GoodsPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\GoodsPrice.aspx.designer.cs">
+      <DependentUpon>GoodsPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\JieSuan.aspx.cs">
+      <DependentUpon>JieSuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\JieSuan.aspx.designer.cs">
+      <DependentUpon>JieSuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\JsComm.aspx.cs">
+      <DependentUpon>JsComm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\JsComm.aspx.designer.cs">
+      <DependentUpon>JsComm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\protocol.aspx.cs">
+      <DependentUpon>protocol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\protocol.aspx.designer.cs">
+      <DependentUpon>protocol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\skAcccount.aspx.cs">
+      <DependentUpon>skAcccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\skAcccount.aspx.designer.cs">
+      <DependentUpon>skAcccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customer\Transfer.aspx.cs">
+      <DependentUpon>Transfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customer\Transfer.aspx.designer.cs">
+      <DependentUpon>Transfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DespAdd.aspx.cs">
+      <DependentUpon>DespAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DespAdd.aspx.designer.cs">
+      <DependentUpon>DespAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Helper.cs" />
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Jfcs.aspx.cs">
+      <DependentUpon>Jfcs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Jfcs.aspx.designer.cs">
+      <DependentUpon>Jfcs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\addPice.aspx.cs">
+      <DependentUpon>addPice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\addPice.aspx.designer.cs">
+      <DependentUpon>addPice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\exchange.aspx.cs">
+      <DependentUpon>exchange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\exchange.aspx.designer.cs">
+      <DependentUpon>exchange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\mAdd.aspx.cs">
+      <DependentUpon>mAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\mAdd.aspx.designer.cs">
+      <DependentUpon>mAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\mAddType.aspx.cs">
+      <DependentUpon>mAddType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\mAddType.aspx.designer.cs">
+      <DependentUpon>mAddType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\memberEdit.aspx.cs">
+      <DependentUpon>memberEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\memberEdit.aspx.designer.cs">
+      <DependentUpon>memberEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\MemberList.aspx.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\MemberList.aspx.designer.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\mlist.aspx.cs">
+      <DependentUpon>mlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\mlist.aspx.designer.cs">
+      <DependentUpon>mlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\mLoss.aspx.cs">
+      <DependentUpon>mLoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\mLoss.aspx.designer.cs">
+      <DependentUpon>mLoss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\mtPrice.aspx.cs">
+      <DependentUpon>mtPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\mtPrice.aspx.designer.cs">
+      <DependentUpon>mtPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\member\typeEdit.aspx.cs">
+      <DependentUpon>typeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\member\typeEdit.aspx.designer.cs">
+      <DependentUpon>typeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\AddGoods.aspx.cs">
+      <DependentUpon>AddGoods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\AddGoods.aspx.designer.cs">
+      <DependentUpon>AddGoods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\fjfaAdd.aspx.cs">
+      <DependentUpon>fjfaAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\fjfaAdd.aspx.designer.cs">
+      <DependentUpon>fjfaAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\fjfadefalut.aspx.cs">
+      <DependentUpon>fjfadefalut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\fjfadefalut.aspx.designer.cs">
+      <DependentUpon>fjfadefalut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\FlloorLd.aspx.cs">
+      <DependentUpon>FlloorLd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\FlloorLd.aspx.designer.cs">
+      <DependentUpon>FlloorLd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\GoodsPrices.aspx.cs">
+      <DependentUpon>GoodsPrices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\GoodsPrices.aspx.designer.cs">
+      <DependentUpon>GoodsPrices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\Init.aspx.cs">
+      <DependentUpon>Init.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\Init.aspx.designer.cs">
+      <DependentUpon>Init.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\InteSyS.aspx.cs">
+      <DependentUpon>InteSyS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\InteSyS.aspx.designer.cs">
+      <DependentUpon>InteSyS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\methpay.aspx.cs">
+      <DependentUpon>methpay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\methpay.aspx.designer.cs">
+      <DependentUpon>methpay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\RommSuo.aspx.cs">
+      <DependentUpon>RommSuo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\RommSuo.aspx.designer.cs">
+      <DependentUpon>RommSuo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomAddSum.aspx.cs">
+      <DependentUpon>RoomAddSum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomAddSum.aspx.designer.cs">
+      <DependentUpon>RoomAddSum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomNumberInfo.aspx.cs">
+      <DependentUpon>RoomNumberInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomNumberInfo.aspx.designer.cs">
+      <DependentUpon>RoomNumberInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomsAllInfo.aspx.cs">
+      <DependentUpon>RoomsAllInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomsAllInfo.aspx.designer.cs">
+      <DependentUpon>RoomsAllInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\Roomsmoshi.aspx.cs">
+      <DependentUpon>Roomsmoshi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\Roomsmoshi.aspx.designer.cs">
+      <DependentUpon>Roomsmoshi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoommoshiAdd.aspx.cs">
+      <DependentUpon>RoommoshiAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoommoshiAdd.aspx.designer.cs">
+      <DependentUpon>RoommoshiAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\Billing.aspx.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\Billing.aspx.designer.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\FloorAdd.aspx.cs">
+      <DependentUpon>FloorAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\FloorAdd.aspx.designer.cs">
+      <DependentUpon>FloorAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\GoodsAdds.aspx.cs">
+      <DependentUpon>GoodsAdds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\GoodsAdds.aspx.designer.cs">
+      <DependentUpon>GoodsAdds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\GoodsPriceAdds.aspx.cs">
+      <DependentUpon>GoodsPriceAdds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\GoodsPriceAdds.aspx.designer.cs">
+      <DependentUpon>GoodsPriceAdds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\GoodsPrices.aspx.cs">
+      <DependentUpon>GoodsPrices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\GoodsPrices.aspx.designer.cs">
+      <DependentUpon>GoodsPrices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\Otherzhiliao.aspx.cs">
+      <DependentUpon>Otherzhiliao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\Otherzhiliao.aspx.designer.cs">
+      <DependentUpon>Otherzhiliao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\price.aspx.cs">
+      <DependentUpon>price.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\price.aspx.designer.cs">
+      <DependentUpon>price.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\Priceinfor.aspx.cs">
+      <DependentUpon>Priceinfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\Priceinfor.aspx.designer.cs">
+      <DependentUpon>Priceinfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\roomAdds.aspx.cs">
+      <DependentUpon>roomAdds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\roomAdds.aspx.designer.cs">
+      <DependentUpon>roomAdds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\RoomInfos.aspx.cs">
+      <DependentUpon>RoomInfos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\RoomInfos.aspx.designer.cs">
+      <DependentUpon>RoomInfos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\RoomTypeAdd.aspx.cs">
+      <DependentUpon>RoomTypeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\RoomTypeAdd.aspx.designer.cs">
+      <DependentUpon>RoomTypeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\Setup.aspx.cs">
+      <DependentUpon>Setup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\Setup.aspx.designer.cs">
+      <DependentUpon>Setup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\ShopBanc.aspx.cs">
+      <DependentUpon>ShopBanc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\ShopBanc.aspx.designer.cs">
+      <DependentUpon>ShopBanc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\shoppingInfo.aspx.cs">
+      <DependentUpon>shoppingInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\shoppingInfo.aspx.designer.cs">
+      <DependentUpon>shoppingInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus\shoppupdate.aspx.cs">
+      <DependentUpon>shoppupdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus\shoppupdate.aspx.designer.cs">
+      <DependentUpon>shoppupdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PartHouse.aspx.cs">
+      <DependentUpon>PartHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PartHouse.aspx.designer.cs">
+      <DependentUpon>PartHouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\accountuser\adduser.aspx.cs">
+      <DependentUpon>adduser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\accountuser\adduser.aspx.designer.cs">
+      <DependentUpon>adduser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\accountuser\edituser.aspx.cs">
+      <DependentUpon>edituser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\accountuser\edituser.aspx.designer.cs">
+      <DependentUpon>edituser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\accountuser\userlist.aspx.cs">
+      <DependentUpon>userlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\accountuser\userlist.aspx.designer.cs">
+      <DependentUpon>userlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\menu\AddMenu.aspx.cs">
+      <DependentUpon>AddMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\menu\AddMenu.aspx.designer.cs">
+      <DependentUpon>AddMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\menu\EditMenu.aspx.cs">
+      <DependentUpon>EditMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\menu\EditMenu.aspx.designer.cs">
+      <DependentUpon>EditMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\menu\menulist.aspx.cs">
+      <DependentUpon>menulist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\menu\menulist.aspx.designer.cs">
+      <DependentUpon>menulist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\Permission\Permission.aspx.cs">
+      <DependentUpon>Permission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\Permission\Permission.aspx.designer.cs">
+      <DependentUpon>Permission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\Permission\permissionajax.aspx.cs">
+      <DependentUpon>permissionajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\Permission\permissionajax.aspx.designer.cs">
+      <DependentUpon>permissionajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Permissions\Role\Role.aspx.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Permissions\Role\Role.aspx.designer.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoomGustkr\RoomkrSelect.aspx.cs">
+      <DependentUpon>RoomkrSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RoomGustkr\RoomkrSelect.aspx.designer.cs">
+      <DependentUpon>RoomkrSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\Advance.aspx.cs">
+      <DependentUpon>Advance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\Advance.aspx.designer.cs">
+      <DependentUpon>Advance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\DailySheet.aspx.cs">
+      <DependentUpon>DailySheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\DailySheet.aspx.designer.cs">
+      <DependentUpon>DailySheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\DailySheetMouth.aspx.cs">
+      <DependentUpon>DailySheetMouth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\DailySheetMouth.aspx.designer.cs">
+      <DependentUpon>DailySheetMouth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\HandOver.aspx.cs">
+      <DependentUpon>HandOver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\HandOver.aspx.designer.cs">
+      <DependentUpon>HandOver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\HandOverXiang.aspx.cs">
+      <DependentUpon>HandOverXiang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\HandOverXiang.aspx.designer.cs">
+      <DependentUpon>HandOverXiang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\HistoryShiftExc.aspx.cs">
+      <DependentUpon>HistoryShiftExc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\HistoryShiftExc.aspx.designer.cs">
+      <DependentUpon>HistoryShiftExc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\OccupancySingle.aspx.cs">
+      <DependentUpon>OccupancySingle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\OccupancySingle.aspx.designer.cs">
+      <DependentUpon>OccupancySingle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\ShiftExc.aspx.cs">
+      <DependentUpon>ShiftExc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\ShiftExc.aspx.designer.cs">
+      <DependentUpon>ShiftExc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\UpdateRoom.aspx.cs">
+      <DependentUpon>UpdateRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShiftExc\UpdateRoom.aspx.designer.cs">
+      <DependentUpon>UpdateRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\accountlist.aspx.cs">
+      <DependentUpon>accountlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\accountlist.aspx.designer.cs">
+      <DependentUpon>accountlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\AcountInfos.aspx.cs">
+      <DependentUpon>AcountInfos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\AcountInfos.aspx.designer.cs">
+      <DependentUpon>AcountInfos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\AddRoom.aspx.cs">
+      <DependentUpon>AddRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\AddRoom.aspx.designer.cs">
+      <DependentUpon>AddRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\AdjustPrice.aspx.cs">
+      <DependentUpon>AdjustPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\AdjustPrice.aspx.designer.cs">
+      <DependentUpon>AdjustPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\ajax.aspx.cs">
+      <DependentUpon>ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\ajax.aspx.designer.cs">
+      <DependentUpon>ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\apartmentInfoAdd.aspx.cs">
+      <DependentUpon>apartmentInfoAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\apartmentInfoAdd.aspx.designer.cs">
+      <DependentUpon>apartmentInfoAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\ChangeRoom.aspx.cs">
+      <DependentUpon>ChangeRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\ChangeRoom.aspx.designer.cs">
+      <DependentUpon>ChangeRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\ContinuedLive.aspx.cs">
+      <DependentUpon>ContinuedLive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\ContinuedLive.aspx.designer.cs">
+      <DependentUpon>ContinuedLive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\CostMoney.aspx.cs">
+      <DependentUpon>CostMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\CostMoney.aspx.designer.cs">
+      <DependentUpon>CostMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\cprotocol.aspx.cs">
+      <DependentUpon>cprotocol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\cprotocol.aspx.designer.cs">
+      <DependentUpon>cprotocol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\customerList.aspx.cs">
+      <DependentUpon>customerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\customerList.aspx.designer.cs">
+      <DependentUpon>customerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\CzPay.aspx.cs">
+      <DependentUpon>CzPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\CzPay.aspx.designer.cs">
+      <DependentUpon>CzPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\DuiHuan.aspx.cs">
+      <DependentUpon>DuiHuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\DuiHuan.aspx.designer.cs">
+      <DependentUpon>DuiHuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\FkMoney.aspx.cs">
+      <DependentUpon>FkMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\FkMoney.aspx.designer.cs">
+      <DependentUpon>FkMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\GoodsAcountsMoney.aspx.cs">
+      <DependentUpon>GoodsAcountsMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\GoodsAcountsMoney.aspx.designer.cs">
+      <DependentUpon>GoodsAcountsMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\GoodsCZ.aspx.cs">
+      <DependentUpon>GoodsCZ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\GoodsCZ.aspx.designer.cs">
+      <DependentUpon>GoodsCZ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\GoodsPrice.aspx.cs">
+      <DependentUpon>GoodsPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\GoodsPrice.aspx.designer.cs">
+      <DependentUpon>GoodsPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\GZlist.aspx.cs">
+      <DependentUpon>GZlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\GZlist.aspx.designer.cs">
+      <DependentUpon>GZlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\makecard.aspx.cs">
+      <DependentUpon>makecard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\makecard.aspx.designer.cs">
+      <DependentUpon>makecard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\PeopleInfosk.aspx.cs">
+      <DependentUpon>PeopleInfosk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\PeopleInfosk.aspx.designer.cs">
+      <DependentUpon>PeopleInfosk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\Remaker.aspx.cs">
+      <DependentUpon>Remaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\Remaker.aspx.designer.cs">
+      <DependentUpon>Remaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\RoomInfo.ashx.cs">
+      <DependentUpon>RoomInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\SetPwd.aspx.cs">
+      <DependentUpon>SetPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\SetPwd.aspx.designer.cs">
+      <DependentUpon>SetPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\ShiftOcc.aspx.cs">
+      <DependentUpon>ShiftOcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\ShiftOcc.aspx.designer.cs">
+      <DependentUpon>ShiftOcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\SincetheAdds.aspx.cs">
+      <DependentUpon>SincetheAdds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\SincetheAdds.aspx.designer.cs">
+      <DependentUpon>SincetheAdds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\Sincethehousing.aspx.cs">
+      <DependentUpon>Sincethehousing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\Sincethehousing.aspx.designer.cs">
+      <DependentUpon>Sincethehousing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\TkMoney.aspx.cs">
+      <DependentUpon>TkMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\TkMoney.aspx.designer.cs">
+      <DependentUpon>TkMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\ToRoom.aspx.cs">
+      <DependentUpon>ToRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\ToRoom.aspx.designer.cs">
+      <DependentUpon>ToRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\FloorAdd.aspx.cs">
+      <DependentUpon>FloorAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\FloorAdd.aspx.designer.cs">
+      <DependentUpon>FloorAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\roomAdds.aspx.cs">
+      <DependentUpon>roomAdds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\roomAdds.aspx.designer.cs">
+      <DependentUpon>roomAdds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomInfos.aspx.cs">
+      <DependentUpon>RoomInfos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomInfos.aspx.designer.cs">
+      <DependentUpon>RoomInfos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomTypeAdd.aspx.cs">
+      <DependentUpon>RoomTypeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Menus2\RoomTypeAdd.aspx.designer.cs">
+      <DependentUpon>RoomTypeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\ToRooms2.aspx.cs">
+      <DependentUpon>ToRooms2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\ToRooms2.aspx.designer.cs">
+      <DependentUpon>ToRooms2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\apartmentInfosAdds.aspx.cs">
+      <DependentUpon>apartmentInfosAdds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\apartmentInfosAdds.aspx.designer.cs">
+      <DependentUpon>apartmentInfosAdds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\PeopleInfoAddsCs1.aspx.cs">
+      <DependentUpon>PeopleInfoAddsCs1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\PeopleInfoAddsCs1.aspx.designer.cs">
+      <DependentUpon>PeopleInfoAddsCs1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\customerList1.aspx.cs">
+      <DependentUpon>customerList1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\customerList1.aspx.designer.cs">
+      <DependentUpon>customerList1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Toroom\zxCard.aspx.cs">
+      <DependentUpon>zxCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Toroom\zxCard.aspx.designer.cs">
+      <DependentUpon>zxCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysRootType.aspx.cs">
+      <DependentUpon>SysRootType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysRootType.aspx.designer.cs">
+      <DependentUpon>SysRootType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="validateCode\validateCode.aspx.cs">
+      <DependentUpon>validateCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="validateCode\validateCode.aspx.designer.cs">
+      <DependentUpon>validateCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\about\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\about\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\about\map.aspx.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\about\map.aspx.designer.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\center\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\center\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\center\myinfo.aspx.cs">
+      <DependentUpon>myinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\center\myinfo.aspx.designer.cs">
+      <DependentUpon>myinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\center\myorder.aspx.cs">
+      <DependentUpon>myorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\center\myorder.aspx.designer.cs">
+      <DependentUpon>myorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\center\updateinfo.aspx.cs">
+      <DependentUpon>updateinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\center\updateinfo.aspx.designer.cs">
+      <DependentUpon>updateinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\center\updatepwd.aspx.cs">
+      <DependentUpon>updatepwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\center\updatepwd.aspx.designer.cs">
+      <DependentUpon>updatepwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\control\banner.ascx.cs">
+      <DependentUpon>banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\control\banner.ascx.designer.cs">
+      <DependentUpon>banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\order_room\bannerDetails.aspx.cs">
+      <DependentUpon>bannerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\order_room\bannerDetails.aspx.designer.cs">
+      <DependentUpon>bannerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\order_room\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\order_room\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\order_room\order.aspx.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\order_room\order.aspx.designer.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\order_room\roomType.aspx.cs">
+      <DependentUpon>roomType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\order_room\roomType.aspx.designer.cs">
+      <DependentUpon>roomType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wap\reg.aspx.cs">
+      <DependentUpon>reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wap\reg.aspx.designer.cs">
+      <DependentUpon>reg.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Images\about16.gif" />
+    <Content Include="Admin\Images\add16.gif" />
+    <Content Include="Admin\Images\a_te01.gif" />
+    <Content Include="Admin\Images\a_te02.gif" />
+    <Content Include="Admin\Images\b1.gif" />
+    <Content Include="Admin\Images\b11-1.gif" />
+    <Content Include="Admin\Images\b11-2.gif" />
+    <Content Include="Admin\Images\b11.gif" />
+    <Content Include="Admin\Images\b12.gif" />
+    <Content Include="Admin\Images\b13-1.gif" />
+    <Content Include="Admin\Images\b13-2.gif" />
+    <Content Include="Admin\Images\b13.gif" />
+    <Content Include="Admin\Images\b3.gif" />
+    <Content Include="Admin\Images\b4.gif" />
+    <Content Include="Admin\Images\b5.gif" />
+    <Content Include="Admin\Images\bar_00.gif" />
+    <Content Include="Admin\Images\bar_01.gif" />
+    <Content Include="Admin\Images\bar_02.gif" />
+    <Content Include="Admin\Images\bar_03.gif" />
+    <Content Include="Admin\Images\bar_04.gif" />
+    <Content Include="Admin\Images\bar_05.gif" />
+    <Content Include="Admin\Images\bar_06.gif" />
+    <Content Include="Admin\Images\bar_07.gif" />
+    <Content Include="Admin\Images\bar_08.gif" />
+    <Content Include="Admin\Images\bar_10.gif" />
+    <Content Include="Admin\Images\bg.gif" />
+    <Content Include="Admin\Images\bgx.GIF" />
+    <Content Include="Admin\Images\bg_01.gif" />
+    <Content Include="Admin\Images\bg_02.gif" />
+    <Content Include="Admin\Images\bg_03.gif" />
+    <Content Include="Admin\Images\blank.gif" />
+    <Content Include="Admin\Images\bottom_01.gif" />
+    <Content Include="Admin\Images\bottom_02.gif" />
+    <Content Include="Admin\Images\bottom_03.gif" />
+    <Content Include="Admin\Images\Briefcase16.gif" />
+    <Content Include="Admin\Images\Briefcase32.gif" />
+    <Content Include="Admin\Images\button_edit.gif" />
+    <Content Include="Admin\Images\button_search.GIF" />
+    <Content Include="Admin\Images\c6.gif" />
+    <Content Include="Admin\Images\card16.gif" />
+    <Content Include="Admin\Images\card32.gif" />
+    <Content Include="Admin\Images\company16.gif" />
+    <Content Include="Admin\Images\css.css" />
+    <Content Include="Admin\Images\d2.gif" />
+    <Content Include="Admin\Images\d3.gif" />
+    <Content Include="Admin\Images\desktop16.gif" />
+    <Content Include="Admin\Images\desktop32.gif" />
+    <Content Include="Admin\Images\desktop_01.gif" />
+    <Content Include="Admin\Images\desktop_02.gif" />
+    <Content Include="Admin\Images\desktop_03.gif" />
+    <Content Include="Admin\Images\dsj16.gif" />
+    <Content Include="Admin\Images\dsj32.gif" />
+    <Content Include="Admin\Images\f3.gif" />
+    <Content Include="Admin\Images\f4.gif" />
+    <Content Include="Admin\Images\find16.gif" />
+    <Content Include="Admin\Images\find32.gif" />
+    <Content Include="Admin\Images\folder16.gif" />
+    <Content Include="Admin\Images\folder32.gif" />
+    <Content Include="Admin\Images\foldergreen_16.gif" />
+    <Content Include="Admin\Images\ger16.gif" />
+    <Content Include="Admin\Images\ger32.gif" />
+    <Content Include="Admin\Images\gongg16.gif" />
+    <Content Include="Admin\Images\gongg32.gif" />
+    <Content Include="Admin\Images\gongzkp16.gif" />
+    <Content Include="Admin\Images\gongzkp32.gif" />
+    <Content Include="Admin\Images\help16.gif" />
+    <Content Include="Admin\Images\help32.gif" />
+    <Content Include="Admin\Images\image.gif" />
+    <Content Include="Admin\Images\in_bg.gif" />
+    <Content Include="Admin\Images\left-1-1.gif" />
+    <Content Include="Admin\Images\left-1-2.gif" />
+    <Content Include="Admin\Images\left-1-3.gif" />
+    <Content Include="Admin\Images\left-1.gif" />
+    <Content Include="Admin\Images\left-2-1.gif" />
+    <Content Include="Admin\Images\left-2-2.gif" />
+    <Content Include="Admin\Images\left-2-3.gif" />
+    <Content Include="Admin\Images\left-2.gif" />
+    <Content Include="Admin\Images\left-3-1.gif" />
+    <Content Include="Admin\Images\left-3-2.gif" />
+    <Content Include="Admin\Images\left-3-3.gif" />
+    <Content Include="Admin\Images\left-3.gif" />
+    <Content Include="Admin\Images\left-bj-1.gif" />
+    <Content Include="Admin\Images\left-bj-2.gif" />
+    <Content Include="Admin\Images\left-bj-3.gif" />
+    <Content Include="Admin\Images\left-bj.gif" />
+    <Content Include="Admin\Images\Loading.gif" />
+    <Content Include="Admin\Images\login.css" />
+    <Content Include="Admin\Images\login_p_img02.gif" />
+    <Content Include="Admin\Images\login_p_img03.gif" />
+    <Content Include="Admin\Images\login_p_img04.gif" />
+    <Content Include="Admin\Images\login_p_img05.gif" />
+    <Content Include="Admin\Images\login_p_img11.gif" />
+    <Content Include="Admin\Images\mag16.gif" />
+    <Content Include="Admin\Images\mail16.gif" />
+    <Content Include="Admin\Images\main_01.gif" />
+    <Content Include="Admin\Images\main_04.gif" />
+    <Content Include="Admin\Images\main_05.gif" />
+    <Content Include="Admin\Images\main_06.gif" />
+    <Content Include="Admin\Images\main_08.gif" />
+    <Content Include="Admin\Images\main_09.gif" />
+    <Content Include="Admin\Images\member_t04.JPG" />
+    <Content Include="Admin\Images\MenuImg\288.GIF" />
+    <Content Include="Admin\Images\MenuImg\about16.gif" />
+    <Content Include="Admin\Images\MenuImg\bbs16.gif" />
+    <Content Include="Admin\Images\MenuImg\find16.gif" />
+    <Content Include="Admin\Images\MenuImg\folder16.gif" />
+    <Content Include="Admin\Images\MenuImg\foldergreen_16.gif" />
+    <Content Include="Admin\Images\MenuImg\ger16.gif" />
+    <Content Include="Admin\Images\MenuImg\help16.gif" />
+    <Content Include="Admin\Images\MenuImg\news16.gif" />
+    <Content Include="Admin\Images\MenuImg\out16.gif" />
+    <Content Include="Admin\Images\MenuImg\Programs16.gif" />
+    <Content Include="Admin\Images\MenuImg\quanx16.gif" />
+    <Content Include="Admin\Images\MenuImg\thumbnails.gif" />
+    <Content Include="Admin\Images\MenuImg\times.gif" />
+    <Content Include="Admin\Images\MenuImg\ts16.gif" />
+    <Content Include="Admin\Images\MenuImg\user16.gif" />
+    <Content Include="Admin\Images\MenuImg\xinx16.gif" />
+    <Content Include="Admin\Images\MenuImg\zhut16.gif" />
+    <Content Include="Admin\Images\MenuImg\zjsp16.gif" />
+    <Content Include="Admin\Images\message16.gif" />
+    <Content Include="Admin\Images\module16.gif" />
+    <Content Include="Admin\Images\module32.gif" />
+    <Content Include="Admin\Images\more1.gif" />
+    <Content Include="Admin\Images\myfile16.gif" />
+    <Content Include="Admin\Images\myfile32.gif" />
+    <Content Include="Admin\Images\news16.gif" />
+    <Content Include="Admin\Images\onecard16.gif" />
+    <Content Include="Admin\Images\onecard32.gif" />
+    <Content Include="Admin\Images\out16.gif" />
+    <Content Include="Admin\Images\out32.gif" />
+    <Content Include="Admin\Images\plan16.gif" />
+    <Content Include="Admin\Images\plan32.gif" />
+    <Content Include="Admin\Images\point07.gif" />
+    <Content Include="Admin\Images\quanx16.gif" />
+    <Content Include="Admin\Images\quanx32.gif" />
+    <Content Include="Admin\Images\right-bj-1.gif" />
+    <Content Include="Admin\Images\right-bj-2.gif" />
+    <Content Include="Admin\Images\right-bj-3.gif" />
+    <Content Include="Admin\Images\right-bj.gif" />
+    <Content Include="Admin\Images\spacer.gif" />
+    <Content Include="Admin\Images\style.css" />
+    <Content Include="Admin\Images\top-1-1.gif" />
+    <Content Include="Admin\Images\top-1-2.gif" />
+    <Content Include="Admin\Images\top-1-3.gif" />
+    <Content Include="Admin\Images\top-1.gif" />
+    <Content Include="Admin\Images\top-2-1.gif" />
+    <Content Include="Admin\Images\top-2-2.gif" />
+    <Content Include="Admin\Images\top-2-3.gif" />
+    <Content Include="Admin\Images\top-2.gif" />
+    <Content Include="Admin\Images\top-3-1.gif" />
+    <Content Include="Admin\Images\top-3-2.gif" />
+    <Content Include="Admin\Images\top-3-3.gif" />
+    <Content Include="Admin\Images\top-3.gif" />
+    <Content Include="Admin\Images\top-4-1.gif" />
+    <Content Include="Admin\Images\top-4-2.gif" />
+    <Content Include="Admin\Images\top-4-3.gif" />
+    <Content Include="Admin\Images\top-4.gif" />
+    <Content Include="Admin\Images\top-5-1.gif" />
+    <Content Include="Admin\Images\top-5-2.gif" />
+    <Content Include="Admin\Images\top-5-3.gif" />
+    <Content Include="Admin\Images\top-5.gif" />
+    <Content Include="Admin\Images\top-bj-1.gif" />
+    <Content Include="Admin\Images\top-bj-2.gif" />
+    <Content Include="Admin\Images\top-bj-3.gif" />
+    <Content Include="Admin\Images\top-bj.gif" />
+    <Content Include="Admin\Images\topbar_01.jpg" />
+    <Content Include="Admin\Images\topbar_02.jpg" />
+    <Content Include="Admin\Images\topbar_03.jpg" />
+    <Content Include="Admin\Images\tubiao_01.GIF" />
+    <Content Include="Admin\Images\tubiao_02.gif" />
+    <Content Include="Admin\Images\user16.gif" />
+    <Content Include="Admin\Images\vote16.gif" />
+    <Content Include="Admin\Images\x16.gif" />
+    <Content Include="Admin\Images\xinx16.gif" />
+    <Content Include="Admin\Images\xinx32.gif" />
+    <Content Include="Admin\Images\yw16.gif" />
+    <Content Include="Admin\Images\zhut16.gif" />
+    <Content Include="Admin\Images\zjsp16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Ajax\Books.ashx" />
+    <Content Include="Admin\Toroom\RoomInfo.ashx" />
+    <Content Include="Admin\Ajax\GoodsAcce.ashx" />
+    <Content Include="Admin\Ajax\SysPara.ashx" />
+    <Content Include="Admin\Ajax\addSession.ashx" />
+    <Content Include="Admin\Ajax\IsDel.ashx" />
+    <Content Include="Admin\Ajax\Member.ashx" />
+    <Content Include="Admin\Ajax\customer.ashx" />
+    <Content Include="Admin\Ajax\calculate.ashx" />
+    <Content Include="Admin\Ajax\goods.ashx" />
+    <None Include="Admin\Toroom\META-INF\MANIFEST.MF" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Wap\css\iconfont.eot" />
+    <None Include="Wap\css\iconfont.svg" />
+    <None Include="Wap\css\iconfont.ttf" />
+    <None Include="Wap\css\iconfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\Images\HeaderImg\" />
+    <Folder Include="bin\" />
+    <Folder Include="js\floor_manage\" />
+    <Folder Include="js\Goods\" />
+    <Folder Include="js\goods_account\" />
+    <Folder Include="js\guest_source\" />
+    <Folder Include="js\hourse_scheme\" />
+    <Folder Include="js\hour_room\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>35189</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Web</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
