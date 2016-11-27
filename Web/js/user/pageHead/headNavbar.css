@@ -1,0 +1,450 @@
+﻿#topBarContainer {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  -webkit-user-select: none;
+  -webkit-transform: translateZ(0);
+
+  color: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .2), 0 3px 12px 0 rgba(0, 0, 0, .2);
+}
+
+#topBarContent {
+  position: relative;
+
+  min-width: 1120px;
+  height: 50px;
+  margin: 0 auto;
+
+  cursor: pointer;
+
+  opacity: .9;
+}
+
+#topBarContent .topBarModule {
+  font-size: 14px;
+
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+/* left links */
+#topBarContent .menuTags {
+  background-color: transparent;
+}
+
+#topBarContent .topBarLink {
+  font-size: 14px;
+  line-height: 50px;
+
+  position: relative;
+
+  float: left;
+
+  height: 50px;
+  padding: 0 24px;
+
+  vertical-align: bottom;
+  text-decoration: none;
+
+  opacity: .9;
+  color: #fff;
+}
+
+#topBarContent .topBarLink.activeTag {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+#topBarContent .topBarLink:not(.activeTag):hover {
+  background-color: rgba(0, 0, 0, .08);
+}
+
+#topBarContent .activeNotice {
+  position: absolute;
+  top: 13px;
+  right: -4px;
+
+  display: none;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+}
+
+#topBarContent .menuTags .activeNotice {
+  right: 16px;
+}
+
+/* right menu*/
+#topBarContent .rightMenuItem {
+  line-height: 38px;
+
+  position: absolute;
+  top: 6px;
+  right: 0;
+
+  height: 38px;
+}
+
+#topBarContent .userCenter {
+  cursor: pointer;
+}
+
+#topBarContent .userCenter .userHeadImg {
+  width: 32px;
+  height: 32px;
+
+  vertical-align: middle;
+}
+
+#topBarContent .userCenter .userName {
+  display: inline-block;
+  overflow: hidden;
+
+  max-width: 60px;
+  margin-left: 10px;
+
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#topBarContent .addressListEntry .activeNotice {
+  top: 8px;
+}
+
+/* Theme */
+#topBarContent .themeChoose {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+
+  width: 0;
+  height: 0;
+
+  cursor: pointer;
+
+  border-width: 7px;
+  border-style: solid;
+  border-color: #000 #000 #fff #fff;
+}
+
+#topBarContent .themeChoose:hover {
+  border-width: 9px;
+}
+
+/* userSettingList */
+#userSet .userSetUL {
+  width: 180px;
+  padding: 5px 0;
+
+  border-bottom: 1px solid #ccc;
+}
+
+#userSet a {
+  line-height: 36px;
+
+  display: block;
+  overflow: hidden;
+
+  height: 36px;
+  padding-left: 35px;
+
+  white-space: nowrap;
+  text-decoration: none;
+  text-overflow: ellipsis;
+
+  color: #333;
+}
+
+#userSet .createCompany {
+  background: #ff9800;
+}
+
+#userSet .createCompany span {
+  margin-left: -5px;
+
+  color: #fff;
+  border-radius: 3px;
+  background: #ff9800;
+}
+
+#userSet .icon {
+  font-size: 15px;
+
+  display: inline-block;
+
+  width: 35px;
+  margin-left: -35px;
+
+  text-align: center;
+
+  color: #888;
+}
+
+#userSet li:hover a,
+#userSet li:hover .icon {
+  color: #fff;
+}
+
+#userSet li:not(:hover) {
+  background: #fff !important;
+}
+
+/* 快捷添加 */
+.addInvite {
+  width: 180px;
+  padding: 5px 0;
+}
+
+.addInvite .createInvite {
+  margin-top: 5px;
+  padding-top: 5px;
+
+  border-top: 1px #ccc solid;
+}
+
+.addInvite i[class*=icon-] {
+  font-size: 18px;
+
+  display: inline-block;
+
+  width: 20px;
+  padding: 0 15px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  color: #757575;
+}
+
+.addInvite li {
+  line-height: 36px;
+
+  overflow: hidden;
+
+  height: 36px;
+
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.addInvite li:not(:hover) {
+  background-color: #fff !important;
+}
+
+.addInvite li:hover,
+.addInvite li:hover i {
+  color: #fff !important;
+}
+
+#topBarContent .topbarGuide.guideShow:after {
+  position: absolute;
+  z-index: 11;
+  top: -6px;
+
+  content: '';
+
+  border: 10px solid rgba(0, 0, 0, .85);
+  border-right-color: transparent;
+  border-bottom-width: 0;
+  border-left-color: transparent;
+}
+
+#topBarContent .topbarGuide {
+  left: 62px;
+}
+
+#topBarContent .topbarGuide .activeNotice {
+  top: 8px;
+}
+
+#topBarContent .searchPart {
+  display: inline-block;
+
+  padding-left: 115px;
+}
+
+#SmartSearch {
+  position: relative;
+
+  border-radius: 2px;
+}
+
+#SmartSearch .smartSearchContainer .searchBtn {
+  margin: 0 5px 0 10px;
+
+  color: currentColor;
+}
+
+#SmartSearch .searchClose {
+  font-size: 16px;
+  line-height: 38px;
+
+  position: absolute;
+  top: 0;
+  right: 10px;
+
+  display: none;
+
+  cursor: pointer;
+
+  color: #c6c6c6;
+}
+
+#SmartSearch .searchClose:hover {
+  color: #333;
+}
+
+#SmartSearch .smartSearchContainer {
+  cursor: pointer;
+  transition: background-color .3s;
+
+  border-radius: 3px;
+  background-color: #fff;
+
+  align-items: center;
+}
+
+#SmartSearchTextBox {
+  font-size: 14px;
+  line-height: 36px;
+
+  width: 0;
+  height: 36px;
+
+  color: #333;
+  border: 0;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+/*返回顶部*/
+#topBarContent .backTop {
+  font-size: 12px;
+
+  display: none;
+  float: left;
+
+  cursor: pointer;
+  text-align: center;
+
+  border-radius: 3px;
+}
+
+#topBarContent .backTop .arrowsName {
+  margin: 0 10px;
+
+  vertical-align: middle;
+}
+
+@keyframes arrowAnimation {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#topBarContent .backTop .arrows {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  transform: rotate(45deg) translate(-50%);
+  animation: arrowAnimation 2s infinite steps(10, end);
+
+  opacity: 0;
+  border: 1px solid #fff;
+  border-width: 1px 0 0 1px;
+}
+
+#topBarContent .backTop .one {
+  top: 15px;
+
+  animation-delay: .9s;
+}
+
+#topBarContent .backTop .two {
+  top: 20px;
+
+  animation-delay: .6s;
+}
+
+#topBarContent .backTop .three {
+  top: 25px;
+
+  animation-delay: .6s;
+}
+
+#topBarContent .topBarIcon {
+  display: inline-block;
+
+  transition-duration: .3s;
+  transition-property: transform;
+  transform: translateZ(0);
+  vertical-align: middle;
+
+  color: rgba(255, 255, 255, .85);
+}
+
+#topBarContent .topBarIcon:hover {
+  transform: scale(1.2);
+}
+
+/*小铃铛计数*/
+#topBarContent .inboxMessage .messageLittleRedDot {
+  font-size: 12px;
+  line-height: 20px;
+
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 12px;
+
+  width: 20px;
+  height: 20px;
+
+  text-align: center;
+
+  border-radius: 50%;
+}
+
+/* override */
+.userSetList.tip-white,
+.quickAdd.tip-white {
+  border: none;
+}
+
+.pageHeadApplist.tip-white {
+  max-width: 320px;
+}
+
+.pageHeadApplist .pageHeadLoading {
+  width: 320px;
+  padding: 90px 0;
+}
+
+.pageHeadApplist .nano .nano-pane {
+  width: 5px;
+
+  border-radius: 0;
+  background: none;
+}
+
+.pageHeadApplist .nano .nano-pane .nano-slider {
+  width: 5px;
+
+  border-radius: 0;
+  background-color: #d9d9d9;
+}

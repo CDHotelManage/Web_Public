@@ -1,0 +1,73 @@
+﻿.themeCarouselBG {
+  position: relative;
+  min-width: 1080px;
+  height: 215px;
+  background: rgba(0, 0, 0, .85);
+}
+
+.themeCarouselBG .themeDesc {
+  line-height: 40px;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+.themeCarouselBG .themeDesc .icon {
+  margin-top: 8px;
+  margin-left: 36px;
+  margin-right: 10px;
+  float: left;
+  background: url("images/theme.png") 20px 20px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.themeCarousel .changePage i {
+  line-height: 52px;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.themeCarousel .changePage i:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.themeList .themeItem {
+  float: left;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.themeList .themeItem img {
+  width: 135px;
+  height: 85px;
+  -webkit-filter: contrast(1);
+}
+
+.themeList .themeItem img:hover {
+  -webkit-filter: contrast(1.5);
+}
+
+.themeCarouselBG .closeTheme {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  text-align: center;
+  color: rgba(255, 255, 255, .5);
+}
+
+.themeCarouselBG .closeTheme:hover {
+  transform: scale(1.1);
+  color: rgba(255, 255, 255, .7);
+}
+
+.themeCarouselBG .backToGuide:hover {
+  text-decoration: underline;
+}
+

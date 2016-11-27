@@ -59,7 +59,7 @@ body {
 	   <li class="BtnK" >　　
        <asp:Button ID="btnLogin" CssClass="button01" runat="server" Text="登陆" OnClick="btnLogin_Click" style="width:60px" />
        <asp:Button ID="btnNull" CssClass="button01" CausesValidation="false" runat="server"
-                            Text="清 空" OnClick="btnNull_Click" style="width:60px" />
+                            Text="注 册" OnClick="btnNull_Click" style="width:60px" />
        </li>
 
        <li class="BtnK" style="margin-top:5px;color:#f00;"><asp:Label ID="lblMessage" runat="server"></asp:Label></li>

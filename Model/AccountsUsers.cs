@@ -119,6 +119,9 @@ namespace CdHotelManage.Model
             set { _style = value; }
             get { return _style; }
         }
+
+        public string LastLoginIP { get; set; }
+        public DateTime LastLoginTime { get; set; }
         #endregion Model
     }
 }

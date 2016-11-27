@@ -1,0 +1,53 @@
+﻿/*进度条*/
+.stepLine {
+    position: relative;
+    height: 60px;
+}
+
+.stepLine .progressBG {
+    background-color: white;
+    height: 4px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.stepLine .progressBG .currentProgress {
+    background-color: #1e88e5;
+    height: 4px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.stepLine .stepItem {
+    position: absolute;
+    text-align: center;
+    top: -10px;
+    margin-left: -22px;
+}
+
+.stepLine .stepItem .number {
+    color: #aaa;
+    background-color: white;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+.stepLine .stepItem .desc {
+    color: #aaa;
+}
+
+.stepLine .stepItem.active .number {
+    color: white;
+    background-color: #1e88e5;
+}
+
+.stepLine .stepItem.active .desc {
+    color: #1e88e5;
+}

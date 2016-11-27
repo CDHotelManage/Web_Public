@@ -1,0 +1,30 @@
+﻿<div class="overflowHidden pAll10">
+    <span class="Normal Gray14 Left Width200">{{=md_lang.ACC0802026||'企业网络名称'}}</span>
+    <span class="Normal Gray14 Left mLeft20">{{=md_lang.ACC0802027||'操作'}}</span>
+    <div class="Clear"></div>
+    <ul class="pTop10">
+        {{?it.data.list.length <= 0}}
+            <li class="Left LineHeight25 w100">{{=md_lang.ACC0808040||'暂无邀请记录！'}}</li>
+        {{??}}
+            {{~it.data.list:list:i}}
+                <li class="Left LineHeight25 Width200">{{!list.companyName}}</li>
+                {{?list.status === 0}}
+                    <li class="Left LineHeight25 TxtLeft mLeft20">{{=md_lang.ACC0802028||'已加入'}}</li>
+                {{??list.status === 1}}
+                    <li class="Left LineHeight25 TxtLeft mLeft20">{{=md_lang.ACC0802029||'已拒绝'}}</li>
+                {{??list.status === 2}}
+                    <li class="Left LineHeight25 TxtLeft mLeft20">{{=md_lang.ACC0802030||'待审批'}}</li>
+                {{??list.status === 3}}
+                    <li class="Left LineHeight25 TxtLeft mLeft20">{{=md_lang.ACC0802031||'加入失败'}}</li>
+                {{??list.status === 4}}
+                    <li class="Left LineHeight25 TxtLeft mLeft20">{{=md_lang.ACC0802032||'已失效'}}</li>
+                {{??list.status === 5}}
+                    <li class="Left LineHeight25 TxtLeft mLeft20">{{=md_lang.ACC0802033||'已退出'}}</li>
+                {{??}}
+                    <li class="Left LineHeight25 TxtLeft ThemeColor3 btnForAuthListAdd Hand mLeft20" projectId = {{= list.projectId }} accountId = {{= list.userId }} token = {{= list.token }} inviterAccountId = {{= list.inviterAccountId }}>{{=md_lang.ACC0808041||'加入'}}</li>
+                    <li class="Left LineHeight25 TxtLeft ThemeColor3 btnForAuthListRefused Hand mLeft20" token = {{= list.token }} projectId = {{= list.projectId }} inviterAccountId = {{= list.inviterAccountId }}>{{=md_lang.ACC0808042||'拒绝'}}</li>
+                {{?}}
+            {{~}}
+        {{?}}
+    </ul>
+</div>

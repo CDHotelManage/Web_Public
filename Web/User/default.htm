@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script src="/js/vendor/jquery/1.8.3/jquery-debug.js"></script>
+    <script src="/js/vendor/jquery/1.8.3/jqueryAnimate.js"></script>
+    <script src="/js/seajs/2.2.1/sea-debug.js"></script>
+    <script src="/js/seajs/seajsText.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/common/seajs-config.js"></script>
+    <script src="/js/vendor/react/react-with-addons.js"></script>
+    <script src="/js/vendor/react/react-dom.js"></script>
+    <script src="/js/vendor/react/react-dom-server.js"></script>
+    <script src="/js/vendor/lodash/lodash.js"></script>
+    <script src="/js/vendor/moment/moment.js"></script>
+    <script src="/js/vendor/plupload/moxie.js"></script>
+    <script src="/js/vendor/plupload/plupload.dev.js"></script>
+    
+    <link href="/js/user/user.css" rel="stylesheet" type="text/css" />
+    <link href="/js/user/all.css" rel="stylesheet" type="text/css" />
+    <link href="/js/user/pageHead/headNavbar.css" rel="stylesheet" type="text/css" />
+    <link href="/js/user/pageHead/theme/style.css" rel="stylesheet" type="text/css" />
+    <link href="/js/user/pageHead/theme/Theme.css" rel="stylesheet" type="text/css" />    
+    <link href="/js/user/inStyle.css" rel="stylesheet" type="text/css" />    
+    <link href="/js/user/font-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server" action="javascript:void(0);">
+        <div id="containerBg" class="ThemeBG">
+        </div>
+
+        <div id="topBarContainer">
+            <div id="themeChooseContainer" class="topbarTopContent"></div>
+            <div id="newGuideContainer" class="topbarTopContent"></div>
+            <div id="topBarContent" class="ThemeBGColor3">
+                <div class="themeChoose" title="切换主题">
+                </div>
+
+                <!-- nav -->
+                <div class="menuTags Absolute clearfix">
+                    <div class="chatTag topBarLink"  >川度酒店管理云平台</div>
+                </div>
+
+                <div class="rightMenuItem mRight25">
+                    <!-- scrollToTop -->
+                    <div class="backTop topBarModule">
+                        <span class="arrows one"></span>
+                        <span class="arrows two"></span>
+                        <span class="arrows three"></span>
+                        <span class="arrowsName"><%=Resources.lang.NNFH001 %></span>
+                    </div>
+
+                    <!-- quickAdd -->
+                    <div class="quickAddInterface topBarModule Hand" data-bssp="topbar.addButton">
+                        <i class="icon-addnewcalendar Hand topBarIcon Font20"></i>
+                    </div>
+
+                    
+
+
+                    <div class="topBarModule addressListEntry mLeft40 mRight35 Relative">
+                        <a href='<%= VirtualPath %>addressList' data-bssp="topbar.addressList" class="icon-topbar-addressList topBarIcon NoUnderline Font20" title="通讯录"></a>
+                        <span class="activeNotice ThemeBGColor12" title="有新消息"></span>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix" id="container">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <link href="/js/user/user.css" rel="stylesheet" type="text/css" />
+            <div class="mainBoxAccount">
+                <div class="fixedContainer ThemeBG leftNavHairGlass"></div>
+                <div id="accountNav" class="ThemeBGColor9 fixedContainer">
+                    <div id="account_title_PersonalCenter" class="pLeft15 accountTitle">
+                        <span class="icon-task-select-other Font20 ThemeColor9 pRight15"></span>
+                        <a href="./default.htm" class="Font15 NoUnderline ThemeColor10">
+                            个人中心
+                        </a>
+                    </div>
+                    <div class="mBottom6 w100 BorderTop ThemeBorderColor9"></div>
+                    <ul class="accountTab">
+                        <!--<li class="pLeft15 ThemeHoverBGColor7 accountChartLi" typeTag="account"><a class="ThemeColor10" href="javascript:void(0);"><span class="icon-task-signal Font20 ThemeColor9 pRight15"></span><%=Resources.lang.ACC0801002%></a></li>-->
+                        <li class="pLeft15  personalInfoLi" typeTag="information">
+                        <a class="ThemeColor10" href="javascript:void(0);">
+                            <span class="icon-task-person Font20 ThemeColor9 pRight15"></span>个人资料
+                        </a>
+                        </li>
+                        <!--<li class="pLeft15 ThemeHoverBGColor7 accountPasswordLi " typeTag="management"><a class="ThemeColor10" href="javascript:void(0);"><span class="icon-task-new-locked Font20 ThemeColor9 pRight15"></span><%=Resources.lang.ACC0801004%></a><span class="warnLight warnLightMyaccount Hidden"></span></li>
+                        <l--<li class="pLeft15 ThemeHoverBGColor7 systemSettingsLi" typeTag="system"><a class="ThemeColor10" href="javascript:void(0);"><span class="icon-setting-six Font20 ThemeColor9 pRight15"></span><%=Resources.lang.ACC0801005%></a></li>-->
+                        <li class="pLeft15  enterprisemLi" typeTag="enterprise">
+                        <a class="ThemeColor10" href="javascript:void(0);">
+                            <span class="icon-company Font20 ThemeColor9 pRight15"></span>酒店管理
+                        </a>
+                        </li>
+                        <!--<li class="pLeft15 ThemeHoverBGColor7 emblemLi" typeTag="emblem"><a class="ThemeColor10" href="javascript:void(0);"><span class="icon-badge Font20 ThemeColor9 pRight15"></span><%=Resources.lang.ACC0801007%></a></li>-->
+                    </ul>
+                </div>
+                <div id="accountCenterMainBox" class="mianPage borderBox relativeContainer"></div>
+            </div>
+        </div>
+        <div class="Clear"></div>
+
+        <div id="mingdao_im"></div>
+        <span class="md_tooltip"></span>
+
+        
+    </form>
+
+    <script type="text/javascript">
+        seajs.use("/js/user/user.js", function (user) {
+            user.init();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<div class="inviteList">
+    {{ var projects = md.global.Account.projects;}}
+    {{? projects.length }}
+    <p class="subTitle mTop5">{{= md_lang.TXL0801029 || '邀请新同事加入明道企业网络' }}</p>
+    <ul class="projectList">
+        {{~ projects:project:index }}
+            {{ var type = (projects.length - 1 - index) % 6 + 1; }}
+            {{ project.className = 'icon-chatnetwork-type' + type; }}
+            {{#def.buildListItem:project }}
+        {{~}}
+    </ul>
+    {{?}}
+    <p class="title mBottom0">{{= md_lang.TXL0801026 || '邀请好友' }}</p>
+    <ul class="projectList">
+        {{ var project = { projectId: '' }; }}
+        {{#def.buildListItem:project }}
+    </ul>
+</div>
+
+{{##def.buildListItem:project:
+<li class="projectItem flexRow pointer ThemeColor3 Hand" data-projectid="{{= project.projectId }}">
+    {{? project.projectId === '' }}
+    <span class="icon-task-select-other Font18 projectIcon"></span>
+    <span class="flex pLeft12 companyName">{{= md_lang.TXL0801027 || '明道好友' }}</span>
+    {{??}}
+    <span class="{{=project.className}} Font18 projectIcon"></span>
+    <span class="flex pLeft12 companyName">{{!project.companyName}}</span>
+    {{?}}
+    <span class="icon-arrow-right-border ThemeColor3"></span>
+</li>
+#}}

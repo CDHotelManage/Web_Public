@@ -1,0 +1,45 @@
+﻿	<div class="sTabs" id="headSetting">
+        <div class="pAll15">
+            <div id="divTabSetAvator">
+                <div class="Avator">
+                    <div class="AvatorBig">
+                        <img id="AvatorBig" style="border-radius:50%;width:100px;height:100px;" src="<%=it.groupObject.avatarBig%>" /><br />
+                        100*100</div>
+                    <div class="AvatorMiddle">
+                        <img id="AvatorMiddle" style="border-radius:50%;width:48px;height:48px;" src="<%=it.groupObject.avatarMiddle%>" /><br />
+                        48*48</div>
+                    <div class="AvatorSmall">
+                        <img id="AvatorSmall" style="border-radius:50%;width:24px;height:24px;" src="<%=it.groupObject.avatarSmall%>" /><br />
+                        24*24</div>
+                    <div class="AvatorNormal" class="mRight0">
+                        <div class="mBottom5">
+                            <span id="spanNormal" class="Blue Bold Hand InlineBlock">
+                                {{=md_lang.ACC0801050 || "本地照片"}}
+                            </span><span id="spanPz" class="Blue mLeft5 Hand InlineBlock">
+                                {{=md_lang.ACC0801051 || "拍照上传"}}
+                            </span>
+                        </div>
+                        <div id="AvatorNormal" class="mAll0 overflowHidden">
+                            <iframe frameborder="0" scrolling="no" width="458" height="378" src="/UIControl/Jcrop/head_upload.aspx">
+                            </iframe>
+                        </div>
+                        <div id="AratorPz">
+                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                                height="376" width="320">
+                                <param name="movie" value="/UIControl/FlexCamera/pz.swf" />
+                                <param name="quality" value="high" />
+                                <embed src="/UIControl/FlexCamera/pz.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer"
+                                    type="application/x-shockwave-flash" height="376" width="320"></embed>
+                            </object>
+                        </div>
+                    </div>
+                    <div class="Clear">
+                    </div>
+                </div>
+                <div class="Clear">
+                </div>
+            </div>
+        </div>
+        <div class="Clear">
+        </div>
+    </div>

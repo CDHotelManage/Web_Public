@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -13,10 +14,10 @@
     <AssemblyName>CdHotelManage.Web</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
+    <OldToolsVersion>4.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -24,6 +25,12 @@
     <SccProvider>SAK</SccProvider>
     <SilverlightApplicationList>
     </SilverlightApplicationList>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +43,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <PlatformTarget>x86</PlatformTarget>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,6 +53,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AspNetPager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
@@ -67,6 +76,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>dll\CrystalDecisions.Web.dll</HintPath>
     </Reference>
+    <Reference Include="Lib.Web">
+      <HintPath>..\Lib\Lib.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="LibMain">
+      <HintPath>..\Lib\LibMain.dll</HintPath>
+    </Reference>
     <Reference Include="LTP.Accounts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
@@ -82,16 +97,50 @@
       <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Concurrent, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Concurrent.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Enlightenment, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.3.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -1005,6 +1054,7 @@
     <Content Include="Images\loginbg3.png" />
     <Content Include="Images\loginText.png" />
     <Content Include="Images\LOGO.png" />
+    <Content Include="Images\LOGO123.png" />
     <Content Include="Images\menu01.png" />
     <Content Include="Images\menu02.png" />
     <Content Include="Images\menu03.png" />
@@ -1023,11 +1073,18 @@
     <Content Include="Images\sicon07.png" />
     <Content Include="Images\topbg2.png" />
     <Content Include="Images\yes.gif" />
+    <Content Include="js\account\account.js" />
+    <Content Include="js\account\register.js" />
     <Content Include="js\AppendHtml.js" />
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
+    <Content Include="js\common\moment.js" />
+    <Content Include="js\common\querystring.js" />
+    <Content Include="js\common\seajs-config.js" />
+    <Content Include="js\common\util.js" />
     <Content Include="js\DivWH.js" />
     <Content Include="js\function.js" />
+    <Content Include="js\global.js" />
     <Content Include="js\hDate.js" />
     <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\jquery.contextmenu.r2.js" />
@@ -1036,17 +1093,206 @@
     <Content Include="js\jqueryes.js" />
     <Content Include="dll\AspNetPager.dll" />
     <Content Include="js\printy.js" />
+    <Content Include="js\seajs\2.2.1\sea-debug.js" />
+    <Content Include="js\seajs\2.2.1\sea.js" />
+    <Content Include="js\seajs\plugins\seajs-combo-debug.js" />
+    <Content Include="js\seajs\plugins\seajs-flush-debug.js" />
+    <Content Include="js\seajs\plugins\seajs-style-debug.js" />
+    <Content Include="js\seajs\plugins\seajs-text-debug.js" />
+    <Content Include="js\seajs\runtime-debug.js" />
+    <Content Include="js\seajs\runtime.js" />
+    <Content Include="js\seajs\sea-debug.js" />
+    <Content Include="js\seajs\sea.js" />
+    <Content Include="js\seajs\seajsText.js" />
+    <Content Include="js\seajs\standalone-debug.js" />
+    <Content Include="js\seajs\standalone.js" />
     <Content Include="js\ShowTabs.js" />
+    <Content Include="js\uicontrol\doT\doT.js" />
+    <Content Include="js\user\all.css" />
+    <Content Include="js\user\common.js" />
+    <Content Include="js\user\enterprise\editCard.js" />
+    <Content Include="js\user\enterprise\enterprise.css" />
+    <Content Include="js\user\enterprise\enterprise.js" />
+    <Content Include="js\user\enterprise\img\chart.png" />
+    <Content Include="js\user\enterprise\img\eye.png" />
+    <Content Include="js\user\enterprise\img\file.png" />
+    <Content Include="js\user\enterprise\img\gift.png" />
+    <Content Include="js\user\enterprise\img\lock.png" />
+    <Content Include="js\user\enterprise\img\OA.png" />
+    <Content Include="js\user\enterprise\img\serch.png" />
+    <Content Include="js\user\enterprise\img\tie.png" />
+    <Content Include="js\user\enterprise\img\usb.png" />
+    <Content Include="js\user\enterprise\img\withoutEnterprise.png" />
+    <Content Include="js\user\enterprise\img\withoutEnterpriseTop.jpg" />
+    <Content Include="js\user\enterprise\tpl\authentication.html" />
+    <Content Include="js\user\enterprise\tpl\dialogAdd.html" />
+    <Content Include="js\user\enterprise\tpl\dialogExit.html" />
+    <Content Include="js\user\enterprise\tpl\editCard.html" />
+    <Content Include="js\user\enterprise\tpl\enterprise.html" />
+    <Content Include="js\user\enterprise\tpl\listEnterprise.html" />
+    <Content Include="js\user\enterprise\tpl\myInvitation.html" />
+    <Content Include="js\user\enterprise\tpl\removeFromProject.html" />
+    <Content Include="js\user\enterprise\tpl\validPassword.html" />
+    <Content Include="js\user\font-awesome.css" />
+    <Content Include="js\user\inStyle.css" />
+    <Content Include="js\user\pageHead\guide\images\01.png" />
+    <Content Include="js\user\pageHead\guide\images\02.png" />
+    <Content Include="js\user\pageHead\guide\images\03.png" />
+    <Content Include="js\user\pageHead\guide\images\04.png" />
+    <Content Include="js\user\pageHead\guide\images\05.png" />
+    <Content Include="js\user\pageHead\guide\images\06.png" />
+    <Content Include="js\user\pageHead\guide\images\07.png" />
+    <Content Include="js\user\pageHead\guide\images\08.png" />
+    <Content Include="js\user\pageHead\guide\images\09.png" />
+    <Content Include="js\user\pageHead\guide\images\10.png" />
+    <Content Include="js\user\pageHead\guide\images\guideBox.gif" />
+    <Content Include="js\user\pageHead\guide\images\guideBoxStatic.jpg" />
+    <Content Include="js\user\pageHead\guide\index.js" />
+    <Content Include="js\user\pageHead\guide\style.css" />
+    <Content Include="js\user\pageHead\guide\tpl.html" />
+    <Content Include="js\user\pageHead\headNavbar.css" />
+    <Content Include="js\user\pageHead\index.js" />
+    <Content Include="js\user\pageHead\modules\appList\applist.js" />
+    <Content Include="js\user\pageHead\modules\appList\images\nullPersonalApp.png" />
+    <Content Include="js\user\pageHead\modules\appList\style.css" />
+    <Content Include="js\user\pageHead\modules\appList\tpl\list.html" />
+    <Content Include="js\user\pageHead\modules\invite\content.html" />
+    <Content Include="js\user\pageHead\modules\invite\index.js" />
+    <Content Include="js\user\pageHead\modules\invite\style.css" />
+    <Content Include="js\user\pageHead\modules\pageHeadIM.js" />
+    <Content Include="js\user\pageHead\modules\projectSelectDialog\content.html" />
+    <Content Include="js\user\pageHead\modules\projectSelectDialog\index.js" />
+    <Content Include="js\user\pageHead\modules\projectSelectDialog\style.css" />
+    <Content Include="js\user\pageHead\modules\router.js" />
+    <Content Include="js\user\pageHead\modules\smallBell\index.js" />
+    <Content Include="js\user\pageHead\modules\smallBell\style.css" />
+    <Content Include="js\user\pageHead\modules\topNotice.js" />
+    <Content Include="js\user\pageHead\modules\util.js" />
+    <Content Include="js\user\pageHead\pageHead.js" />
+    <Content Include="js\user\pageHead\theme\images\theme.png" />
+    <Content Include="js\user\pageHead\theme\style.css" />
+    <Content Include="js\user\pageHead\theme\Theme.css" />
+    <Content Include="js\user\pageHead\theme\theme.js" />
+    <Content Include="js\user\pageHead\tpl\dropdowns.html" />
+    <Content Include="js\user\personalInfo\avatorInfo.js" />
+    <Content Include="js\user\personalInfo\basicInfo.js" />
+    <Content Include="js\user\personalInfo\contactInfo.js" />
+    <Content Include="js\user\personalInfo\education.js" />
+    <Content Include="js\user\personalInfo\personalInfo.css" />
+    <Content Include="js\user\personalInfo\personalInfo.js" />
+    <Content Include="js\user\personalInfo\tpl\avatorInfo.html" />
+    <Content Include="js\user\personalInfo\tpl\basicInfo.html" />
+    <Content Include="js\user\personalInfo\tpl\contactInfo.html" />
+    <Content Include="js\user\personalInfo\tpl\education.html" />
+    <Content Include="js\user\personalInfo\tpl\personalInfo.html" />
+    <Content Include="js\user\personalInfo\tpl\workhistory.html" />
+    <Content Include="js\user\personalInfo\workhistory.js" />
+    <Content Include="js\user\personalInfo\workOrEdu.js" />
+    <Content Include="js\user\user.css" />
+    <Content Include="js\user\user.js" />
+    <Content Include="js\vendor\jquery\1.8.3\jquery-debug.js" />
+    <Content Include="js\vendor\jquery\1.8.3\jquery.js" />
+    <Content Include="js\vendor\jquery\1.8.3\jqueryAnimate.js" />
+    <Content Include="js\vendor\jquery\1.8.3\seajsWrapper.js" />
+    <Content Include="js\vendor\lodash\lodash.js" />
+    <Content Include="js\vendor\lodash\lodash.min.js" />
+    <Content Include="js\vendor\moment\moment-with-locales.min.js" />
+    <Content Include="js\vendor\moment\moment.js" />
+    <Content Include="js\vendor\moment\moment.min.js" />
+    <Content Include="js\vendor\plupload\i18n\ar.js" />
+    <Content Include="js\vendor\plupload\i18n\az.js" />
+    <Content Include="js\vendor\plupload\i18n\be_BY.js" />
+    <Content Include="js\vendor\plupload\i18n\bg.js" />
+    <Content Include="js\vendor\plupload\i18n\bs.js" />
+    <Content Include="js\vendor\plupload\i18n\ca.js" />
+    <Content Include="js\vendor\plupload\i18n\cs.js" />
+    <Content Include="js\vendor\plupload\i18n\cy.js" />
+    <Content Include="js\vendor\plupload\i18n\da.js" />
+    <Content Include="js\vendor\plupload\i18n\de.js" />
+    <Content Include="js\vendor\plupload\i18n\el.js" />
+    <Content Include="js\vendor\plupload\i18n\en.js" />
+    <Content Include="js\vendor\plupload\i18n\es.js" />
+    <Content Include="js\vendor\plupload\i18n\et.js" />
+    <Content Include="js\vendor\plupload\i18n\fa.js" />
+    <Content Include="js\vendor\plupload\i18n\fi.js" />
+    <Content Include="js\vendor\plupload\i18n\fr.js" />
+    <Content Include="js\vendor\plupload\i18n\he.js" />
+    <Content Include="js\vendor\plupload\i18n\hr.js" />
+    <Content Include="js\vendor\plupload\i18n\hu.js" />
+    <Content Include="js\vendor\plupload\i18n\hy.js" />
+    <Content Include="js\vendor\plupload\i18n\id.js" />
+    <Content Include="js\vendor\plupload\i18n\it.js" />
+    <Content Include="js\vendor\plupload\i18n\ja.js" />
+    <Content Include="js\vendor\plupload\i18n\ka.js" />
+    <Content Include="js\vendor\plupload\i18n\kk.js" />
+    <Content Include="js\vendor\plupload\i18n\km.js" />
+    <Content Include="js\vendor\plupload\i18n\ko.js" />
+    <Content Include="js\vendor\plupload\i18n\ku_IQ.js" />
+    <Content Include="js\vendor\plupload\i18n\lt.js" />
+    <Content Include="js\vendor\plupload\i18n\lv.js" />
+    <Content Include="js\vendor\plupload\i18n\ms.js" />
+    <Content Include="js\vendor\plupload\i18n\nl.js" />
+    <Content Include="js\vendor\plupload\i18n\pl.js" />
+    <Content Include="js\vendor\plupload\i18n\pt_BR.js" />
+    <Content Include="js\vendor\plupload\i18n\ro.js" />
+    <Content Include="js\vendor\plupload\i18n\ru.js" />
+    <Content Include="js\vendor\plupload\i18n\sk.js" />
+    <Content Include="js\vendor\plupload\i18n\sq.js" />
+    <Content Include="js\vendor\plupload\i18n\sr.js" />
+    <Content Include="js\vendor\plupload\i18n\sv.js" />
+    <Content Include="js\vendor\plupload\i18n\th_TH.js" />
+    <Content Include="js\vendor\plupload\i18n\tr.js" />
+    <Content Include="js\vendor\plupload\i18n\uk_UA.js" />
+    <Content Include="js\vendor\plupload\i18n\vi.js" />
+    <Content Include="js\vendor\plupload\i18n\zh_CN.js" />
+    <Content Include="js\vendor\plupload\i18n\zh_TW.js" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\img\done.gif" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\img\error.gif" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\img\throbber.gif" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="js\vendor\plupload\jquery.plupload.queue\jquery.plupload.queue.min.js" />
+    <Content Include="js\vendor\plupload\jquery.ui.plupload\css\jquery.ui.plupload.css" />
+    <Content Include="js\vendor\plupload\jquery.ui.plupload\img\loading.gif" />
+    <Content Include="js\vendor\plupload\jquery.ui.plupload\img\plupload.png" />
+    <Content Include="js\vendor\plupload\jquery.ui.plupload\jquery.ui.plupload.js" />
+    <Content Include="js\vendor\plupload\jquery.ui.plupload\jquery.ui.plupload.min.js" />
+    <Content Include="js\vendor\plupload\moxie.js" />
+    <Content Include="js\vendor\plupload\moxie.min.js" />
+    <Content Include="js\vendor\plupload\Moxie.swf" />
+    <Content Include="js\vendor\plupload\Moxie.xap" />
+    <Content Include="js\vendor\plupload\plupload.dev.js" />
+    <Content Include="js\vendor\plupload\plupload.full.min.js" />
+    <Content Include="js\vendor\plupload\plupload.min.js" />
+    <Content Include="js\vendor\react\react-dom-server.js" />
+    <Content Include="js\vendor\react\react-dom.js" />
+    <Content Include="js\vendor\react\react-with-addons.js" />
+    <Content Include="js\vendor\react\react-with-addons.min.js" />
+    <Content Include="register.htm" />
     <Content Include="style\css.css" />
     <Content Include="style\cssbf.css" />
+    <Content Include="style\font\HelveticaNeue.svg" />
+    <Content Include="style\font\MD_Icon.svg" />
+    <Content Include="style\font\TitilliumWeb-ExtraLight.svg" />
+    <Content Include="style\font\TitilliumWeb-Regular.svg" />
     <Content Include="style\hDate.css" />
     <Content Include="style\newhouseview.css" />
     <Content Include="style\Opendiv.css" />
+    <Content Include="style\register\basic.css" />
+    <Content Include="style\register\register.css" />
+    <Content Include="style\register\stepLine.css" />
+    <Content Include="style\register\style.css" />
     <Content Include="style\reset.css" />
     <Content Include="style\Sheet.css" />
     <Content Include="style\shezhi.css" />
     <Content Include="style\toom.css" />
     <Content Include="SysRootType.aspx" />
+    <Content Include="terms.htm" />
     <Content Include="Upload\Banner\a052811d-268b-43d6-9460-f4abd8ca3b4c.jpg" />
     <Content Include="Upload\MenuIcon\02b6914d-8e7c-46ae-8019-eae668faa518.png" />
     <Content Include="Upload\MenuIcon\02b6914d-8e7c-46ae-8019-eae668faa519.png" />
@@ -1057,6 +1303,7 @@
     <Content Include="Upload\MenuIcon\9c4fdd4e-70c2-4da6-8164-b704ac7c2bef.png" />
     <Content Include="Upload\MenuIcon\b3b721dc-b2ab-4354-8501-99346546cf30.png" />
     <Content Include="Upload\MenuIcon\qiehuan.png" />
+    <Content Include="User\default.htm" />
     <Content Include="validateCode\validateCode.aspx" />
     <Content Include="Wap\about\index.aspx" />
     <Content Include="Wap\about\map.aspx" />
@@ -2211,8 +2458,24 @@
       <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Project>{e3d8759a-c5eb-402d-9f10-f5c6029a8d1a}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hotel.Application\Hotel.Application.csproj">
+      <Project>{48c6f9fa-6369-451a-92a7-23795ba66630}</Project>
+      <Name>Hotel.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hotel.Core\Hotel.Core.csproj">
+      <Project>{064ff84d-ec3b-4e93-8125-52cb368f4e7a}</Project>
+      <Name>Hotel.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hotel.EntityFramework\Hotel.UserCenterEntityFramework.csproj">
+      <Project>{0d4198a8-2225-4f0b-9fbd-030299673093}</Project>
+      <Name>Hotel.UserCenterEntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hotel.WebApi\Hotel.WebApi.csproj">
+      <Project>{dbe6f063-f639-4a11-a90b-5046e9ea6dc3}</Project>
+      <Name>Hotel.WebApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
@@ -2413,6 +2676,20 @@
     <Content Include="Admin\Ajax\goods.ashx" />
     <None Include="Admin\Toroom\META-INF\MANIFEST.MF" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="packages.config" />
+    <Content Include="style\font\HelveticaNeue.eot" />
+    <Content Include="style\font\HelveticaNeue.ttf" />
+    <Content Include="style\font\HelveticaNeue.woff" />
+    <Content Include="style\font\MD_Icon.eot" />
+    <Content Include="style\font\MD_Icon.otf" />
+    <Content Include="style\font\MD_Icon.ttf" />
+    <Content Include="style\font\MD_Icon.woff" />
+    <Content Include="style\font\TitilliumWeb-ExtraLight.eot" />
+    <Content Include="style\font\TitilliumWeb-ExtraLight.ttf" />
+    <Content Include="style\font\TitilliumWeb-ExtraLight.woff" />
+    <Content Include="style\font\TitilliumWeb-Regular.eot" />
+    <Content Include="style\font\TitilliumWeb-Regular.ttf" />
+    <Content Include="style\font\TitilliumWeb-Regular.woff" />
     <None Include="Wap\css\iconfont.eot" />
     <None Include="Wap\css\iconfont.svg" />
     <None Include="Wap\css\iconfont.ttf" />
@@ -2420,6 +2697,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\Images\HeaderImg\" />
+    <Folder Include="App_Data\" />
     <Folder Include="bin\" />
     <Folder Include="js\floor_manage\" />
     <Folder Include="js\Goods\" />
@@ -2432,8 +2710,13 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

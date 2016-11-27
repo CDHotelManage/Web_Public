@@ -50,7 +50,7 @@ namespace CdHotelManage.Web.Admin.Permissions.Permission
                 {
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        urbll.Delete(dt.Rows[i]["UserID"].ToString());
+                        urbll.Delete(dt.Rows[i]["Id"].ToString());
                     }
                 }
                 rmbll.Delete(roleid);

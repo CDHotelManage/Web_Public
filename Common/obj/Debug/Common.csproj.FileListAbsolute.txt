@@ -31,3 +31,16 @@ C:\Documents and Settings\Administrator\桌面\CdHotelManage\Common\bin\Debug\Cd
 C:\Documents and Settings\Administrator\桌面\CdHotelManage\Common\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Administrator\桌面\CdHotelManage\Common\obj\Debug\CdHotelManage.Common.dll
 C:\Documents and Settings\Administrator\桌面\CdHotelManage\Common\obj\Debug\CdHotelManage.Common.pdb
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\CdHotelManage.Common.dll
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\CdHotelManage.Common.pdb
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\CdHotelManage.Model.dll
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\COM.Excel.dll
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\Excel.dll
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\OpenSmtp.dll
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\OWC10Chart.dll
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\CdHotelManage.Model.pdb
+D:\项目构建\HotelManage\Web_Public\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\项目构建\HotelManage\Web_Public\Common\obj\Debug\CdHotelManage.Common.dll
+D:\项目构建\HotelManage\Web_Public\Common\obj\Debug\CdHotelManage.Common.pdb
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\Newtonsoft.Json.dll
+D:\项目构建\HotelManage\Web_Public\Common\bin\Debug\Newtonsoft.Json.xml

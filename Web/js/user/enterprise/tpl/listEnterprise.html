@@ -1,0 +1,99 @@
+﻿{{~it.data.list:list:i}}
+    <ul class="enterpriseList mTop10 BorderBottom BorderGrayColor" userId = {{= list.userId }} projectId = {{= list.projectId }}>
+        <li class="Left LineHeight30 mTop10 Gray mLeft10 TxtLeft">{{= list.projectCode }}</li>
+        <li class="Left LineHeight30 mTop10 Gray mLeft10 TxtLeft ellipsis companyName">{{!list.companyName}}</li>
+        <li class="Left LineHeight30 mTop10 Gray TxtLeft pLeft5">{{= list.userNum }}</li>
+        {{?list.role === 0}}
+            <li class="Left LineHeight30 mTop10 Gray overflow_ellipsis">{{='管理员'}}
+                {{?list.isCreateUser}}
+                {{='(创建者)'}}
+                {{?}}
+            </li>
+        {{??}}
+            <li class="Left LineHeight30 mTop10 Gray">{{="普通成员"}}</li>
+        {{?}}
+        {{?list.prjStatus === 0}}
+            <li class="Left LineHeight30 mTop10 Gray pLeft15">{{='试用中'}}</li>
+        {{??list.prjStatus === 1}}
+            <li class="Left LineHeight30 mTop10 Gray pLeft15">{{='待开通'}}</li>
+        {{??list.prjStatus === 2}}
+            <li class="Left LineHeight30 mTop10 Gray pLeft15">{{="使用中"}}</li>
+        {{??list.prjStatus === 3}}
+            <li class="Left LineHeight30 mTop10 Gray pLeft15">{{='待续费'}}</li>
+        {{??list.prjStatus === 4}}
+            <li class="Left LineHeight30 mTop10 Gray pLeft15">{{='已注销'}}</li>
+        {{??}}
+            <li class="Left LineHeight30 mTop10 Gray pLeft15"></li>
+        {{?}}
+        {{?list.expireDate >= 7}}
+            <li class="Left LineHeight30 mTop10 Gray ellipsis">
+                <span class="DepGreen">
+                    {{="剩余"}}
+                    <span class="expireDate">{{= list.expireDate }}</span>
+                    {{="天"}}
+                </span>
+                {{="("}}{{= list.lastDay.split(' ')[0] }}{{="到期)"}}
+            </li>
+        {{??}}
+            {{?list.expireDate <= 0}}
+                <li class="Left LineHeight30 mTop10 Gray ellipsis">
+                    <span class="Red">{{="剩余"}}0{{="天"}}</span>{{='(已到期)'}}
+                </li>
+            {{??}}
+            <li class="Left LineHeight30 mTop10 Gray ellipsis">
+                <span class="Red">
+                    {{="剩余"}}
+                    <span class="expireDate">{{= list.expireDate }}</span>
+                    {{="天"}}
+                </span>
+                {{="("}}{{= list.lastDay.split(' ')[0] }}{{="到期)"}}
+            </li>
+            {{?}}
+        {{?}}
+        <li class="Left LineHeight30 mTop10 Gray TxtLeft">
+        {{?list.prjUserStatus === 3}}
+            <span class="ThemeColor3 mRight10 Hand sendSystemMessageToAdmin">{{='提醒管理员审核'}}</span>
+            <!-- <span class="Hand tipIconPrjStatus mLeft5 Hand LineHeight15">
+            <span>?</span>
+            </span> -->
+        {{??}}
+            {{?list.prjStatus === 0}}<!--  /*试用中*/ -->
+                <span class="ThemeColor3 mRight10 Hand editCard InlineBlock">{{="编辑名片"}}</span>
+                {{?list.role === 0}} <!-- /*管理员试用中*/ -->
+                    <span class="ThemeColor3 mRight10 Hand goAdminPage InlineBlock">{{='管理企业账户'}}</span>
+                {{??}} <!-- /*普通用户试用中*/ -->
+                    <span class="ThemeColor3 mRight10 Hand applyForProjectAdmin InlineBlock">{{="申请成为管理员"}}</span>
+                {{?}}
+                <span class="ThemeColor3 mRight10 Hand buyNowBtn">{{='开通'}}</span>
+                <span class="ThemeColor3 Hand exitEnterprise">{{="退出"}}</span>
+            {{??list.prjStatus === 1}}
+                <span class="mRight10 InlineBlock Gray_9">{{="编辑名片"}}</span>
+                <span class="mRight10 InlineBlock Gray_9 goAdminPageNo">{{='管理企业账户'}}</span>
+                <span class="ThemeColor3 mRight10 Hand buyNowBtn">{{='开通'}}</span>
+                <span class="ThemeColor3 Hand exitEnterprise">{{="退出"}}</span>
+            {{??list.prjStatus === 2}} <!-- /*使用中*/ -->
+                <span class="ThemeColor3 mRight10 Hand editCard InlineBlock">{{="编辑名片"}}</span>
+                {{?list.role === 0}} <!-- /*管理员试用中*/ -->
+                    <span class="ThemeColor3 mRight10 Hand goAdminPage InlineBlock">{{='管理企业账户'}}</span>
+                {{??}}<!--  /*普通用户试用中*/ -->
+                    <span class="ThemeColor3 mRight10 Hand applyForProjectAdmin InlineBlock">{{="申请成为管理员"}}</span>
+                {{?}}
+                <span class="ThemeColor3 mRight10 Hand renewalNowBtn">{{="续费"}}</span>
+                <span class="ThemeColor3 Hand exitEnterprise">{{="退出"}}</span>
+            {{??list.prjStatus === 3}} <!-- /*待续费*/ -->
+                <span class="mRight10 InlineBlock Gray_9">{{="编辑名片"}}</span>
+                <span class="mRight10 InlineBlock Gray_9 goAdminPageNo">{{='管理企业账户'}}</span>
+                <span class="ThemeColor3 mRight10 Hand renewalNowBtn">{{="续费"}}</span>
+                <span class="ThemeColor3 Hand exitEnterprise">{{="退出"}}</span>
+            {{??list.prjStatus === 4 && list.role === 0}}
+                <span class="ThemeColor3 mRight10 Hand buyNowBtn">{{='开通'}}</span>
+            {{??}}
+                <span class="mRight10 InlineBlock Gray_9">{{="编辑名片"}}</span>
+                <span class="mRight10 InlineBlock Gray_9 goAdminPageNo">{{='管理企业账户'}}</span>
+                <span class="ThemeColor3 mRight10 Hand buyNowBtn">{{='开通'}}</span>
+                <span class="ThemeColor3 Hand exitEnterprise">{{="退出"}}</span>
+            {{?}}
+        {{?}}
+        </li>
+    </ul>
+{{~}}

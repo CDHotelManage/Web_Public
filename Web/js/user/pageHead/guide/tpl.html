@@ -1,0 +1,53 @@
+﻿{{? it.type !== 'title' }}
+<div class="guideBox">
+    {{# def.buildTitle }}
+    <div class="content">
+        {{~ it.keys:key:index }}
+        {{# def.buildStep:{ key: key, step: it.steps[key] } }}
+        {{~}}
+    </div>
+</div>
+<div class="Absolute icon-delete Font20 closeGuide"></div>
+{{??}}
+{{# def.buildTitle }}
+{{?}}
+
+
+{{##def.buildStepIcon:param:
+{{ var key = param.key, step = param.step; }}
+{{ var isActive = key === it.active; }}
+{{ var isCompleted = step.isCompleted; }}
+<li class="Left ThemeBGColor3 tip-bottom step{{= isActive ? ' active' : ''}}{{= isCompleted ? ' completed' : '' }}"
+    data-key="{{= key }}" data-tip="{{= step.btnName }}">
+    {{? isCompleted}}
+    <span class="icon-ok"></span>
+    {{?}}
+</li>
+#}}
+
+{{##def.buildStep:param:
+{{ var key = param.key, step = param.step; }}
+{{ var isActive = key === it.active; }}
+{{ var isCompleted = step.isCompleted; }}
+<div class="step {{= isActive ? ' active' : ''}}{{= isCompleted ? ' completed' : '' }}">
+    <div class="imageBox Left">
+        <img class="Block" src="{{= step.image }}" alt="">
+    </div>
+    <div class="textBox">
+        <p class="textTitle">{{= step.title }}</p>
+        <p class="textDesc">{{= step.desc }}</p>
+        <p class="textOp"><button type="button" class="op ThemeBGColor3">{{= step.btnName }}</button><span class="tip">已完成！</span></p>
+    </div>
+</div>
+#}}
+
+{{##def.buildTitle:
+<div class="title clearfix">
+    <span class="icon-dictionary ThemeColor3 Font20 TxtMiddle mRight10"></span><span class="Font16 TxtMiddle">玩转明道 {{= (it.activeIndex + 1) + '/' + it.keys.length }}</span>
+    <ul class="Right clearfix stepBox">
+        {{~ it.keys:key }}
+        {{# def.buildStepIcon:{ key: key, step: it.steps[key] } }}
+        {{~}}
+    </ul>
+</div>
+#}}

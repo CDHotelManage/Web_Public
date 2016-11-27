@@ -1,0 +1,386 @@
+﻿/* .withoutEnterprise, */
+
+.oneEnterprise,
+.moreEnterprise {
+  width: 100%;
+  min-height: 500px;
+}
+span.enterpriseNoteLi {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ccc;
+  display: block;
+  float: left;
+}
+.enterpriseTop {
+  width: 100%;
+  height: 50px;
+}
+.enterpriseList {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+.enterpriseList li {
+  width: 9%;
+  text-align: left;
+}
+.enterpriseList li:nth-child(2) {
+  width: 15%;
+}
+.enterpriseList li:nth-child(6) {
+  width: 18%;
+}
+.enterpriseList li:nth-child(7) {
+  width: 23%;
+}
+.enterpriseList .goAdminPage,
+.enterpriseList .applyForProjectAdmin,
+.goAdminPageNo {
+  width: 85px;
+}
+.invitationList ul>li {
+  width: 80px;
+}
+.invitationList ul>li.teamName {
+  width: 70%;
+}
+.oneEnterprise .tipIcon,
+.moreEnterprise .tipIcon,
+#dialogBoxEditCard .tipIcon,
+.tipIconPrjStatus,
+.tipIconImg,
+.tipIconTeam {
+  color: #ffffff;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.oneEnterprise .tipIcon:hover,
+.moreEnterprise .tipIcon:hover,
+#dialogBoxEditCard .tipIcon:hover,
+.tipIconTeam:hover {
+  background-color: #666;
+  border: 1px solid #666;
+}
+#dialogBoxEditCard .ulEditCard {
+  width: 340px;
+  box-sizing: border-box;
+  color: #a1a1a1;
+}
+#dialogBoxEditCard .liEditCard {
+  position: relative;
+}
+#dialogBoxEditCard .liEditCard .workSiteDropdown,
+#dialogBoxEditCard .liEditCard .departmentDropdown {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#dialogBoxEditCard .liEditCard ol {
+  width: 100%;
+  max-height: 200px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  overflow: auto;
+  z-index: 1;
+  background: #fff;
+}
+#dialogBoxEditCard .liEditCard ol li {
+  padding: 5px;
+}
+#dialogBoxEditCard .liEditCard ol li:hover {
+  background: #1e88e5;
+  color: #fff;
+}
+#dialogBoxEditCard .liEditCard input {
+  width: 340px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  line-height: 38px;
+  height: 38px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  padding-left: 10px;
+  border: 0px;
+}
+#dialogBoxEditCard .liEditCard.selectContainer {
+  line-height: 38px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+#dialogBoxEditCard .liEditCard.selectContainer .spanShow {
+  border: 0px!important;
+}
+#dialogBoxEditCard .liEditCard.selectContainer .spanShow:hover {
+  border: 0px!important;
+}
+#dialogBoxEditCard .sureBtnForEditCard {
+  letter-spacing: 3px;
+}
+.tipIconImg {
+  position: absolute;
+  right: 37px;
+  top: 81px;
+}
+#dialogBoxForAuthentication .inputForAccounts,
+#dialogBoxForAddEnterprise .inputForMDID {
+  width: 340px;
+  box-sizing: border-box;
+  line-height: 38px;
+  height: 38px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  padding-left: 10px;
+  border: 0px;
+}
+#dialogBoxForAuthentication .inputForCode,
+#dialogBoxForAddEnterprise .inputForCode {
+  margin-top: 15px;
+  width: 220px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  line-height: 38px;
+  height: 38px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  padding-left: 10px;
+  border: 0px;
+}
+#dialogBoxForAddEnterprise .inputForCode {
+  width: 180px;
+}
+#dialogBoxForAuthentication .btnForCode {
+  width: 100px;
+  height: 38px;
+}
+#dialogBoxForAuthentication .btnSureForAuthentication,
+#dialogBoxForAddEnterprise .btnSureForMDID {
+  width: 340px;
+  height: 38px;
+}
+#dialogBoxForAddEnterprise .textForCode {
+  width: 85px;
+  line-height: 38px;
+  height: 38px;
+  box-sizing: border-box;
+  background-color: #ccc;
+  border-radius: 3px;
+  padding-left: 10px;
+  border: 0px;
+}
+#dialogBoxForAddEnterprise ul {
+  max-height: 400px;
+  overflow-y: auto;
+}
+#dialogBoxForAddEnterprise ul li{
+  word-wrap:break-word;
+}
+#dialogBoxForAddEnterprise .boxMDID {
+  height: auto;
+  position: absolute;
+  left: 30px;
+  top: 109px;
+  background: #666;
+}
+#dialogBoxForAddEnterprise .boxMDID span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -6px;
+  left: 5px;
+  border-style: solid;
+  border-bottom-width: 15px;
+  border-left-width: 15px;
+  border-right-width: 15px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-width: 0;
+  border-bottom-color: #666;
+}
+#dialogBoxExitEnterprisecloseBtn {
+  margin: 10px 10px 0 0!important;
+  box-sizing: border-box;
+}
+#dialogBoxForAdmin ol li {
+  line-height: 20px;
+}
+#dialogBoxForAdmin ol li span {
+  width: 3px;
+  height: 3px;
+  background: #333;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+#dialogBoxExitEnterprise #transferAdmin {
+  width: 150px;
+  display: inline-block;
+}
+#dialogBoxExitEnterprise #sureBtn,
+#dialogBoxExitEnterprise #sureBtnOne {
+  width: 80px;
+  display: inline-block;
+}
+#dialogBoxTransferAdminProject .selectUserTransfer,
+#dialogBoxTransferAdminProject .exitProject {
+  width: 100%;
+  margin-top: 15px;
+  box-sizing: border-box;
+  padding: 8px 0;
+  border-radius: 3px;
+  border: 0px;
+}
+#dialogBoxForAuthentication .changeLoginType {
+  position: absolute;
+  right: 50px;
+  line-height: 35px;
+  top: 75px;
+}
+.enterpriseListOneBox {
+  min-height: 400px;
+}
+.MyInvitation {
+  position: relative;
+}
+.MyInvitationNew {
+  position: absolute;
+  top: 1px;
+  right: -15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+}
+.cardFullName {
+  background: #fff!important;
+}
+.enterprise {
+  position: relative;
+}
+.enterprise .enterpriseLoad {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
+#dialogBoxValidate .inputBox {
+  width: 340px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  line-height: 38px;
+  height: 38px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  padding-left: 10px;
+  border: 0px;
+}
+#dialogBoxValidate .btn {
+  padding: 8px 0;
+  width: 340px;
+}
+
+/* 无网络 */
+
+.withoutEnterprise {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.withoutEnterpriseTopBox {
+  width: 100%;
+  height: 250px;
+  background: url('./img/withoutEnterpriseTop.jpg') no-repeat center top;
+  background-size: cover;
+  color: #fff;
+}
+.withoutEnterpriseTopBox .withoutBoxCon {
+  padding-top: 100px;
+  line-height: 32px;
+}
+.creatEnterpriseBtn,
+.addEnterpriseBtn {
+  width: 70px;
+  height: 32px;
+  text-align: center;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.addEnterpriseBtn {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+.addEnterpriseBtn:hover {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.creatEnterpriseBtn {
+  color: #333;
+  background: rgba(255, 255, 255, 0.85);
+}
+.creatEnterpriseBtn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+.withoutEnterprise .MyInvitation {
+  color: rgba(255, 255, 255, .6);
+}
+.withoutEnterprise .MyInvitation:hover {
+  color: rgba(255, 255, 255, .8);
+}
+.noEnterpriseIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: inline-block;
+  margin-top: -40px;
+  background: #2196f3;
+  line-height: 76px;
+}
+.noEnterpriseIcon span {
+  display: inline-block;
+  width: 76px;
+  height: 76px;
+  background: url('./img/gift.png') center center;
+  background-size: contain;
+}
+.enterpriseNoteTitle {
+  font-weight: normal;
+}
+.enterpriseNote .btnExperience {
+  width: 310px;
+  height: 55px;
+  line-height: 55px;
+  margin-bottom: 70px;
+}
+.enterpriseNote .btnExperience:hover {
+  background: #1e88e5;
+}
+.withoutEnterprise ul {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.withoutEnterprise ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 45px;
+  color: #333;
+  font-size: 16px;
+}
+.withoutEnterprise ul li img {
+  width: 80px;
+  height: 80px;
+}

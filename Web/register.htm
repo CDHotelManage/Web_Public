@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>川度｜注册</title>
+    <link href="/style/register/register.css?v=2016022501" rel="stylesheet" />
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script src="/js/seajs/sea.js"></script>
+    <script src="/js/global.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="content">
+            <div class="mingdaoLogo"></div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container Hidden" style="display: block;">
+            <div class="progressContainer"></div>
+            <div class="inputContainer contianerBGStyle">
+                <div class="accountVerify">
+                    <div class="itemTitle">欢迎注册</div>
+                    <div class="warnningDiv warnningRed Hidden"></div>
+                    <div class="inputDiv">
+                        <div class="intl-tel-input allow-dropdown separate-dial-code iti-sdc-3">
+                            <div class="flag-container">
+                            <div class="selected-flag" tabindex="0" title="China (中国): +86"><div class="iti-flag cn"></div>
+                                <div class="selected-dial-code"></div><div class="iti-arrow"></div></div>
+                            </div>
+                        <input type="text" class="formText pRight30" id="txtAccount" placeholder="手机号/邮箱" maxlength="64" tabindex="1" autocomplete="off">
+                        </div><span class="noticeFlag"></span>
+                    </div>
+                    <div class="inputDiv">
+                    <input type="text" class="formText shortFormText Left validateCodeIcon fromTextIndex" id="txtVerifyCode" placeholder="验证码" maxlength="4" tabindex="1">
+                    <input type="button" class="btn btnEnabled btnSendVerifyCode Right" id="btnSendVerifyCode" value="获取验证码">
+                    <div class="Clear"></div></div>
+                    <div class="inputDiv">
+                    <input type="text" class="formText userNameIcon fromTextIndex" id="txtUserName" placeholder="姓名" maxlength="64" tabindex="1"></div>
+                    <div class="inputDiv">
+                    <input type="password" class="formText passwordIcon fromTextIndex" placeholder="密码，8-20位，必须含字母+数字" id="txtPassword" maxlength="20" tabindex="1">
+                    <span class="noticeFlag" style="right:30px;"></span><span class="showPassword passwordShowIcon Hidden" title="显示密码"></span></div>
+                    <input type="button" class="btn btnEnabled Font14" value="注册" id="btnSubmitAccountVerify"><div class="mTop25">
+                    <span class="Left loginPart">已有账号，<a href="./Admin/login.aspx">登录</a></span>
+                    <span class="Right">注册即同意<a target="_blank" class="terms" href="./terms.htm">《明道使用协议》</a></span>
+                    <div class="Clear"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--{-->
+    
+    <!--}-->
+    
+    <script type="text/javascript">
+        seajs.use("/js/account/register.js", function (register) {
+            register.init();
+    });
+    </script>
+
+
+    
+</body>
+</html>

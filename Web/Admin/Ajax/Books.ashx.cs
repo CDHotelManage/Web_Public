@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
 using System.Data;
+using Common;
 
 namespace CdHotelManage.Web.Admin.Ajax
 {

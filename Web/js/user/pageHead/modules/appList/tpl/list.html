@@ -1,0 +1,69 @@
+﻿<div class="appList">
+    <div class="fixedTitle listTitle"></div>
+    <div class="nano">
+        <div class="nano-content">
+            <div class="stickApps {{= it.top && it.top.length ? '' : 'Hidden'}}">
+                <p class="listTitle overflow_ellipsis">{{= md_lang.NTKL032  || '置顶' }}</p>
+                <ul class="listContent" data-istop="true">
+                    {{~ it.top:app}} {{ app.isStick = true; }} {{#def.singleApp:app}} {{~}}
+                </ul>
+            </div>
+            <div class="projectApps">
+                <!-- 1. 超过两个网络时 网络应用列表全部收起隐藏 -->
+                <!-- 2. 个人应用列表为空时，只有一个网络，展开并显示空状态， 超过一个网络，空状态折叠-->
+                {{~it.projects:project:index}}
+                {{ var isCollapsed = it.projects.length > 2; }}
+                {{? project.projectId === '' && !project.apps.length }}
+                {{ isCollapsed = it.projects.length > 1; }}
+                {{?}}
+                <p class="listTitle Hand flexRow">
+                    <span class="overflow_ellipsis companyName" data-projectid="{{= project.projectId }}">
+                        {{!project.companyName}}
+                        <span class="noticeDot"></span>
+                    </span>
+                    {{? project.isAdmin || project.projectId === '' }}
+                    <a class="settingBtn ThemeColor3 tip-bottom" href="{{= project.settingUrl }}" data-tip="{{= md_lang.TB0801032 || '管理应用' }}" target="_blank"><span class="icon-setting-six"></span></a>
+                    {{?}}
+                    <span class="ThemeColor3 toggleMainList">
+                        <span class="{{= isCollapsed ? 'Hidden' : ''}}">{{= md_lang.TB0801035 || '隐藏' }}</span>
+                        <span class="{{= isCollapsed ? '' : 'Hidden'}}">{{= md_lang.TB0801036 || '展开' }}</span>
+                    </span>
+                </p>
+                <ul class="listContent projectApplist" data-projectid="{{=project.projectId || ''}}"
+                    style="display: {{= isCollapsed ? 'none' : 'block'}};">
+                    {{? project.apps.length }}
+                    {{~project.apps:app}}
+                    {{#def.singleApp:app}}
+                    {{~}}
+                    {{?? project.projectId === '' }}
+                    <li class="nullPersonalApps ThemeColor3"><a href="{{= project.settingUrl }}" target="_blank" class="NoUnderline nullTip">{{= md_lang.TB0801033 || '当前没有应用，去添加' }}</a>
+                    </li>
+                    {{?}}
+                </ul>
+                {{~}}
+            </div>
+        </div>
+    </div>
+    <div class="appsOps">
+        <a href="https://app.mingdao.com" class="NoUnderline addNewApp" target="_blank">{{= md_lang.TB0801034 || '前往明道应用市场' }} &gt;</a>
+    </div>
+</div>
+{{##def.singleApp:item:
+<li data-appid="{{= item.appId }}" data-projectid="{{= item.projectId || '' }}" data-istop="{{= item.isTop }}" class="singleApp flexRow">
+    <a href="{{= item.oauthUrl }}" target="_blank" class="flexRow NoUnderline singleAppLink flex">
+        <span class="noticeDot"></span>
+        <img src="{{= item.avatar + '?imageView2/1/w/32/h/32' }}" alt="app icon" class="appAvatar">
+        {{? item.isStick }}
+        <span class="appName ThemeColor3" title="{{=item.appName}}">{{!item.appName}}</span>
+        <span class="companyName flex" title="{{= it.projectsDict[item.projectId] }}">{{! it.projectsDict[item.projectId] }}</span>
+        {{??}}
+        <span class="appName flex ThemeColor3" title="{{=item.appName}}">{{!item.appName}}</span>
+        {{?}}
+        <span class="tip-bottom-left stickBtn ThemeColor3 {{= item.isTop ? '' : 'Hidden'}}" data-tip="{{= md_lang.UML07 || '取消' }}"><span class="icon-folder-top"></span></span>
+        <span class="tip-bottom-left stickBtn {{= item.isTop ? 'Hidden' : ''}}" data-tip="{{= md_lang.myfeed_text_25 || '置顶' }}"><span class="icon-folder-top"></span></span>
+    </a>
+    {{? item.isAdmin }}
+    <a class="tip-bottom-left settingBtn ThemeColor3" data-tip="{{= md_lang.newUI_omit_text234 || '设置' }}" target="_blank" href="{{= item.settingUrl }}"><span class="icon-setting-six"></span></a>
+    {{?}}
+</li>
+#}}

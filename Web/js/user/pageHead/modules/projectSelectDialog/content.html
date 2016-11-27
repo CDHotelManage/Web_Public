@@ -1,0 +1,8 @@
+<div class="projectSelectWrapper">
+  <h3 class="title Font16">选择企业账户</h2>
+  <ul class="pContainer mTop15">
+    {{~ it.projects:project }}
+    <li class="ThemeBGColor3 singleProject Font14 Hand overflow_ellipsis Block" data-projectid="{{= project.projectId}}" title="{{! project.companyName }}">{{! project.companyName }}</li>
+    {{~}}
+  </ul>
+</div>

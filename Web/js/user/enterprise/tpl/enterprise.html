@@ -1,0 +1,101 @@
+﻿
+    {{?!it.isEnterprise}}
+    <div class="enterprise clearfix">
+    <div class="withoutEnterprise card overflowHidden">
+        <div class="withoutEnterpriseTopBox TxtCenter clearfix">
+            <span class="Right Hand MyInvitation LineHeight30 mTop20 mRight30 Fong14">
+                {{='我的受邀信息'}}
+                <span class="MyInvitationNew Hidden">0</span>
+            </span>
+            <p class="LineHeight30 Font16 withoutBoxCon">{{='您当前还没有加入任何企业，'}}<span class="Hand btnExperience creatEnterpriseBtn InlineBlock">{{='创建'}}</span> {{='或'}} <span class="Hand addEnterpriseBtn InlineBlock">{{='加入'}}</span> {{='一个企业网络'}}</p>
+        </div>
+        <div class="enterpriseNote TxtCenter">
+            <span class="noEnterpriseIcon borderBox"><span></span></span>
+            <h3 class="enterpriseNoteTitle Gray Font26 mTop30">{{=md_lang.ACC0801151||'免费体验企业版'}}</h3>
+            <p class="mTop20 Font16">{{='您可以先免费体验企业版，试用以下企业高级功能'}}</p>
+            <input type="button" class="btnBootstrap btnBootstrap-primary btnBootstrap-small mLeft20 btnExperience Font18 mTop45" value="{{='立即体验'}}">
+            <ul class="">
+                <li class="Gray_6 LineHeight30">
+                    <img src="modules/mdpublic/user/enterprise/img/eye.png" alt="{{='获得管理员权限'}}"><br>
+                    <p class="">{{='获得管理员权限'}}</p>
+                </li>
+                <li class="Gray_6 LineHeight30">
+                    <img src="modules/mdpublic/user/enterprise/img/serch.png" alt="{{='文档深度搜索'}}"><br>
+                    <p class="">{{='文档深度搜索'}}</p>
+                </li>
+                <li class="Gray_6 LineHeight30">
+                    <img src="modules/mdpublic/user/enterprise/img/usb.png" alt="{{='数据批量导出'}}"><br>
+                    <p class="">{{='数据批量导出'}}</p>
+                </li>
+                    <li class="Gray_6 LineHeight30">
+                    <img src="modules/mdpublic/user/enterprise/img/lock.png" alt="{{='企业安全策略配置'}}"><br>
+                <p class="">{{='企业安全策略配置'}}</p>
+                </li>
+                <li class="Gray_6 LineHeight30">
+                    <img src="modules/mdpublic/user/enterprise/img/chart.png" alt="{{='企业使用统计模块'}}"><br>
+                    <p class="">{{='企业使用统计模块'}}</p>
+                </li>
+                <li class="Gray_6 LineHeight30">
+                    <img src="modules/mdpublic/user/enterprise/img/file.png" alt="{{='无限存储空间'}}"><br>
+                    <p class="">{{='无限存储空间'}}</p>
+                </li>
+                <li class="Gray_6 LineHeight30">
+                    <img src="modules/mdpublic/user/enterprise/img/tie.png" alt="{{='专属顾问协助部署'}}"><br>
+                    <p class="">{{='专属顾问协助部署'}}</p>
+                </li>
+                <li class="Gray_6 LineHeight30">
+                    <img src="modules/mdpublic/user/enterprise/img/OA.png" alt="{{='OA等企业专属应用'}}"><br>
+                    <p class="">{{='OA等企业专属应用'}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {{?}}
+    <div class="pageLoading enterpriseLoad Hidden">
+        <div class="TxtCenter mTop10 mBottom10">
+            <div class="divCenter clipLoader ThemeColor3">
+            </div>
+        </div>
+    </div>
+    {{?it.isEnterprise}}
+    <div class="enterprise card minWidth borderBox pageBox pAll20 clearfix minHeight80">
+    <div class="oneEnterprise overflow_ellipsis">
+        <div class="enterpriseTop BorderBottom BorderGrayColor">
+            <h3 class="Left Gray mLeft10 LineHeight30">{{="企业版"}}</h3>
+            <span class="Right Hand MyInvitation LineHeight30 mRight20">
+                {{='我的受邀信息'}}
+                {{?it.invitNum>0}}
+                <span class="MyInvitationNew">{{=it.invitNum}}</span>
+                {{??}}
+                <span class="MyInvitationNew Hidden">0</span>
+                {{?}}
+            </span>
+            <input type="button" class="btnBootstrap btnBootstrap-primary btnBootstrap-small Right addEnterpriseBtn mRight20 overflow_ellipsis" value="{{='加入企业网络'}}" title="{{='加入企业网络'}}" style="width:110px;height:30px;">
+            <input type="button" class="btnBootstrap btnBootstrap-primary btnBootstrap-small Right btnExperience mRight20 overflow_ellipsis" value="{{='创建企业网络'}}" title="{{='创建企业网络'}}" style="width:110px;height:30px;">
+        </div>
+        <ul class="enterpriseList mTop10 BorderBottom BorderGrayColor">
+            <li class="Left LineHeight30 mTop10 Gray mLeft10 TxtLeft">
+                {{='企业网络号'}}
+                <span class="Hand tipIconTeam mLeft2 Hand tip-top-right LineHeight16" data-tip="{{='当您或您的同事主动加入企业网络的时候，输入此明道企业网络号。'}}">
+                    <span>?</span>
+                </span>
+            </li>
+            <li class="Left LineHeight30 mTop10 Gray mLeft20 TxtLeft">{{='企业网络名称'}}</li>
+            <li class="Left LineHeight30 mTop10 Gray TxtLeft">{{='计费人数'}}</li>
+            <li class="Left LineHeight30 mTop10 Gray">{{='权限'}}<span class="Hand tipIcon mLeft5 Hand tip-top LineHeight16" data-tip="{{='权限分管理员和普通成员。'}}"><span>?</span></span></li>
+            <li class="Left LineHeight30 mTop10 Gray pLeft15">{{='网络状态'}}</li>
+            <li class="Left LineHeight30 mTop10 Gray">{{='剩余时间'}}</li>
+            <li class="Left LineHeight30 mTop10 Gray TxtLeft">{{='操作'}}</li>
+        </ul>
+        <div class="pageLoading enterpriseListLoad">
+            <div class="TxtCenter mTop10 mBottom10">
+                <div class="divCenter clipLoader ThemeColor3">
+                </div>
+            </div>
+        </div>
+        <div class="enterpriseListOneBox mBottom20">
+        </div>
+        <div id='divPager'></div>
+    </div>
+    {{?}}
+</div>

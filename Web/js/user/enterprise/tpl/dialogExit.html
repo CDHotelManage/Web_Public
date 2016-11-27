@@ -1,0 +1,15 @@
+﻿<!-- 移交管理员身份给指定同事 -->
+{{? it.needTransfer }}
+<div class="mTop15 mAll20 borderBox">
+    <p>{{=md_lang.ACC0802034||'你是该网络唯一管理员，需要先移交管理身份再退出'}}</p>
+    <p>{{=md_lang.ACC0801131||'退出后，管理员可通过明道企业账户来交接或分配您负责的剩余工作'}}</p>
+    <input type="button" class="btnBootstrap btnBootstrap-primary btnBootstrap-small selectUserTransfer" value="{{=md_lang.ACC0802035||'指定另一位同事为管理员'}}">
+    <input type="button" class="btnBootstrap btnBootstrap-primary btnBootstrap-small exitProject Hidden" value="{{=md_lang.ACC0801132||'确定'}}">
+</div>
+{{??}}
+<div class="mTop15 mAll20 borderBox">
+    <p>{{=md_lang.ACC0801130||'你确认要退出：'}} {{= it.companyName }} ?</p>
+    <p>{{=md_lang.ACC0801131||'退出后，管理员可通过明道企业账户来交接或分配您负责的剩余工作'}}</p>
+    <input type="button" class="btnBootstrap btnBootstrap-primary btnBootstrap-small exitProject" value="{{=md_lang.ACC0801132||'确定'}}">
+</div>
+{{?}}

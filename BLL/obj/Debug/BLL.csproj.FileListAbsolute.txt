@@ -49,3 +49,46 @@ C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\bin\Debug\CdHot
 C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\obj\Debug\CdHotelManage.BLL.dll
 C:\Documents and Settings\Administrator\桌面\CdHotelManage\BLL\obj\Debug\CdHotelManage.BLL.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.BLL.dll.config
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.BLL.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.BLL.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.Common.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.DAL.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.Model.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Hotel.ApplictionFactory.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\OpenSmtp.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Excel.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\COM.Excel.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.DBUtility.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Hotel.Application.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\LibMain.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Hotel.Core.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Castle.Windsor.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Castle.Core.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\ServiceStack.Interfaces.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.Common.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.DAL.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Hotel.ApplictionFactory.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.Model.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\CdHotelManage.DBUtility.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Hotel.Application.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\LibMain.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Hotel.Core.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Castle.Windsor.xml
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Castle.Core.xml
+D:\项目构建\HotelManage\Web_Public\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\项目构建\HotelManage\Web_Public\BLL\obj\Debug\CdHotelManage.BLL.dll
+D:\项目构建\HotelManage\Web_Public\BLL\obj\Debug\CdHotelManage.BLL.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Hotel.EntityFramework.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\ServiceStack.OrmLite.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Lib.EntityFramework.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\ServiceStack.Common.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\ServiceStack.Text.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Hotel.EntityFramework.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\ServiceStack.OrmLite.xml
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Lib.EntityFramework.pdb
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\ServiceStack.Common.xml
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\ServiceStack.Text.xml
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\项目构建\HotelManage\Web_Public\BLL\bin\Debug\Newtonsoft.Json.xml

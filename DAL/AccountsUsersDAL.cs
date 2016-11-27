@@ -611,7 +611,8 @@ namespace CdHotelManage.DAL
         public DataSet GetUsersPager(string sort, string order, int currentPage, int pageSize)
         {
             string _sql = @" select  *
-                                from (select *,Row_number() over(order by " + sort + " " + order + ") as IDRank from Accounts_Users ) as IDWithRowNumber where IDRank>=(" + currentPage + "-1)*" + pageSize + "+1 and IDRank<=" + currentPage + "*" + pageSize + "";
+                                from (select *,Row_number() over(order by " + sort + " " + order + ") as IDRank from Accounts_Users ) as IDWithRowNumber where IDRank>=(" 
+                                + currentPage + "-1)*" + pageSize + "+1 and IDRank<=" + currentPage + "*" + pageSize + "";
 
             return DbHelperSQL.Query(_sql);
         }

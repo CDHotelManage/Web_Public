@@ -8,6 +8,7 @@ namespace CdHotelManage.Model
     [Serializable]
     public class AccountsUserRoles
     {
+        public int Id { get; set; }
         public AccountsUserRoles()
         { }
         #region Model
@@ -29,6 +30,9 @@ namespace CdHotelManage.Model
             set { _roleid = value; }
             get { return _roleid; }
         }
+        public string HotelID { get; set; }
+        public DateTime CreateTime { get; set; }
+        public DateTime UpdateTime { get; set; }
         #endregion Model
     }
 }

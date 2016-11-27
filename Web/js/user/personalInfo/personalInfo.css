@@ -1,0 +1,113 @@
+﻿.personalInfo {
+  width: 100%;
+  min-height: 500px;
+}
+.accountTab_secend {
+  position: relative;
+  list-style: none;
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  padding-left: 20px;
+  height: 56px;
+}
+.accountTab_secend li a {
+  line-height: 50px;
+  color: #999;
+  display: inline-block;
+  width: 65px;
+  float: left;
+  padding: 0px;
+  cursor: pointer;
+  text-align: center;
+  height: 50px;
+  font-size: 12px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 0 6px;
+  text-decoration: none;
+}
+.Avator {
+  margin-top: 20px;
+  height: 500px;
+}
+.Avator div {
+  vertical-align: top;
+  text-align: center;
+  border: 0px;
+  margin-left: 20px;
+  display: inline-block;
+  width: auto;
+  float: left;
+}
+.AvatorNormal {
+  width: 458px!important;
+  height: 410px;
+  border: 1px solid #cccccc;
+  float: right;
+  margin-right: 5px;
+}
+#AvatorNormal {
+  border: 1px solid #F2F2F2;
+  height: 380px;
+  width: 456px;
+}
+#AratorPz {
+  display: none;
+}
+#divTabSetAvator #AvatorBig img {
+  border-radius: 50%;
+}
+#msg {
+  color: Red;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 300px;
+}
+.resumeModule .updateHead {
+  border-bottom: 0px;
+}
+.resumeModule .resuleList {
+  border: 1px solid #d5d5d5;
+  background-color: #f5f5f5;
+  margin: 5px 0px;
+  _margin-bottom: 2px;
+}
+.resuleList .resuleItem {
+  border-bottom: 1px solid #d5d5d5;
+  padding: 10px;
+}
+.resuleItem2 {
+  width: 440px;
+  margin-bottom: 10px;
+}
+.resuleItem2 .Left {
+  width: 378px;
+  padding: 10px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15);
+}
+#divTabContract .MSNTextBox {
+  background: url(/images/Ico_BaseInfo.gif) 4px 3px no-repeat;
+  padding-left: 25px;
+}
+#divTabContract .QQTextBox {
+  background: url(/images/Ico_BaseInfo.gif) 4px -21px no-repeat;
+  padding-left: 25px;
+}
+#divTabContract .INTextBox {
+  background: url(/images/Ico_BaseInfo.gif) 4px -73px no-repeat;
+  padding-left: 25px;
+}
+#divTabContract .SINATextBox {
+  background: url(/images/Ico_BaseInfo.gif) 4px -47px no-repeat;
+  padding-left: 25px;
+}
+#divTabContract .QQWeiboTextBox {
+  background: url(/images/QQWeibo_Ico.gif) 3px center no-repeat;
+  padding-left: 25px;
+}
+#divTabContract .WeixinTextBox {
+  background: url(/images/Weixin_Ico.jpg) 3px center no-repeat;
+  padding-left: 25px;
+}

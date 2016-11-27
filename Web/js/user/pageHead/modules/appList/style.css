@@ -1,0 +1,218 @@
+.pageHeadApplist .appList {
+  width: 320px;
+  padding-top: 5px;
+}
+
+.pageHeadApplist .appList .fixedTitle {
+  position: fixed;
+  z-index: 1;
+
+  display: none;
+
+  width: 314px;
+  height: 40px;
+
+  background-color: #fff;
+}
+
+.pageHeadApplist .appList .stickApps {
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.pageHeadApplist .appList .projectApps {
+  margin-top: 5px;
+}
+
+.pageHeadApplist .appList .stickApps + .projectApps {
+  margin-top: 0;
+}
+
+.pageHeadApplist .appList .listTitle {
+  line-height: 40px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding-left: 15px;
+
+  color: #999;
+
+  align-items: center;
+}
+
+.pageHeadApplist .appList .listTitle .companyName {
+  max-width: 210px;
+  padding-right: 8px;
+
+  position: relative;
+}
+
+.pageHeadApplist .appList .listTitle .toggleMainList {
+  visibility: hidden;
+
+  margin-right: 15px;
+  margin-left: auto;
+
+  color: #999 !important;
+}
+
+.pageHeadApplist .appList .listTitle .toggleMainList .clipLoader {
+  display: inline-block;
+
+  width: 10px;
+  height: 10px;
+}
+
+.pageHeadApplist .appList .listContent .singleApp {
+  position: relative;
+
+  height: 40px;
+  padding: 0 15px;
+
+  cursor: pointer;
+
+  align-items: center;
+}
+
+.pageHeadApplist .appList .noticeDot {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+  display: none;
+
+  background-color: #f00;
+}
+
+.pageHeadApplist .appList .singleApp .noticeDot {
+  left: 32px;
+}
+
+.pageHeadApplist .appList .listTitle .noticeDot {
+  right: 3px;
+  top: 9px;
+}
+
+.pageHeadApplist .appList .notice .noticeDot {
+  display: block;
+}
+
+.pageHeadApplist .appList .listContent .singleApp:hover {
+  background-color: #f5f5f5;
+}
+
+.pageHeadApplist .appList .listTitle:hover .settingBtn,
+.pageHeadApplist .appList .listTitle:hover .toggleMainList,
+.pageHeadApplist .appList .listContent .singleApp:hover .stickBtn:not(.Hidden),
+.pageHeadApplist .appList .listContent .singleApp:hover .settingBtn {
+  visibility: visible;
+}
+
+.pageHeadApplist .appList .singleAppLink {
+  min-width: 0;
+
+  align-items: center;
+}
+
+.pageHeadApplist .appList .appAvatar {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+}
+
+.pageHeadApplist .appList .stickBtn,
+.pageHeadApplist .appList .settingBtn {
+  font-size: 15px;
+
+  visibility: hidden;
+
+  margin-left: 10px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  color: #999;
+}
+
+.pageHeadApplist .appList .settingBtn:not(:hover) {
+  color: #999 !important;
+}
+
+.pageHeadApplist .appList .stickBtn.Hidden {
+  display: none;
+}
+
+.pageHeadApplist .appList .singleApp:not(:hover) .appName {
+  color: #333 !important;
+}
+
+.pageHeadApplist .appList .singleApp .appName,
+.pageHeadApplist .appList .singleApp .companyName {
+  font-size: 13px;
+
+  overflow: hidden;
+
+  padding-left: 5px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  color: #333;
+}
+
+.pageHeadApplist .stickApps .appList .singleApp .appName {
+  flex: 0 0 auto;
+}
+
+.pageHeadApplist .appList .singleApp .companyName {
+  min-width: 60px;
+
+  color: #aaa;
+}
+
+.pageHeadApplist .appList .appsOps {
+  margin-top: 5px;
+  padding: 10px 0;
+
+  border-top: 1px solid #eee;
+}
+
+.pageHeadApplist .appList .addNewApp {
+  line-height: 34px;
+
+  height: 34px;
+  padding-left: 20px;
+
+  cursor: pointer;
+}
+
+.pageHeadApplist .appList .addNewApp span {
+  margin-right: 15px;
+
+  vertical-align: -1px;
+}
+
+.pageHeadApplist .appList .nullPersonalApps {
+  padding: 30px 0;
+
+  cursor: pointer;
+  text-align: center;
+}
+
+.pageHeadApplist .appList .nullPersonalApps .nullTip {
+  display: block;
+
+  padding-top: 90px;
+
+  background: no-repeat url('./images/nullPersonalApp.png') top center;
+}
+
+.pageHeadApplist .appList .nullPersonalApps:not(:hover) .nullTip {
+  color: #e3e4e7 !important;
+}

@@ -1,0 +1,42 @@
+﻿{{? it.type == 'user' }}
+<div id='userSet'>
+    <ul class='userSetUL'>
+        <li class="ThemeBGColor3" data-tag="account"><a href='/personal' data-bssp="topbar.personalSetting"><span class="icon icon-task-select-other"></span>{{= md_lang.TB0801015 || '个人账户' }}</a></li>
+        {{? md.global.Account.projects.length }}
+        <li class="ThemeBGColor3"><a href='javascript:void(0);' class="nmEntry" data-bssp="topbar.networkManagement"><span class="icon icon-company"></span>{{= md_lang.TB0801016 || '企业账户管理' }}</a></li>
+        {{??}}
+        <li class="createCompany" data-tag="createCompany"><a href='/personal?type=enterprise' target="_blank"><span class="pAll5">{{= md_lang.TB0801022 || '全公司用明道' }}</span></a></li>
+        {{?}}
+    </ul>
+    <ul class='userSetUL'>
+        <li class="ThemeBGColor3"><a href='/mobile.htm' target='_blank' data-bssp="topbar.clientDownload"><span class="icon icon-phonelink"></span>{{= md_lang.TB0801017 || 'App和客户端' }}</a></li>
+        <li class="ThemeBGColor3">
+            <a href='javascript:void(0);' class="showFollowWeixinDialog" data-bssp="topbar.serviceNumber"><span class="icon icon-weixin"></span>{{= md_lang.TB0801018 || '微信服务号' }}</a>
+        </li>
+        <li class="ThemeBGColor3"><a href='http://support.mingdao.com/' target="_blank" data-bssp="topbar.BugFeedback"><span class="icon icon-help"></span>{{= md_lang.TB0801019 || '使用帮助' }}</a></li>
+        <li class="ThemeBGColor3"><a href='http://blog.mingdao.com/' target='_blank'><span class="icon icon-blogs"></span>{{= md_lang.TB0801020 || '明道博客' }}</a></li>
+        <li class="ThemeBGColor3" data-tag="mdDaShi">
+            <a href='http://dashi.mingdao.com/' class="btnMDDashi" target='_blank' data-bssp="topbar.earnCommissions"><span class="icon icon-earnings"></span>{{= md_lang.TB0801021 || '推广收益' }}</a>
+        </li>
+    </ul>
+    <ul class="pTop5 pBottom5">
+        <li class="ThemeBGColor3">
+            <a href='/logout' data-bssp="topbar.logOut" class="loggingOut"><span class="icon icon-exit"></span>{{=md_lang.newUI_omit_text146}}</a>
+        </li>
+    </ul>
+</div>
+
+{{?? it.type == 'invite' }}
+<div class="addInvite Relative">
+    <ul>
+        <li class="createPost ThemeBGColor3" data-bssp="topbar.addFeed"><i class="icon-task-edit-pen Font14"></i>{{= md_lang.TB0801001 || '动态(S)' }}</li>
+        <li class="createTask ThemeBGColor3" data-bssp="topbar.createTask"><i class="icon-task-responsible"></i>{{= md_lang.TB0801002 || '任务(T)' }}</li>
+        <li class="createCalendar ThemeBGColor3" data-bssp="topbar.createCalendar"><i class="icon-task-calendar"></i>{{= md_lang.TB0801003 || '日程(C)' }}</li>
+        <li class="uploadAssistant ThemeBGColor3"><i class="icon-knowledge-cloud"></i>{{= md_lang.TB0801004 || '文件(U)' }}</li>
+    </ul>
+    <ul class="createInvite">
+        <li class="inviteMember ThemeBGColor3" data-bssp="topbar.inviteColleagues"><i class="icon-topbar-invite"></i>{{= md_lang.TB0801005 || '邀请' }}</li>
+        <li class="linkCreateGroup ThemeBGColor3" data-bssp="topbar.createGroup"><i class="icon-chat-group2"></i>{{= md_lang.TB0801006 || '群组' }}</li>
+    </ul>
+</div>
+{{?}}

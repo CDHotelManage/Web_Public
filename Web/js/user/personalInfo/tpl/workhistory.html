@@ -1,0 +1,91 @@
+﻿   <div class="sTabs" id="workhistory">
+       <div class="pAll15">
+           <!-- Work -->
+           <div id="divTabWork">
+               <div class="resumeModule clearfix">
+                    {{~it.data.list:accountDetail:i}}
+                        <div class="resuleItem2 clearfix mTop10" selId={{=accountDetail.autoId}}>
+                            <div name="sel" id="Sel{{=accountDetail.autoId}}" class="Left ThemeBGColor5"><div>
+                                <span class="Black16 accountName overflow_ellipsis Width200" title="{{!accountDetail.name}}">{{!accountDetail.name}}</span>
+                                <span class="mLeft20 accountTime">
+                                {{=accountDetail.startDate}}{{=md_lang.ACC0802008||'至'}}
+                                {{?accountDetail.endDate}}
+                                    {{=accountDetail.endDate}}
+                                {{??}}
+                                    今
+                                {{?}}
+                                </span>
+                                </div>
+                                <div class="Blue accountTi AllBreak">{{!accountDetail.title}}</div>
+                                <div class="Blue accountDes AllBreak">{{!accountDetail.description}}</div>
+                            </div>
+                            <div class="mLeft5 Right">
+                                <a href="javascript:;" class="updateHistoryBtn" autoId="{{=accountDetail.autoId}}"
+                                name="{{!accountDetail.name}}" title="{{!accountDetail.title}}"
+                                description="{{!accountDetail.description}}" startDate="{{=accountDetail.startDate}}"
+                                endDate="{{=accountDetail.endDate}}" type="{{=it.type}}">{{=md_lang.ACC0802009||'编辑'}}</a><br />
+                                <a href="javascript:;" class="delHistoryBtn" accountAttr="{{=accountDetail.autoId}}">{{=md_lang.ACC0802010||'删除'}}</a>
+                            </div>
+                        </div>
+                    {{~}}
+               </div>
+               <div class="Blue mTop20 mLeft10">
+                   <%=md_lang.myaccount_profile_job_tip_1%>
+                   ( +<span id="spanWorkScore">{{=it.data.score}}</span><%=md_lang.myaccount_profile_job_tip_2 %>)
+               </div>
+               <div class="mTop10 mBottom10">
+                   <!-- <table border="0" cellpadding="0" cellspacing="10" style="border: 1px solid #dfdfdf;background-color: #f5f5f5;"> -->
+                   <table border="0" cellpadding="0" cellspacing="10">
+                       <tr>
+                           <td width="80">
+                               <%=md_lang.myaccount_profile_job_name%>
+                           </td>
+                           <td colspan="2">
+                               <input type="text" name="nameWE" class="TextBox" style="width: 168px;" />
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <%=md_lang.myaccount_profile_job_position%>
+                           </td>
+                           <td colspan="2">
+                               <input type="text" name="titleWE" class="TextBox" style="width: 168px;" />
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <%=md_lang.myaccount_profile_job_description%>
+                           </td>
+                           <td colspan="2">
+                               <input type="text" name="description" class="TextBox" style="width: 328px;" />
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <%=md_lang.myaccount_profile_job_duration%>
+                           </td>
+                           <td colspan="2">
+                               <input type="text" id="txtWorkStartDate" name="startDate" class="TextBox" readonly="readonly" placeholder="{{=md_lang.NNF011}}" />
+                               <%=md_lang.myaccount_profile_job_to%>
+                               <input type="text" id="txtWorkEndDate" name="endDate" class="TextBox" readonly="readonly" placeholder="{{=md_lang.NNF012}}" />
+                               <input type="checkbox" id="chNowWork"/><label for="chNowWork"><%=md_lang.myaccount_profile_job_notresign%></label>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <input type="button" id="btnAddWork" class="Left btnBootstrap btnBootstrap-primary btnBootstrap-small Hand" value="<%=md_lang.myaccount_button_add %>" />
+                               <input type="button" id="btnSaveWork" class="Left btnBootstrap btnBootstrap-primary btnBootstrap-small Hand Hidden" value="<%=md_lang.myaccount_button_save %>" />
+                           </td>
+                           <td class="LineHeight30">
+                               <a href="javascript:;"><span id="spnWorkReset">
+                                   <%=md_lang.myaccount_button_reset%></span></a>
+                           </td>
+                           <td>
+                               &nbsp;
+                           </td>
+                       </tr>
+                   </table>
+               </div>
+           </div>
+       </div>
+   </div>

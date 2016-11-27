@@ -1,0 +1,87 @@
+﻿     <div class="sTabs" id="basic">
+    <div class="pAll15">
+        <div id="divTabProfile">
+            <table border="0" cellspacing="10">
+                <tr>
+                    <td class="Bold" width="70">
+                        {{= "姓名"}}
+                    </td>
+                    <td>
+                        <input type="text" name="Fullname" maxlength="20" class="TextBox" style="width: 168px;" />
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Bold">
+                        {{= "生日"}}
+                    </td>
+                    <td>
+                        <input type="text" class="TextBox" id="txtBirthday" readonly="readonly" style="width: 168px;" />
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Bold">
+                        {{="性别"}}
+                    </td>
+                    <td>
+                        <input type="radio" name="Gender" value="1" id="rdoMade" /><label for="rdoMade">{{="男"}}</label>
+                        <input type="radio" name="Gender" value="2" id="rdoReMade" /><label for="rdoReMade">{{="女"}}</label>
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr id="tr_CompanyName">
+                    <td class="Bold">
+                       {{="公司名称"}}
+                    </td>
+                    <td>
+                        <input type="text" name="CompanyName" maxlength="20" class="TextBox" style="width: 168px;" />
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Bold">
+                        {{="职位"}}
+                    </td>
+                    <td>
+                        <input type="text" name="Job" class="TextBox" style="width: 168px;" />
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Bold">
+                        {{="居住地址"}}
+                    </td>
+                    <td>
+                        <input type="text" name="address" class="TextBox" style="width: 168px;" />
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" style="height: 24px; cursor: pointer;" class="btnBootstrap btnBootstrap-primary btnBootstrap-small"
+                            id="btnSaveProfile" value='{{="保存"}}' />
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

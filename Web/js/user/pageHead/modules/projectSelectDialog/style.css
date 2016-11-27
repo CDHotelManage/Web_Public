@@ -1,0 +1,36 @@
+.projectSelectWrapper {
+    padding: 15px 0;
+}
+
+.projectSelectWrapper .title {
+    font-weight: normal;
+
+    margin: 5px 0;
+}
+
+.projectSelectWrapper .title,
+.projectSelectWrapper .singleProject {
+    padding: 0 25px;
+}
+
+.projectSelectWrapper .singleProject {
+    line-height: 2em;
+
+    height: 2em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.projectSelectWrapper .pContainer {
+    overflow: auto;
+
+    max-height: 15em;
+}
+
+.projectSelectWrapper .singleProject:not(:hover) {
+    background-color: transparent!important;
+}
+
+.projectSelectWrapper .singleProject:hover {
+    color: rgba(255,255,255,.87);
+}

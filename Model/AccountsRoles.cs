@@ -11,7 +11,9 @@ namespace CdHotelManage.Model
         public AccountsRoles()
         { }
         #region Model
-        private int _roleid;
+        public int Id { get; set; }
+        public string HotelID { get; set; }
+        private string _roleid;
         private string _title;
         /// <summary>
         /// 
@@ -25,7 +27,7 @@ namespace CdHotelManage.Model
         /// <summary>
         /// 
         /// </summary>
-        public int RoleID
+        public string RoleID
         {
             set { _roleid = value; }
             get { return _roleid; }

@@ -1,0 +1,109 @@
+﻿<div class="sTabs" id="contact">
+   <div class="pAll15">
+       <!-- Contract -->
+       <div id="divTabContract">
+           <table border="0" cellspacing="10" cellpadding="0">
+               <tr>
+                   <td>
+                       <%=md_lang.A041%>
+                   </td>
+                   <td>
+                    <% if(it.groupObject.email){ %>
+                   <span class="Left mRight15">
+                       <%=it.groupObject.email%>
+                       </span>
+                       <a href="/personal?type=management" class="ThemeColor3">{{=md_lang.ACC0801056 || "更换"}}</a>
+                    <% } else { %>
+                      <span class="Left mRight5">
+                         <a href="/personal?type=management" class="ThemeColor3">{{=md_lang.ACC0801057 || "未绑定"}}</a>
+                      </span>
+                    <% } %>
+                   </td>
+                   <td>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <%=md_lang.myaccount_profile_contact_mobile%>
+                   </td>
+                   <td class="mobilePhoneTd">
+                        <% if(it.groupObject.mobilePhone){ %>
+                        <span class="Left mRight15">
+                           <%=it.groupObject.mobilePhone%>
+                        </span>
+                        <a href="/personal?type=management" class="ThemeColor3">{{=md_lang.ACC0801056 || "更换"}}</a>
+                        <% } else { %>
+                        <span class="Left mRight5">
+                           <a href="/personal?type=management" class="ThemeColor3">{{=md_lang.ACC0801057 || "未绑定"}}</a>
+                       </span>
+                        <% } %>
+                       <label id="Label_MobilePhone" class="Hidden"><input id="Checked_MobilePhone" value="MobilePhone" type="checkbox" /><%=md_lang.myaccount_profile_contact_onlytome%></label>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       QQ
+                   </td>
+                   <td>
+                       <input type="text" name="QQ" class="TextBox QQTextBox" style="width: 143px;" />
+                       <label id="Label_QQ" class="Hidden">
+                           <input id="Checked_QQ" value="QQ" type="checkbox" /><%=md_lang.myaccount_profile_contact_onlytome%></label>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       LinkedIn
+                   </td>
+                   <td>
+                       <input type="text" name="LinkedIn" placeholder="<%=md_lang.myaccount_profile_contact_blankstate_1 %>"
+                           class="TextBox INTextBox" style="width: 143px;" />
+                       <label id="Label_Linkedin" class="Hidden">
+                           <input id="Checked_Linkedin" value="Linkedin" type="checkbox" /><%=md_lang.myaccount_profile_contact_onlytome%></label>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <%=md_lang.myaccount_profile_contact_sinaweibo%>
+                   </td>
+                   <td>
+                       <input type="text" name="Sina" placeholder="<%=md_lang.myaccount_profile_contact_blankstate_2 %>"
+                           class="TextBox SINATextBox" style="width: 143px;" />
+                       <label id="Label_Sina" class="Hidden">
+                           <input id="Checked_Sina" value="Sina" type="checkbox" /><%=md_lang.myaccount_profile_contact_onlytome%></label>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <%=md_lang.myaccount_profile_contact_tencentweibo%>
+                   </td>
+                   <td>
+                       <input type="text" name="QQWeibo" placeholder="<%=md_lang.myaccount_profile_contact_blankstate_3 %>"
+                           class="TextBox QQWeiboTextBox" style="width: 143px;" />
+                       <label id="Label_QQWeibo" class="Hidden">
+                           <input id="Checked_QQWeibo" value="QQWeibo" type="checkbox" /><%=md_lang.myaccount_profile_contact_onlytome%></label>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <%=md_lang.myaccount_profile_contact_weixin%>
+                   </td>
+                   <td>
+                       <input type="text" name="weiXin" class="TextBox WeixinTextBox" placeholder="<%=md_lang.myaccount_profile_contact_blankstate_4 %>"
+                           style="width: 143px;" />
+                       <label id="Label_Weixin" class="Hidden">
+                           <input id="Checked_Weixin" value="weiXin" type="checkbox" /><%=md_lang.myaccount_profile_contact_onlytome%></label>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <input type="button" id="btnAddContract" class="btnBootstrap btnBootstrap-primary btnBootstrap-small"
+                           style="height: 24px; cursor: pointer;" value="<%=md_lang.myaccount_button_save %>" />
+                   </td>
+                   <td>
+                       &nbsp;
+                   </td>
+               </tr>
+           </table>
+       </div>
+   </div>
+</div>

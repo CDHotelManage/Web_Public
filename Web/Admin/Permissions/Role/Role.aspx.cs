@@ -36,13 +36,13 @@ namespace CdHotelManage.Web.Admin.Permissions.Role
             try
             {
                 Model.AccountsRoles model = new Model.AccountsRoles();
-                int count = rolebll.GetList("title='" + this.txtrolename.Text.Trim() + "'").Tables[0].Rows.Count;
+                int count = rolebll.GetListByTitle( this.txtrolename.Text.Trim()).Tables[0].Rows.Count;
                 if (count > 0)
                 {
                     this.labname.Text = "该角色名已存在！";
                     return;
                 }
-                model.RoleID = rolebll.GetMaxId();
+                model.RoleID = rolebll.GetMaxId().ToString();
                 model.Title = this.txtrolename.Text.Trim();
                 model.Description = this.txtdescript.Text.Trim();
                 rolebll.Add(model);
@@ -74,7 +74,7 @@ namespace CdHotelManage.Web.Admin.Permissions.Role
             {
                 Model.AccountsRoles model = new Model.AccountsRoles();
                 int roleid = Convert.ToInt32(Request.QueryString["roleid"].ToString());
-                model.RoleID = roleid;
+                model.RoleID = roleid.ToString();
                 model.Title = this.rolename.Text.Trim();
                 model.Description = this.descript.Text.Trim();
                 rolebll.Update(model);

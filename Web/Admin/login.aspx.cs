@@ -72,8 +72,8 @@ namespace CdHotelManage.Web.Admin
             if (Request.QueryString["returnurl"] != null)
             {
                 CdHotelManage.Model.AccountsUsers user = aubll.GetModel(userid);
-                user.Phone = GetIP();
-                user.Email = DateTime.Now.ToString();
+                user.LastLoginIP = GetIP();
+                user.LastLoginTime = DateTime.Now;
                 aubll.Update(user);
                 string returnurl = Request.QueryString["returnurl"].ToString();
                 Response.Redirect(returnurl);
@@ -86,7 +86,7 @@ namespace CdHotelManage.Web.Admin
                     if (Request.Cookies["ip"] == null)
                     {
                         HttpCookie ip = new HttpCookie("ip");
-                        ip.Value = user.Phone;
+                        ip.Value = user.LastLoginIP;
                         ip.Expires = DateTime.Now.AddDays(1);
                         Response.Cookies.Add(ip);
                         Request.Cookies.Set(ip);
@@ -104,10 +104,10 @@ namespace CdHotelManage.Web.Admin
                         Request.Cookies.Set(date);
                     }
                 }
-                user.Phone = GetIP();
-                user.Email = DateTime.Now.ToString();
+                user.LastLoginIP = GetIP();
+                user.LastLoginTime = DateTime.Now;
                 aubll.Update(user);
-                Response.Redirect("/Admin/index.aspx");
+                Response.Redirect("/User/default.htm?account="+ userid ?? string.Empty);
             }
         }
 
@@ -171,9 +171,7 @@ namespace CdHotelManage.Web.Admin
 
         protected void btnNull_Click(object sender, EventArgs e)
         {
-            txtName.Text = "";
-            txtPwd.Text = "";
-            txtSN.Text = "";
+            HttpContext.Current.Response.Redirect("/register.htm");
         }
     }
 }

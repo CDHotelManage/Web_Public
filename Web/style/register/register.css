@@ -1,0 +1,89 @@
+﻿@import '/style/register/basic.css';
+@import '/style/register/stepLine.css';
+@import '/style/register/style.css';
+
+body {
+    background: #4486b7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    background-image: url(/Images/loginbg.png);
+}
+.header .content .mingdaoLogo {
+    display: inline-block;
+    width: 370px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    background-image: url(/Images/LOGO123.png);
+}
+.inputContainer.invite .itemTitle {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+/*邀请加入*/
+.inviteBody {
+  background: none;
+  background-color: #eef1f6;
+}
+
+/*企业账号注册*/
+.enterpriseBody {
+  background-image: url("../../common/images/bge.png");
+}
+
+.enterpriseBody .enterpriseTitle {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*链接邀请文案提示*/
+.linkInviteNotice {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.linkInviteNotice .linkInviteDesc {
+  font-size: 14px;
+  color: #999;
+  line-height: 25px;
+  margin: 20px 28px;
+}
+
+/*注册成功页面*/
+.successTip .resultTitle {
+  font-size: 15px;
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.successTip .downloadDesc {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.successTip ul {
+  color: #B5B4B4;
+  line-height: 28px;
+  margin-left: 20px;
+}
+
+.successTip ul li {
+  list-style-type: disc;
+}
+
+a.terms, a.terms:hover {
+  color: #999;
+}
+
+/* hide login part */
+@media screen and (max-width: 500px) {
+  .accountVerify .loginPart {
+    display: none;
+  }
+}
+

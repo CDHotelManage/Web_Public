@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="roomType.aspx.cs" Inherits="CdHotelManage.Web.Wap.order_room.roomType" %>

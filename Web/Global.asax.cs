@@ -9,14 +9,15 @@ using System.IO;
 using System.Web.Security;
 using LTP.Accounts.Bus;
 using System.Collections.Generic;
+using Lib.Web;
 
 namespace CdHotelManage.Web 
 {
 	/// <summary>
 	/// Global 的摘要说明。
 	/// </summary>
-	public class Global : System.Web.HttpApplication
-	{
+	public class Global : LibWebApplication
+    {
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
@@ -85,8 +86,9 @@ namespace CdHotelManage.Web
 			Application["1xfirstpage_topimage"]="images/top_01.gif";
 			Application["1xfirstpage_bottomimage"]="images/bottom_01.gif";
 			Application["1xfirstpage_middleimage"]="images/bg_01.gif";
-			#endregion
-		}
+            #endregion
+            base.Application_Start(sender, e);
+        }
 
         void aTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {

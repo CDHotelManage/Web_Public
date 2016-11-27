@@ -1,0 +1,53 @@
+﻿<div class="mBottom20 pLeft5">
+    <h3 class="LineHeight30 Normal Gray14 mp0">
+        {{=md_lang.TXL0801037||"编辑我的企业网络名片"}}
+        <span class="Hand tipIcon mLeft5 Hand LineHeight15 Relative tip-top" data-tip="{{=md_lang.TXL0801045||'企业网络名片是您在该企业网络下的个人信息，只在本企业网络中展示。'}}">
+            <span>?</span>
+        </span>
+    </h3>
+    <div class="Clear"></div>
+    <ul class="ulEditCard mTop20 divCenter mLeft0">
+        <li class="liEditCard">
+            <input type="text" disabled="disabled" value="{{!it.data.fullname}}"  placeholder="姓名"  class="borderBox Gray_6 textWH TextBoxNew cardFullName" />
+        </li>
+
+        {{? it.isEdit || it.settings.isUserFillCompanyEnabled }}
+        <li class="liEditCard">
+            <input type="text" value="{{!it.data.companyName|| '' }}" placeholder="{{=md_lang.ACC0808080||'公司'}}"  class="borderBox Gray_6 textWH TextBoxNew cardCompanyName"/>
+        </li>
+        {{?}}
+
+        {{?it.data.departments.length}}
+        <li class="liEditCard department selectContainer">
+            <input type="hidden" class="borderBox Gray_6 textWH TextBoxNew cardDepartment" />
+        </li>
+        {{?}}
+
+        <li class="liEditCard">
+            <input type="text" value="{{!it.data.job || '' }}" placeholder="{{=md_lang.TXL0801039||'职位'}}"  class="borderBox Gray_6 textWH TextBoxNew cardJob"/>
+        </li>
+
+        {{? it.isEdit || it.settings.isUserFillJobNumberEnabled }}
+            <li class="liEditCard">
+                <input type="text" value="{{!it.data.jobNumber || '' }}" placeholder="{{=md_lang.TXL0801040||'工号'}}"  class="borderBox Gray_6 textWH TextBoxNew cardJobNum"/>
+            </li>
+        {{?}}
+
+        {{? (it.isEdit || it.settings.isUserFillWorkSiteEnabled) && it.data.workSites.length}}
+        <li class="liEditCard workSite selectContainer">
+            <input type="hidden" class="borderBox Gray_6 textWH TextBoxNew cardWorkSite" />
+        </li>
+        {{?}}
+
+        {{?it.isEdit }}
+        <li class="liEditCard">
+            <input type="text" value="{{!it.data.contactPhone || '' }}" placeholder="{{=md_lang.TXL0801043||'工作电话（区号-电话号码-分机）'}}" class="borderBox Gray_6 textWH TextBoxNew cardContactPhone" />
+        </li>
+        {{?}}
+    </ul>
+    {{?!it.isEdit}}
+    <input type="button" style="height:38px;width:340px;" class="divCenter btnBootstrap btnBootstrap-primary btnBootstrap-small Hand mTop5 sureBtnForEditCard" value="{{=md_lang.TXL0801042||'加入企业网络'}}">
+    {{??}}
+    <input type="button" style="height:38px;width:340px;" class="divCenter btnBootstrap btnBootstrap-primary btnBootstrap-small Hand mTop5 sureBtnForEditCard" value="{{=md_lang.TXL0801044||'确认'}}"/>
+    {{?}}
+</div>

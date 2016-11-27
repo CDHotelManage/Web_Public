@@ -1,0 +1,177 @@
+﻿#newGuideContainer {
+  box-sizing: border-box;
+  display: none;
+  height: 215px;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, .85);
+  position: relative;
+}
+
+#newGuideContainer .closeGuide {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#newGuideContainer .guideBox {
+  width: 600px;
+  margin: 0 auto;
+
+  border-radius: 3px;
+  background: #fff;
+}
+
+#newGuideContainer .guideBox .title {
+  line-height: 43px;
+
+  height: 43px;
+  padding: 0 15px;
+
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#newGuideContainer .guideBox .content {
+  position: relative;
+
+  height: 135px;
+}
+
+#newGuideContainer .guideBox .textBox {
+  height: 115px;
+  margin: 10px 0 10px 208px;
+
+  color: #333;
+}
+
+#newGuideContainer .guideBox p {
+  margin: 0;
+}
+
+#newGuideContainer .guideBox .textTitle {
+  font-size: 17px;
+
+  padding-top: 5px;
+}
+
+#newGuideContainer .guideBox .textDesc {
+  font-size: 13px;
+
+  padding-top: 4px;
+
+  color: #999;
+}
+
+#newGuideContainer .guideBox .textOp {
+  font-size: 14px;
+  line-height: 34px;
+
+  padding-top: 4px;
+}
+
+#newGuideContainer .guideBox .op {
+  padding: 0 1em;
+  height: 34px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  color: #fff;
+  border-radius: 3px;
+}
+
+#newGuideContainer .guideBox .tip {
+  line-height: 34px;
+
+  margin-left: 10px;
+
+  color: #4caf50;
+}
+
+#newGuideContainer .title .stepBox {
+  margin-top: 12px;
+  margin-right: -10px;
+}
+
+#newGuideContainer .title .stepBox .step {
+  line-height: 18px;
+
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+
+  cursor: pointer;
+  text-align: center;
+
+  color: #fff;
+  border-radius: 50%;
+}
+
+#newGuideContainer .title .stepBox .step:not(.active) {
+  background-color: #e0e0e0 !important;
+}
+
+#newGuideContainer .title .stepBox .step.completed:not(.active) {
+  background-color: #a5d6a7 !important;
+}
+
+#newGuideContainer .content .step {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+
+  padding-right: 25px;
+  padding-left: 15px;
+
+  transition: opacity .3s;
+
+  opacity: 0;
+}
+
+#newGuideContainer .content .step.active {
+  z-index: 1;
+
+  transition: opacity .3s .3s;
+
+  opacity: 1;
+}
+
+#newGuideContainer .content .step:not(.completed) .tip {
+  display: none;
+}
+
+#newGuideContainer .content .imageBox {
+  margin-top: 10px;
+  width: 180px;
+}
+
+#newGuideContainer .content .imageBox img {
+  width: 100%;
+}
+
+.guidePoshytip .guideContainer {
+  padding: 10px 0;
+}
+
+.guidePoshytip .guideContainer .image {
+  float: left;
+  margin-left: 14px;
+  margin-right: 13px;
+  width: 80px;
+  height: 80px;
+  background-image: url('./images/guideBox.gif');
+}
+
+.guidePoshytip .guideContainer:hover .image {
+  background-image: url('./images/guideBoxStatic.jpg');
+}
+
+.guidePoshytip .guideContainer .textBox {
+  margin-right: 15px;
+  font-size: 14px;
+}

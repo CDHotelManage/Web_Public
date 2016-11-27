@@ -1,0 +1,41 @@
+﻿<div class="overflowHidden mTop10 mAll20 borderBox">
+    <div class="exitEnterpriseText LineHeight30 mTop10">
+        <div class="exitText borderBox">
+            {{?it.data.quitStatus === 3}}
+                <!-- 普通成员退出-->
+                <p>退出后，该网络将从您的企业网络列表中删除。</p>
+                <p>同时该企业的通讯录、公司群组会从您的账户中剔除。</p>
+                <p>您无权再查看该企业发布的消息、动态、日程、知识及任务。</p>
+                <p>可能有部分应用将无法使用。</p>
+                <p>您将不再享受该企业授权的VIP会员权益。</p>
+                <p class="TxtRight borderBox">
+                <input type="button" id="applyForQuit" class="btnBootstrap btnBootstrap-primary btnBootstrap-small mRight20" value="申请退出">
+                <!-- <input type="button" id="sureBtn" class="Hidden btnBootstrap btnBootstrap-primary btnBootstrap-small mRight20" value="确定"> -->
+                <span class="ThemeColor3 Hand cancelBtnExitEnterprise">取消</span>
+                </p>
+            {{??it.data.quitStatus === 2}}
+                <!-- 一个网络管理员 -->
+                <p>您确认要退出上海万企明道软件有限公司？</p>
+                <p class="Red">注意：您是该网络唯一成员，退出后，该网络及网络所有数据将被删除。</p>
+                <p class="TxtRight borderBox">
+                <input type="button" id="sureBtnOne" class="Hidden btnBootstrap btnBootstrap-primary btnBootstrap-small mRight20" value="确定">
+                <span class="ThemeColor3 Hand cancelBtnExitEnterprise">取消</span>
+                </p>
+            {{??it.data.quitStatus === 1}}
+                <!-- 一个网络管理员多个成员  -->
+                <p>您是该网络唯一管理员，是否需要先移交管理员身份再退出？</p>
+                <p class="TxtRight borderBox">
+                <span class="ThemeColor3 Hand cancelBtnExitEnterprise mRight20">取消</span>
+                <input type="button" id="transferAdmin" class="Hidden btnBootstrap btnBootstrap-primary btnBootstrap-small" value="指定一名同事授予权限">
+            </p>
+            {{??}}
+                <!-- 多网络管理员多个成员 -->
+                <p>您是该网络的管理员，是否需要先移交管理员身份再退出？</p>
+                <p class="TxtRight borderBox">
+                <span class="Gary Hand mRight20 quitStatusNow">直接退出</span>
+                <input type="button" id="transferAdmin" class="Hidden btnBootstrap btnBootstrap-primary btnBootstrap-small" value="指定一名同事授予权限">
+                </p>
+            {{?}}
+        </div>
+    </div>
+</div>
