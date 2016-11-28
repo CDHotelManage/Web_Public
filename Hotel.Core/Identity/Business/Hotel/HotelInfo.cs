@@ -22,6 +22,6 @@ namespace Hotel.Core.Identity.Business.Hotel
         public string Remark { get; set; }
         public DateTime? CreateTime { get; set; }
         public DateTime? UpdateTime { get; set; }
-        public bool? IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }        
     }
 }

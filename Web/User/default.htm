@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>川度｜个人中心</title>
     <script src="/js/jquery.js" type="text/javascript"></script>
     <script src="/js/vendor/jquery/1.8.3/jquery-debug.js"></script>
     <script src="/js/vendor/jquery/1.8.3/jqueryAnimate.js"></script>
     <script src="/js/seajs/2.2.1/sea-debug.js"></script>
     <script src="/js/seajs/seajsText.js"></script>
-    <script src="/js/global.js"></script>
     <script src="/js/common/seajs-config.js"></script>
+    <script src="/js/global.js"></script>    
     <script src="/js/vendor/react/react-with-addons.js"></script>
     <script src="/js/vendor/react/react-dom.js"></script>
     <script src="/js/vendor/react/react-dom-server.js"></script>
@@ -115,6 +115,7 @@
         seajs.use("/js/user/user.js", function (user) {
             user.init();
         });
+        seajs.use("/js/user/pageHead/index.js");
     </script>
 </body>
 </html>

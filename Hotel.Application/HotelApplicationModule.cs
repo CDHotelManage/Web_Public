@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel.BusinessEntityFramework.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -10,7 +11,7 @@ namespace Hotel.Application
     public class HotelApplicationModule : LibMain.Modules.Module
     {
         public override void Initialize()
-        {
+        {            
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
         }
     }

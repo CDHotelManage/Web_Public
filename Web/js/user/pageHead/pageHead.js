@@ -11,7 +11,7 @@
   PageHead.options = {
     pageHeadLoadingTpl: '<div class="pageHeadLoading">' + LoadDiv() + '</div>',
   };
-
+  
   PageHead.init = function () {
     PageHead.menuItemResponse();
     PageHead.initPage();

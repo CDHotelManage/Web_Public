@@ -11,12 +11,12 @@
   BasicInfo.options = {};
   // 首次调用
   BasicInfo.init = function () {
-      var loginAccount="";
-      var request = util.getRequest();
-      if (request['account']) {
-          loginAccount = request['account'];
-      }
-      common.ajaxObj = account.getAccountBasicInfo({ AccountId: loginAccount });
+      //var loginAccount="";
+      //var request = util.getRequest();
+      //if (request['account']) {
+      //    loginAccount = request['account'];
+      //}
+      common.ajaxObj = account.getAccountBasicInfo({ AccountId: md.global.Account.accountId });
     common.ajaxObj.then(function (data) {
       if (data && data.result) {
         require.async('./tpl/basicInfo.html', function (rowsTpl) {

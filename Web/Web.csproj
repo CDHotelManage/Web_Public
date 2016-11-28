@@ -1078,6 +1078,7 @@
     <Content Include="js\AppendHtml.js" />
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
+    <Content Include="js\common\hotel.js" />
     <Content Include="js\common\moment.js" />
     <Content Include="js\common\querystring.js" />
     <Content Include="js\common\seajs-config.js" />
@@ -1124,6 +1125,7 @@
     <Content Include="js\user\enterprise\img\usb.png" />
     <Content Include="js\user\enterprise\img\withoutEnterprise.png" />
     <Content Include="js\user\enterprise\img\withoutEnterpriseTop.jpg" />
+    <Content Include="js\user\enterprise\register.js" />
     <Content Include="js\user\enterprise\tpl\authentication.html" />
     <Content Include="js\user\enterprise\tpl\dialogAdd.html" />
     <Content Include="js\user\enterprise\tpl\dialogExit.html" />
@@ -1304,6 +1306,7 @@
     <Content Include="Upload\MenuIcon\b3b721dc-b2ab-4354-8501-99346546cf30.png" />
     <Content Include="Upload\MenuIcon\qiehuan.png" />
     <Content Include="User\default.htm" />
+    <Content Include="User\enterpriseRegister.htm" />
     <Content Include="validateCode\validateCode.aspx" />
     <Content Include="Wap\about\index.aspx" />
     <Content Include="Wap\about\map.aspx" />
@@ -2464,6 +2467,10 @@
     <ProjectReference Include="..\Hotel.Application\Hotel.Application.csproj">
       <Project>{48c6f9fa-6369-451a-92a7-23795ba66630}</Project>
       <Name>Hotel.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hotel.BusinessEntityFramework\Hotel.BusinessEntityFramework.csproj">
+      <Project>{00cb6877-6522-4e73-ac54-f33c233f8023}</Project>
+      <Name>Hotel.BusinessEntityFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\Hotel.Core\Hotel.Core.csproj">
       <Project>{064ff84d-ec3b-4e93-8125-52cb368f4e7a}</Project>

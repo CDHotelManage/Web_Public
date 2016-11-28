@@ -73,6 +73,8 @@
     <Compile Include="Account\IRolesAppService.cs" />
     <Compile Include="Account\RolesAppService.cs" />
     <Compile Include="Business\Hotel\Dto\HotelInfoDto.cs" />
+    <Compile Include="Business\Hotel\HotelAppService.cs" />
+    <Compile Include="Business\Hotel\IHotelAppService.cs" />
     <Compile Include="HotelApplicationModule.cs" />
     <Compile Include="HotelAppServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +84,10 @@
       <Project>{e3d8759a-c5eb-402d-9f10-f5c6029a8d1a}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Hotel.BusinessEntityFramework\Hotel.BusinessEntityFramework.csproj">
+      <Project>{00cb6877-6522-4e73-ac54-f33c233f8023}</Project>
+      <Name>Hotel.BusinessEntityFramework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hotel.Core\Hotel.Core.csproj">
       <Project>{064ff84d-ec3b-4e93-8125-52cb368f4e7a}</Project>
       <Name>Hotel.Core</Name>
@@ -89,6 +95,10 @@
     <ProjectReference Include="..\Hotel.EntityFramework\Hotel.UserCenterEntityFramework.csproj">
       <Project>{0d4198a8-2225-4f0b-9fbd-030299673093}</Project>
       <Name>Hotel.UserCenterEntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hotel.Enum\Hotel.Enum.csproj">
+      <Project>{e93488ef-0edb-41ed-95d2-29d7655aa36b}</Project>
+      <Name>Hotel.Enum</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

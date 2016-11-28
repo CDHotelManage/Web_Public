@@ -23,6 +23,7 @@ md.global = {
         taskAppID: "ab99d0bb-3249-46f9-8a60-6952cb76cac2",
         calendarAppID: "42c96ef1-3ab6-4269-9824-e21436f34a38"
     },
+    Account:{},
     AjaxRequestQueue: new Array()
 };
 var globalVariablesEl = document.getElementById('globalVariables');

@@ -16,11 +16,25 @@ namespace Hotel.Application.Business.Hotel.Dto
         public string HAddress { get; set; }
         public float HLocationX { get; set; }
         public float HLocationY { get; set; }
-        public int Status { get; set; }
+        private int status = -1;
+        public int Status
+        {
+            get
+            {
+                return status;
+            }
+
+            set
+            {
+                this.status = value;
+            }
+        }
         public string Remark { get; set; }
         public DateTime CreateTime { get; set; }
         public DateTime UpdateTime { get; set; }
         public bool IsDeleted { get; set; }
         public bool IsAdmin { get; set; }
+
+        public string AccountID { get; set; }
     }
 }

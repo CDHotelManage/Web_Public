@@ -59,7 +59,7 @@ define(function (require, exports, module) {
           .hide();
         // $('.personalInfoMain').html('');
         PersonalInfo.reloadNav(userInfoClick);
-        history.pushState(type, document.title, location.href + '&type=information' + type + '&userInfo=' + userInfoClick);
+        history.pushState(type, document.title, location.href.split('?')[0] + '?type=information' + type + '&userInfo=' + userInfoClick);
       });
     });
   };

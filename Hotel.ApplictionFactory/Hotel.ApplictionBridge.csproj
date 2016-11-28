@@ -54,6 +54,10 @@
       <Project>{48c6f9fa-6369-451a-92a7-23795ba66630}</Project>
       <Name>Hotel.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Hotel.BusinessEntityFramework\Hotel.BusinessEntityFramework.csproj">
+      <Project>{00cb6877-6522-4e73-ac54-f33c233f8023}</Project>
+      <Name>Hotel.BusinessEntityFramework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hotel.Core\Hotel.Core.csproj">
       <Project>{064ff84d-ec3b-4e93-8125-52cb368f4e7a}</Project>
       <Name>Hotel.Core</Name>

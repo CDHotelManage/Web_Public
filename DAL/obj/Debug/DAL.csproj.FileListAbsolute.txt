@@ -48,11 +48,11 @@ D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\CdHotelManage.Model.dll
 D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\OpenSmtp.dll
 D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\Excel.dll
 D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\COM.Excel.dll
+D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\Newtonsoft.Json.dll
 D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\CdHotelManage.Common.pdb
 D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\CdHotelManage.DBUtility.pdb
 D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\CdHotelManage.Model.pdb
+D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\Newtonsoft.Json.xml
 D:\项目构建\HotelManage\Web_Public\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\项目构建\HotelManage\Web_Public\DAL\obj\Debug\CdHotelManage.DAL.dll
 D:\项目构建\HotelManage\Web_Public\DAL\obj\Debug\CdHotelManage.DAL.pdb
-D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\Newtonsoft.Json.dll
-D:\项目构建\HotelManage\Web_Public\DAL\bin\Debug\Newtonsoft.Json.xml

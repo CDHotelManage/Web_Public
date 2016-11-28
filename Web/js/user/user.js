@@ -8,6 +8,10 @@ define(function (require, exports, module) {
   }
   var User = {};
 
+  if (request['account']) {
+      md.global.Account.accountId  = request['account'];
+  }
+
   User.init = function () {
     $('#accountNav').on('click', 'li', function () {
       var $this = $(this);
@@ -15,7 +19,7 @@ define(function (require, exports, module) {
         .siblings('li')
         .removeClass('ThemeBGColor8');
       var typeTag = $this.attr('typeTag');
-      history.pushState(typeTag, document.title, location.href + '&type=' + typeTag);
+      history.pushState(typeTag, document.title, location.href.split('?')[0] + '?type=' + typeTag);
       common.init();
       User.reloadList(typeTag);
     });
