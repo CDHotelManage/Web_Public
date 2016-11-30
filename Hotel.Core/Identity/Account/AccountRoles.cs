@@ -32,7 +32,7 @@ namespace Hotel.Core.Identity.Account
         /// <summary>
         /// 
         /// </summary>
-        public int RoleID { get; set; }
+        public string RoleID { get; set; }
 
         public DateTime? CreateTime { get; set; }
         public DateTime? UpdateTime { get; set; }

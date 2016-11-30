@@ -67,7 +67,7 @@ namespace Hotel.ApplictionFactory
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public static AccountsRoles GetModel(int accountRolesId)
+        public static AccountsRoles GetModel(string accountRolesId)
         {
             IRolesAppService service = IocManager.Instance.Resolve<IRolesAppService>();
             if (service == null)

@@ -14,7 +14,7 @@ namespace CdHotelManage.Model
         public shopInfo()
         { }
         #region Model
-        private int _id;
+        private string _id;
         private string _shop_name;
         private string _shop_lxman;
         private string _shop_telphone;
@@ -30,7 +30,7 @@ namespace CdHotelManage.Model
         /// <summary>
         /// 
         /// </summary>
-        public int id
+        public string id
         {
             set { _id = value; }
             get { return _id; }

@@ -1,0 +1,19 @@
+﻿using LibMain.Application.Services.Dto;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hotel.Application.Account.Dto
+{
+    public class MenuDto: EntityDto
+    {
+        public string title { get; set; }
+        public int parent_id { get; set; }
+        public string url { get; set; }
+        public string imgurl { get; set; }
+        public int sortId { get; set; }
+        public bool isable { get; set; }
+    }
+}

@@ -52,7 +52,7 @@ namespace CdHotelManage.Web.Admin.Permissions.accountuser
 
                     Model.AccountsUserRoles aur = new Model.AccountsUserRoles();
                     aur.UserID = id;
-                    aur.RoleID = Convert.ToInt32(this.drpRole.SelectedValue);
+                    aur.RoleID = this.drpRole.SelectedValue;
                     aurbll.Add(aur);
                     ClientScript.RegisterStartupScript(GetType(), "message", "<script language='javascript' defer>alert('提交成功');parent.Window_Close();</script>");
                 }

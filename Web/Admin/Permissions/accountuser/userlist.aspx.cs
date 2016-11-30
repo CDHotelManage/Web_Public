@@ -15,10 +15,13 @@ namespace CdHotelManage.Web.Admin.Permissions.accountuser
         private readonly CdHotelManage.BLL.AccountsUsersBLL aubll = new BLL.AccountsUsersBLL();
         private readonly CdHotelManage.BLL.AccountsUserRolesBLL aurbll = new BLL.AccountsUserRolesBLL();
         private readonly CdHotelManage.BLL.AccountsRolesBLL rolebll = new BLL.AccountsRolesBLL();
+
+        string hotelID = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                hotelID = Request.QueryString["hid"];
                 hidSort.Value = "Email";
                 hidOrder.Value = "DESC";
                 hidCheck.Value = "false";
@@ -74,7 +77,7 @@ namespace CdHotelManage.Web.Admin.Permissions.accountuser
             string rolename="";
             try
             {
-                Model.AccountsUserRoles urmodel = aurbll.GetModel(id);
+                Model.AccountsUserRoles urmodel = aurbll.GetModel(id, hotelID);
                 Model.AccountsRoles rolemodel = rolebll.GetModel(urmodel.RoleID);
                 rolename = rolemodel.Title;
             }

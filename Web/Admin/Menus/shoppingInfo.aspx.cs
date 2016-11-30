@@ -49,7 +49,7 @@ namespace CdHotelManage.Web.Admin.Menus
         {
             
             Model.shopInfo fmInfo = new Model.shopInfo();
-            fmInfo.id = Convert.ToInt32(txtid.Value);
+            fmInfo.id = txtid.Value;
             fmInfo.shop_Name = txtName.Value;
             fmInfo.shop_LxMan = txtContactName.Value;
             fmInfo.Shop_Telphone = txtPhone.Value;

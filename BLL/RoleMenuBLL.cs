@@ -3,6 +3,8 @@ using System.Data;
 using System.Collections.Generic;
 using Maticsoft.Common;
 using CdHotelManage.Model;
+using Hotel.ApplictionFactory;
+
 namespace CdHotelManage.BLL
 {
 	/// <summary>
@@ -76,16 +78,21 @@ namespace CdHotelManage.BLL
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
-		public DataSet GetList(string strWhere)
+		public DataSet GetList(string roleId)
 		{
-			return dal.GetList(strWhere);
+			return RoleMenuBridge.GetList(roleId);
 		}
-		/// <summary>
-		/// 获得前几行数据
-		/// </summary>
-		public DataSet GetList(int Top,string strWhere,string filedOrder)
+
+        public DataSet GetList(string meunuPId,string roleId)
+        {            
+            return RoleMenuBridge.GetList(meunuPId, roleId);
+        }
+        /// <summary>
+        /// 获得前几行数据
+        /// </summary>
+        public DataSet GetSingleOrderByMenuId(string meunuPId, string roleId)
 		{
-			return dal.GetList(Top,strWhere,filedOrder);
+			return RoleMenuBridge.GetSingleOrderByMenuId(meunuPId, roleId);
 		}
 		/// <summary>
 		/// 获得数据列表

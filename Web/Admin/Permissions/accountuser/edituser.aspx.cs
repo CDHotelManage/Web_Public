@@ -12,10 +12,12 @@ namespace CdHotelManage.Web.Admin.Permissions.accountuser
         CdHotelManage.BLL.AccountsUsersBLL aubll = new BLL.AccountsUsersBLL();
         CdHotelManage.BLL.AccountsRolesBLL arbll = new BLL.AccountsRolesBLL();
         CdHotelManage.BLL.AccountsUserRolesBLL aurbll = new BLL.AccountsUserRolesBLL();
+        string hotelID = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                hotelID = Request.QueryString["hid"];
                 BindRole();
                 if (!string.IsNullOrEmpty(Request.QueryString["uid"]))
                 {
@@ -48,17 +50,17 @@ namespace CdHotelManage.Web.Admin.Permissions.accountuser
                     aubll.Update(au);
 
                     Model.AccountsUserRoles aur = new Model.AccountsUserRoles();
-                    Model.AccountsUserRoles urmodel= aurbll.GetModel("UserID='" + uid + "'");
+                    Model.AccountsUserRoles urmodel= aurbll.GetModel(uid, hotelID);
                     if (urmodel != null)
                     {
                         aur.UserID = uid;
-                        aur.RoleID = Convert.ToInt32(this.drpRole.SelectedValue);
+                        aur.RoleID = this.drpRole.SelectedValue;
                         aurbll.Update(aur);
                     }
                     else
                     {
                         aur.UserID = uid;
-                        aur.RoleID = Convert.ToInt32(this.drpRole.SelectedValue);
+                        aur.RoleID = this.drpRole.SelectedValue;
                         aurbll.Add(aur);
                     }
                     ClientScript.RegisterStartupScript(GetType(), "message", "<script language='javascript' defer>alert('提交成功');parent.Window_Close();</script>");
@@ -85,7 +87,7 @@ namespace CdHotelManage.Web.Admin.Permissions.accountuser
                     Model.AccountsUsers au = aubll.GetModel(uid);
                     if (au != null)
                     {
-                        Model.AccountsUserRoles aur = aurbll.GetModel(au.UserID);
+                        Model.AccountsUserRoles aur = aurbll.GetModel(au.UserID, hotelID);
                         if (aur != null)
                         {
                             labrole.Text = arbll.GetModel(aur.RoleID).Title;

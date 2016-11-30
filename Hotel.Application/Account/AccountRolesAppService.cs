@@ -12,7 +12,7 @@ using Common;
 
 namespace Hotel.Application.Account
 {
-    public class AccountRolesAppService: IAccountRolesAppService
+    public class AccountRolesAppService: ApplicationService,IAccountRolesAppService
     {
         private readonly IRepository<AccountRoles> _userRepository;
         public AccountRolesAppService(IRepository<AccountRoles> userRepository)
@@ -45,9 +45,9 @@ namespace Hotel.Application.Account
             }
         }
 
-        public int Delete(int accountRolesId)
+        public int Delete(string accountRolesId)
         {
-            if (accountRolesId <= 0)
+            if (string.IsNullOrEmpty(accountRolesId))
             {
                 return 0;
             }
@@ -57,9 +57,9 @@ namespace Hotel.Application.Account
             }
         }
 
-        public AccountRolesDto GetModel(int accountRolesId)
+        public AccountRolesDto GetModel(string HID,string accountID)
         {
-            var accountUser = _userRepository.Single(a => (a.Id == accountRolesId));
+            var accountUser = _userRepository.Single(a => (a.HotelID == HID && a.AccountID== accountID));
             if (accountUser == null)
             {
                 return null;

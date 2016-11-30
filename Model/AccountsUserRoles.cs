@@ -13,7 +13,7 @@ namespace CdHotelManage.Model
         { }
         #region Model
         private string _userid;
-        private int _roleid;
+        private string _roleid;
         /// <summary>
         /// 
         /// </summary>
@@ -25,7 +25,7 @@ namespace CdHotelManage.Model
         /// <summary>
         /// 
         /// </summary>
-        public int RoleID
+        public string RoleID
         {
             set { _roleid = value; }
             get { return _roleid; }

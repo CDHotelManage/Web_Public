@@ -134,7 +134,7 @@ namespace CdHotelManage.DAL
 			{
 				if(row["RoleID"]!=null && row["RoleID"].ToString()!="")
 				{
-					model.RoleID=int.Parse(row["RoleID"].ToString());
+					model.RoleID= row["RoleID"].ToString();
 				}
 				if(row["Menu_id"]!=null && row["Menu_id"].ToString()!="")
 				{

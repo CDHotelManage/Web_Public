@@ -10,11 +10,15 @@ namespace Hotel.EntityFramework
 {
     public class UserCenterDbContext: Lib.EntityFramework.EntityFramework.LibDbContext
     {
-        //public IDbSet<UserLogin> UserLogins { get; set; }
+        public IDbSet<Roles> Roles { get; set; }
+        public IDbSet<RoleMenu> RoleMenus { get; set; }
+        public IDbSet<AccountRoles> AccountRoles { get; set; }
         ///// <summary>
         ///// Users.
         ///// </summary>
-       public IDbSet<AccountUser> Users { get; set; }
+        public IDbSet<AccountUser> Users { get; set; }
+
+        public IDbSet<Menu> Menus { get; set; }
 
         public UserCenterDbContext()
             : base("Default")

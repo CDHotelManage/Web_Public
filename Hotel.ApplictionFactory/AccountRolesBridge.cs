@@ -60,13 +60,11 @@ namespace Hotel.ApplictionFactory
             }
             else
             {
-                int id = 0;
-                int.TryParse(accountRolesId, out id);
-                return service.Delete(id) > 0;
+                return service.Delete(accountRolesId) > 0;
             }
         }
 
-        public AccountRolesDto GetModel(int accountRolesId)
+        public static AccountsUserRoles GetModel(string accountID,string hotelID)
         {
             IAccountRolesAppService service = IocManager.Instance.Resolve<IAccountRolesAppService>();
             if (service == null)
@@ -75,7 +73,8 @@ namespace Hotel.ApplictionFactory
             }
             else
             {
-                return service.GetModel(accountRolesId);
+                var dto = service.GetModel(hotelID, accountID);
+                return ConvertFromDto(dto);
             }
         }
 

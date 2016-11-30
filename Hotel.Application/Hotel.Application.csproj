@@ -67,10 +67,16 @@
     <Compile Include="Account\AccuntEnum.cs" />
     <Compile Include="Account\Dto\AccountDto.cs" />
     <Compile Include="Account\Dto\AccountRolesDto.cs" />
+    <Compile Include="Account\Dto\MenuDto.cs" />
+    <Compile Include="Account\Dto\RoleMenuDto.cs" />
     <Compile Include="Account\Dto\RolesDto.cs" />
     <Compile Include="Account\IAccountAppService.cs" />
     <Compile Include="Account\IAccountRolesAppService.cs" />
+    <Compile Include="Account\IMenuAppService.cs" />
+    <Compile Include="Account\IRoleMenuAppService.cs" />
     <Compile Include="Account\IRolesAppService.cs" />
+    <Compile Include="Account\MenuAppService.cs" />
+    <Compile Include="Account\RoleMenuAppService.cs" />
     <Compile Include="Account\RolesAppService.cs" />
     <Compile Include="Business\Hotel\Dto\HotelInfoDto.cs" />
     <Compile Include="Business\Hotel\HotelAppService.cs" />

@@ -41,7 +41,7 @@ namespace CdHotelManage.BLL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public CdHotelManage.Model.AccountsRoles GetModel(int id)
+        public CdHotelManage.Model.AccountsRoles GetModel(string id)
         {
             //该表无主键信息，请自定义主键/条件字段
             return RolesBridge.GetModel(id);

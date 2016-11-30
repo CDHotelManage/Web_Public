@@ -4,6 +4,8 @@ using System.Text;
 using System.Data;
 using Maticsoft.Common;
 using CdHotelManage.DAL;
+using Hotel.ApplictionFactory.Business;
+
 namespace CdHotelManage.BLL
 {
     /// <summary>
@@ -110,6 +112,11 @@ namespace CdHotelManage.BLL
             DataSet ds = dal.GetList(strWhere);
             return DataTableToList(ds.Tables[0]);
         }
+
+        public CdHotelManage.Model.shopInfo GetModel(string hotelID)
+        {
+            return ShopBridge.GetModel(hotelID);
+        }
         /// <summary>
         /// 获得数据列表
         /// </summary>
@@ -125,7 +132,7 @@ namespace CdHotelManage.BLL
                     model = new CdHotelManage.Model.shopInfo();
                     if (dt.Rows[n]["id"] != null && dt.Rows[n]["id"].ToString() != "")
                     {
-                        model.id = int.Parse(dt.Rows[n]["id"].ToString());
+                        model.id = dt.Rows[n]["id"].ToString();
                     }
                     if (dt.Rows[n]["shop_Name"] != null && dt.Rows[n]["shop_Name"].ToString() != "")
                     {

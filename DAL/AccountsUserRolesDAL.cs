@@ -117,7 +117,7 @@ namespace CdHotelManage.DAL
                 }
                 if (ds.Tables[0].Rows[0]["RoleID"] != null && ds.Tables[0].Rows[0]["RoleID"].ToString() != "")
                 {
-                    model.RoleID = int.Parse(ds.Tables[0].Rows[0]["RoleID"].ToString());
+                    model.RoleID = ds.Tables[0].Rows[0]["RoleID"].ToString();
                 }
                 return model;
             }

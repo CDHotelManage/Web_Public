@@ -71,6 +71,8 @@
     <Compile Include="HotelCoreModule.cs" />
     <Compile Include="Identity\Account\AccountRoles.cs" />
     <Compile Include="Identity\Account\AccountUser.cs" />
+    <Compile Include="Identity\Account\Menu.cs" />
+    <Compile Include="Identity\Account\RoleMenu.cs" />
     <Compile Include="Identity\Account\Roles.cs" />
     <Compile Include="Identity\Business\Hotel\HotelFullInfo.cs" />
     <Compile Include="Identity\Business\Hotel\HotelInfo.cs" />

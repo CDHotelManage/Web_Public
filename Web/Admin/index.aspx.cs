@@ -20,12 +20,13 @@ namespace CdHotelManage.Web.Admin
         protected Model.shopInfo modelsi = new Model.shopInfo();
         //protected void Page_Load(object sender, EventArgs e)
         //{
-            
+
 
         //}
-
+        string hotelID = string.Empty;
         
         string[] menu_pid = null;
+        
         private void BindMenu()
         {
             try
@@ -34,13 +35,13 @@ namespace CdHotelManage.Web.Admin
                 Model.AccountsUsers User = UserNow;
                 if (User != null)
                 {
-                    Model.AccountsUserRoles UserRoles = userrolebll.GetModel(User.UserID);
+                    Model.AccountsUserRoles UserRoles = userrolebll.GetModel(User.UserID, hotelID);
                     if (UserRoles != null)
                     {
-                        int roleid = UserRoles.RoleID;
+                        string roleid = UserRoles.RoleID;
                         ViewState["roleid"] = roleid;
                         //获取菜单
-                        DataTable dt = rolemenubll.GetList("RoleID=" + roleid).Tables[0];
+                        DataTable dt = rolemenubll.GetList(roleid).Tables[0];
                         //获取一级菜单ID
                         List<string> menu_pidlist = new List<string>();
                         for (int i = 0; i < dt.Rows.Count; i++)
@@ -60,7 +61,7 @@ namespace CdHotelManage.Web.Admin
                                 html += "\"menuname\":\"" + GetMenuData(Convert.ToInt32(menu_pid[i])).title + "\",";
                                 html += "\"menus\":[";
 
-                                DataTable dtchild = rolemenubll.GetList(" Menu_pid=" + menu_pid[i] + " and RoleID=" + roleid).Tables[0];
+                                DataTable dtchild = rolemenubll.GetList(menu_pid[i], roleid).Tables[0];
                                 if (dtchild != null)
                                 {
                                     for (int j = 0; j < dtchild.Rows.Count; j++)
@@ -153,7 +154,7 @@ namespace CdHotelManage.Web.Admin
             string [] childinfo=new string[2];
             if (menu_id != "0")
             {
-                DataTable dt = rolemenubll.GetList(1, "Menu_pid=" + menu_id + " and RoleID=" + Convert.ToInt32(ViewState["roleid"]), "Menu_id asc").Tables[0];
+                DataTable dt = rolemenubll.GetSingleOrderByMenuId(menu_id ,ViewState["roleid"].ToString()).Tables[0];
                 if (dt != null)
                 {
                     int mid = Convert.ToInt32(dt.Rows[0]["Menu_id"].ToString());
@@ -178,25 +179,24 @@ namespace CdHotelManage.Web.Admin
         {
             if (!IsPostBack)
             {
-                //if (Session["User"] != null)
+                if (Session["User"] != null)
+                {
+                    hotelID = Request.QueryString["hid"];
+                    BindMenu();
+                    BindNav();
+                }
+                //if (Request.Cookies["User"] != null)
                 //{
                 //    BindMenu();
                 //    BindNav();
                 //}
-                if (Request.Cookies["User"] != null)
-                {
-                    BindMenu();
-                    BindNav();
-                }
                 //else
                 //{
                 //    Response.Redirect("login.aspx");
                 //}
             }
-            List<Model.shopInfo> listsi = bllsi.GetModelList("");
-            if (listsi.Count > 0) {
-                modelsi = listsi[0];
-            }
+            modelsi = bllsi.GetModel(hotelID);
+            
         }
     }
 }

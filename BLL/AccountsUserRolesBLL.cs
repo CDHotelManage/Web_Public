@@ -42,10 +42,10 @@ namespace CdHotelManage.BLL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public CdHotelManage.Model.AccountsUserRoles GetModel(string id)
+        public CdHotelManage.Model.AccountsUserRoles GetModel(string accountID,string hotelID)
         {
             //该表无主键信息，请自定义主键/条件字段
-            return dal.GetModel(id);
+            return AccountRolesBridge.GetModel(accountID, hotelID);
         }       
 
         /// <summary>

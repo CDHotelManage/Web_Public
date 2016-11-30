@@ -10,13 +10,13 @@ namespace CdHotelManage.Model
 		public RoleMenu()
 		{}
 		#region Model
-		private int? _roleid;
+		private string _roleid;
 		private int? _menu_id;
 		private int? _menu_pid;
 		/// <summary>
 		/// 角色ID
 		/// </summary>
-		public int? RoleID
+		public string RoleID
 		{
 			set{ _roleid=value;}
 			get{return _roleid;}

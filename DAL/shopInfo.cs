@@ -202,7 +202,7 @@ namespace CdHotelManage.DAL
             {
                 if (ds.Tables[0].Rows[0]["id"] != null && ds.Tables[0].Rows[0]["id"].ToString() != "")
                 {
-                    model.id = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
+                    model.id = ds.Tables[0].Rows[0]["id"].ToString();
                 }
                 if (ds.Tables[0].Rows[0]["shop_Name"] != null && ds.Tables[0].Rows[0]["shop_Name"].ToString() != "")
                 {

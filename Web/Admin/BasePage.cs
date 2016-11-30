@@ -103,8 +103,6 @@ namespace CdHotelManage.Web.Admin
             ListOcc = fmmx.GetModelList("occ_with='否' and state_id=0");
             if (ListOcc.Count > 0)
             {
-
-
                 foreach (Model.occu_infor item in ListOcc)
                 {
                     List<Model.occu_infor> listocc1 = fmmx.GetModelList("order_id='" + fmmx.GetModels(" where occ_with='否' and occ_no!='' and state_id=0 and room_number='" + item.room_number + "'").order_id + "' and occ_no!='' and state_id=0");
@@ -149,7 +147,6 @@ namespace CdHotelManage.Web.Admin
             }
             catch (Exception ex)
             {
-
                 throw;
             }
             
@@ -158,16 +155,16 @@ namespace CdHotelManage.Web.Admin
             if (listif.Count > 0) {
                 modelsi = listif[0];
             }
-            if ( Request.Cookies["User"] == null)
+            var user = Session["User"];
+            if (user == null)
             {
                 //Page.ClientScript.RegisterStartupScript(GetType(), "info", "<script>alert('您还没有登录！');window.location='/Admin/login.aspx';</script>");
                 Response.Write("<script>alert('您还没有登录!');window.location='/Admin/login.aspx';</*script>");
                 Response.End();
             }
-            else {
-                //Session["User"] = UserNow;
-                string uid=Request.Cookies["User"].Value;
-                UserNow = bllu.GetModel(uid);
+            else
+            {                
+                UserNow = user as Model.AccountsUsers;
             }
             SonLoad();
         }

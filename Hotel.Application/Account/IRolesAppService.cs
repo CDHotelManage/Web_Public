@@ -13,7 +13,7 @@ namespace Hotel.Application.Account
         bool Add(RolesDto model);
         int Update(RolesDto model);
         int Delete(int accountRolesId);
-        RolesDto GetModel(int accountRolesId);
+        RolesDto GetModel(string accountRolesId);
         List<RolesDto> GetList(string strWhere);
         List<RolesDto> GetListByTitle(string title);
         int GetMaxId();

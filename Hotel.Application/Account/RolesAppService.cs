@@ -54,9 +54,9 @@ namespace Hotel.Application.Account
             }
         }
 
-        public RolesDto GetModel(int accountRolesId)
+        public RolesDto GetModel(string accountRolesId)
         {
-            var accountUser = _userRepository.Single(a => (a.Id == accountRolesId));
+            var accountUser = _userRepository.Single(a => (a.RoleID == accountRolesId));
             if (accountUser == null)
             {
                 return null;

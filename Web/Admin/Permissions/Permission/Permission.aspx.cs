@@ -140,7 +140,7 @@ namespace CdHotelManage.Web.Admin.Permissions.Permission
                         CheckBox cb = (CheckBox)rptMenuRole.Items[j].FindControl("cbMenu");
                         if (cb.Checked)
                         {
-                            model.RoleID = Convert.ToInt32(ViewState["RoleID"].ToString());
+                            model.RoleID = ViewState["RoleID"].ToString();
                             model.Menu_id = Convert.ToInt32(hidchildid.Value);
                             model.Menu_pid = Convert.ToInt32(menu_pid.Value);
                             rmbll.Add(model);

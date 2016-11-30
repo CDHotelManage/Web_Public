@@ -45,8 +45,11 @@
   <ItemGroup>
     <Compile Include="AccountBridge.cs" />
     <Compile Include="AccountRolesBridge.cs" />
+    <Compile Include="Business\ShopBridge.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="MenuBridge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleMenuBridge.cs" />
     <Compile Include="RolesBridge.cs" />
   </ItemGroup>
   <ItemGroup>

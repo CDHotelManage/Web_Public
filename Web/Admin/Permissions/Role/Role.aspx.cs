@@ -10,10 +10,13 @@ namespace CdHotelManage.Web.Admin.Permissions.Role
     public partial class AddRole : System.Web.UI.Page
     {
         CdHotelManage.BLL.AccountsRolesBLL rolebll = new BLL.AccountsRolesBLL();
+        string hotelID = string.Empty;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                hotelID = Request.QueryString["hid"];
                 if (!string.IsNullOrEmpty(Request.QueryString["opera"]))
                 {
                     string opera = Request.QueryString["opera"].ToString();
@@ -24,8 +27,7 @@ namespace CdHotelManage.Web.Admin.Permissions.Role
                     else if (opera == "edit" && (!string.IsNullOrEmpty(Request.QueryString["roleid"].ToString())))
                     {
                         this.PanelEdit.Visible = true;
-                        int roleid = Convert.ToInt32(Request.QueryString["roleid"].ToString());
-                        BindRole(roleid);
+                        BindRole(Request.QueryString["roleid"].ToString());
                     }
                 }
             }
@@ -55,9 +57,9 @@ namespace CdHotelManage.Web.Admin.Permissions.Role
             }
         }
 
-        private void BindRole(int RoleId)
+        private void BindRole(string RoleId)
         {
-            if (RoleId != 0)
+            if (!string.IsNullOrEmpty(RoleId))
             {
                 Model.AccountsRoles model = rolebll.GetModel(RoleId);
                 if (model != null)

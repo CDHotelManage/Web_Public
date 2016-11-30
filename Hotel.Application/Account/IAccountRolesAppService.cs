@@ -13,8 +13,8 @@ namespace Hotel.Application.Account
     {
         bool Add(AccountRolesDto model);
         int Update(AccountRolesDto model);
-        int Delete(int accountRolesId);
-        AccountRolesDto GetModel(int accountRolesId);
+        int Delete(string accountRolesId);
+        AccountRolesDto GetModel(string HID, string accountID);
 
     }
 }

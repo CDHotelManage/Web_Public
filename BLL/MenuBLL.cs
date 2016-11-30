@@ -3,6 +3,8 @@ using System.Data;
 using System.Collections.Generic;
 using Maticsoft.Common;
 using CdHotelManage.Model;
+using Hotel.ApplictionFactory;
+
 namespace CdHotelManage.BLL
 {
 	/// <summary>
@@ -69,7 +71,7 @@ namespace CdHotelManage.BLL
 		public CdHotelManage.Model.Menu GetModel(int menu_id)
 		{
 			
-			return dal.GetModel(menu_id);
+			return MenuBridge.GetModel(menu_id);
 		}
 
 		/// <summary>
@@ -175,7 +177,7 @@ namespace CdHotelManage.BLL
         public DataSet GetMenulist(string menu_id)
         {
 
-            return dal.GetMenulist(menu_id);
+            return MenuBridge.GetMenulist(menu_id);
         }
 		#endregion  ExtensionMethod
 	}

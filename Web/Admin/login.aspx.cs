@@ -143,8 +143,7 @@ namespace CdHotelManage.Web.Admin
                         {
                             //Session["User"] = User;
                             string ubaseid = User.UserID;
-                            HttpCookie cookie = new HttpCookie("User", ubaseid);
-                            Response.Cookies.Add(cookie);
+                            Session["User"] = User;
                             userid = User.UserID;
                             ToPage();
                         }

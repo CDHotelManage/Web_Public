@@ -66,8 +66,8 @@
   
         <ul id="ulfllor" runat="server" class="ulleft">
             <li><%=modelsi.shop_Name %></li>
-            <li>用户名：<%=UserNow.UserName %></li>
-            <li>姓名：<%=UserNow.TrueName %></li>
+            <li>用户名：<%=UserNow.UserName??string.Empty %></li>
+            <li>姓名：<%=UserNow.TrueName??string.Empty %></li>
             <li><%=DateTime.Now.ToLongDateString() %></li>
             <li style="float:right; color:#fff;"><a href="#" onclick="IsCecck()" style="color:#fff">退出</a></li>
         </ul>
